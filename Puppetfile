@@ -5,3 +5,5 @@ mod 'puppet',
   :git => 'git://github.com/tampakrap/puppet-puppet',
   :ref => 'gentoo_v2'
 mod 'ploperations/nginx', '1.0.0'
+mod 'ploperations/ssl',
+  :git => 'git://github.com/puppetlabs-operations/puppet-ssl'
