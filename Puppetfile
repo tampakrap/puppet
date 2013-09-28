@@ -1,1 +1,1 @@
-mod 'adrien/puppet-portage', '2.0.1'
+mod 'adrien/portage', '2.0.1'
