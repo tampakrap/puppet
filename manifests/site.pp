@@ -1,4 +1,4 @@
-node puppet-test1.dev.gentoo.org {
+node 'puppet-test1.dev.gentoo.org' {
   portage::makeconf {'gentoo_mirrors':
     content => 'http://mirror.mcs.anl.gov/pub/gentoo/',
   }
