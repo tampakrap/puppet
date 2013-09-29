@@ -7,15 +7,15 @@ class infrastructure::puppetmaster::hiera {
   }
 
   file {'/etc/puppet/hiera.yaml':
-    source => "puppet:///modules-services/infrastructure/$name",
+    source => "puppet:///modules-services/infrastructure/$path",
   }
 
   file {'/etc/puppet/hiera/common.yaml':
-    source => "puppet:///modules-services/infrastructure/$name",
+    source => "puppet:///modules-services/infrastructure/$path",
   }
 
   file {'/etc/puppet/hiera/node/puppet-test1.dev.gentoo.org.yaml':
-    source => "puppet:///modules-services/infrastructure/$name",
+    source => "puppet:///modules-services/infrastructure/$path",
   }
 
 }
