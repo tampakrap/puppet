@@ -9,7 +9,12 @@ class infrastructure::puppetmaster {
   include infrastructure::puppetmaster::hiera
   include infrastructure::puppetmaster::r10k
 
-  file { '/etc/puppet/manifests', '/etc/puppet/modules':
+  file { '/etc/puppet/manifests':
     ensure => absent,
   }
+
+  file { '/etc/puppet/modules':
+    ensure => absent,
+  }
+
 }
