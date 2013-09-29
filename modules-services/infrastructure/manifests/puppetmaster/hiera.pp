@@ -7,11 +7,11 @@ class infrastructure::puppetmaster::hiera {
   }
 
   file { '/etc/puppet/hiera.yaml':
-    source => 'puppet:///modules-services/infrastructure/etc/puppet/hiera.yaml',
+    source => 'puppet:///modules/infrastructure/etc/puppet/hiera.yaml',
   }
 
   file {'/etc/puppet/hiera/':
-    source  => 'puppet:///modules-services/infrastructure/etc/puppet/hiera/',
+    source  => 'puppet:///modules/infrastructure/etc/puppet/hiera/',
     recurse => true,
   }
 
