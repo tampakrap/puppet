@@ -6,19 +6,16 @@ class infrastructure::puppetmaster::hiera {
     ensure   => '1.0.0',
   }
 
-  file {'hiera.yaml':
-    path   => "$confdir/$name",
-    source => "puppet:///infrastructure/$path",
+  file {'/etc/puppet/hiera.yaml':
+    source => "puppet:///modules-services/infrastructure/$name",
   }
 
-  file {'common.yaml':
-    path   => "$confdir/hiera/$name",
-    source => "puppet:///infrastructure/$path",
+  file {'/etc/puppet/hiera/common.yaml':
+    source => "puppet:///modules-services/infrastructure/$name",
   }
 
-  file {'puppet-test1.dev.gentoo.org.yaml':
-    path   => "$confdir/hiera/node/$name",
-    source => "puppet:///infrastructure/$path",
+  file {'/etc/puppet/hiera/node/puppet-test1.dev.gentoo.org.yaml':
+    source => "puppet:///modules-services/infrastructure/$name",
   }
 
 }
