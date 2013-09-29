@@ -29,3 +29,4 @@ puppet::agent::monitor_service: true
 puppet::agent::keywords:
   - '~amd64'
   - '~x86'
+r10k::configfile: 'puppet:///modules/infrastructure/etc/r10k.yaml'
