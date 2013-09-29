@@ -11,6 +11,7 @@ node 'puppet-test1.dev.gentoo.org' {
   eselect { 'ruby':
     set => 'ruby19',
   }
-  include puppet::server
+
+  include service::puppet::master
   include puppet::agent
 }
