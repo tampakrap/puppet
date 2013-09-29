@@ -1,5 +1,11 @@
 class infrastructure::puppetmaster {
-  include puppet::server
+
+  $modulepath = hiera_array('puppet_modulepath')
+
+  class { 'puppet::server':
+    modulepath => inline_template("<%= modulepath.join(':') %>"),
+  }
+
   include infrastructure::puppetmaster::hiera
   include infrastructure::puppetmaster::r10k
 }
