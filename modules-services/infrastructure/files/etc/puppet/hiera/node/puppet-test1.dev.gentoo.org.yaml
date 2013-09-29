@@ -1,0 +1,4 @@
+---
+ssl::params::ssl_path: '/etc/ssl'
+ssl::params::ssl_cert_file: '$ssl_path/certs/puppet-test1.dev.gentoo.org.crt'
+ssl::params::ssl_key_file: '$ssl_path/private/puppet-test1.dev.gentoo.org.key'
