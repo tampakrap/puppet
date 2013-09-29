@@ -1,7 +1,6 @@
 ---
 puppet_modulepath:
   - '$confdir/environments/$environment/modules'
-  - '$confdir/environments/$environment/modules-base'
   - '$confdir/environments/$environment/modules-services'
   - '$confdir/environments/$environment/modules-roles'
 puppet::server::servertype: 'standalone'
