@@ -12,7 +12,7 @@ node 'puppet-test1.dev.gentoo.org' {
     set => 'ruby19',
   }
   class { 'puppet::server':
-    servertype => 'unicorn',
+    servertype => 'standalone',
     monitor_server => true,
     backup_server => true,
     manifest => '$confdir/environments/$environment/manifests/site.pp',
