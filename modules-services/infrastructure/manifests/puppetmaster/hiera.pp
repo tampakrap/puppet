@@ -8,17 +8,17 @@ class infrastructure::puppetmaster::hiera {
 
   file {'hiera.yaml':
     path   => "$confdir/$name",
-    source => "puppet:///modules-services/infrastructure/$path",
+    source => "puppet:///infrastructure/$path",
   }
 
   file {'hiera/common.yaml':
     path   => "$confdir/$name",
-    source => "puppet:///modules-services/infrastructure/$path",
+    source => "puppet:///infrastructure/$path",
   }
 
   file {'hiera/node/puppet-test1.dev.gentoo.org.yaml':
     path   => "$confdir/$name",
-    source => "puppet:///modules-services/infrastructure/$path",
+    source => "puppet:///infrastructure/$path",
   }
 
 }
