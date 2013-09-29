@@ -7,3 +7,4 @@ mod 'puppet',
 mod 'ploperations/nginx', '1.0.0'
 mod 'ssl',
   :git => 'git://github.com/puppetlabs-operations/puppet-ssl'
+mod 'ploperations/interval', '0.0.1'
