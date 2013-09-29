@@ -10,7 +10,7 @@ puppet::server::keywords:
   - '~x86'
 puppet::server::ensure: '3.3.0'
 puppet::server::use:
-  - '-augeas'
+  - 'augeas'
   - 'diff'
   - '-doc'
   - '-emacs'
