@@ -9,6 +9,10 @@ class infrastructure::puppetmaster {
   include infrastructure::puppetmaster::hiera
   include infrastructure::puppetmaster::r10k
 
+  file { '/etc/puppet/auth.conf':
+    source => 'puppet:///modules/infrastructure/etc/puppet/auth.conf',
+  }
+
   file { '/etc/puppet/manifests':
     ensure => absent,
     force  => true
