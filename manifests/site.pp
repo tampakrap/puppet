@@ -1,17 +1,25 @@
-node 'puppet-test1.dev.gentoo.org' {
-  portage::makeconf {'gentoo_mirrors':
-    content => 'http://mirror.mcs.anl.gov/pub/gentoo/',
-  }
-  portage::makeconf { 'use':
-    content => 'ruby',
-  }
-  portage::makeconf { 'ruby_targets':
-    content => 'ruby19',
-  }
-  eselect { 'ruby':
-    set => 'ruby19',
-  }
+import 'nodes.pp'
 
-  include infrastructure::puppetmaster
-  include puppet::agent
+# Global defaults
+Package { provider => portage }
+
+filebucket { 'remote':
+  server => 'puppetmaster.tampakrap.gr',
+  path   => false,
 }
+
+Service {
+  provider   => 'openrc',
+  hasrestart => true,
+  hasstatus  => true,
+}
+
+File {
+  owner  => 'root',
+  group  => 'root',
+  mode   => 0755,
+  backup => 'remote',
+}
+
+# Always show stdout/stderr in the reports
+Exec { logoutput => true }
