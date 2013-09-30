@@ -12,6 +12,11 @@ class service::puppet::master {
     source => 'puppet:///modules/infrastructure/etc/puppet/auth.conf',
   }
 
+  include ::r10k
+  include ::r10k::prerun_command
+
+  # Remove empty directories
+
   file { '/etc/puppet/manifests':
     ensure => absent,
     force  => true
