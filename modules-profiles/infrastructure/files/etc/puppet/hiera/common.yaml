@@ -1,7 +1,7 @@
 ---
 puppet_modulepath:
   - '$confdir/environments/$environment/modules'
-  - '$confdir/environments/$environment/modules-services'
+  - '$confdir/environments/$environment/modules-profiles'
   - '$confdir/environments/$environment/modules-roles'
 puppet::server::servertype: 'standalone'
 puppet::server::manifest: '$confdir/environments/$environment/manifests/site.pp'
@@ -24,9 +24,9 @@ puppet::server::use:
   - 'sqlite3'
   - 'vim-syntax'
   - '-xemacs'
-puppet::agent::server: 'puppet-test1.dev.gentoo.org'
-puppet::agent::ca_server: 'puppet-test1.dev.gentoo.org'
-puppet::agent::report_server: 'puppet-test1.dev.gentoo.org'
+puppet::agent::server: 'eyedea.tampakrap.gr'
+puppet::agent::ca_server: 'eyedea.tampakrap.gr'
+puppet::agent::report_server: 'eyedea.tampakrap.gr'
 puppet::agent::manage_repos: false
 puppet::agent::monitor_service: true
 puppet::agent::keywords:
