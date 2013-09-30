@@ -7,13 +7,11 @@ class service::puppet::master {
   }
 
   include service::puppet::master::hiera
+  include service::puppet::master::r10k
 
   file { '/etc/puppet/auth.conf':
     source => 'puppet:///modules/infrastructure/etc/puppet/auth.conf',
   }
-
-  include ::r10k
-  include ::r10k::prerun_command
 
   # Remove empty directories
 
