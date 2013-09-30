@@ -10,7 +10,7 @@ class service::puppet::master {
   }
 
   file { '/etc/puppet/auth.conf':
-    source => 'puppet:///modules/infrastructure/etc/puppet/auth.conf',
+    source => 'puppet:///modules/service/etc/puppet/auth.conf',
   }
 
   # Remove empty directories
