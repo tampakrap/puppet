@@ -10,7 +10,7 @@ node 'eyedea.tampakrap.gr' {
   }
 
   include service::puppet::master
-  include puppet::agent
+  include service::puppet::agent
 
 }
 
@@ -25,7 +25,7 @@ node 'evidence.tampakrap.gr' {
     set => 'ruby19'
   }
 
-  include puppet::agent
+  include service::puppet::agent
 }
 
 node 'raekwon.tampakrap.gr' {
@@ -39,5 +39,5 @@ node 'raekwon.tampakrap.gr' {
     set => 'ruby19'
   }
 
-  include puppet::agent
+  include service::puppet::agent
 }
