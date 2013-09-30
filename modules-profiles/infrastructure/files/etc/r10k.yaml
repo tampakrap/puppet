@@ -1,7 +1,0 @@
-:cachedir: '/var/cache/r10k'
-:sources:
-  :plops:
-    remote: 'git://github.com/tampakrap/puppet'
-    basedir: '/etc/puppet/environments'
-:purgedirs:
-  - '/etc/puppet/environments'
