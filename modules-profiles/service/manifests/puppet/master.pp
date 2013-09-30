@@ -1,8 +1,8 @@
-class service::puppetmaster {
+class service::puppet::master {
 
   $modulepath = hiera_array('puppet_modulepath')
 
-  class { 'puppet::server':
+  class { '::puppet::server':
     modulepath => inline_template("<%= modulepath.join(':') %>"),
   }
 
