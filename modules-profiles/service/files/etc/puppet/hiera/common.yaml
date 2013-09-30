@@ -33,5 +33,4 @@ puppet::agent::keywords:
   - '~amd64'
   - '~x86'
 r10k::remote: 'git://github.com/tampakrap/puppet'
-r10k::modulepath: '/etc/puppet/$environment/modules-base'
 r10k::version: '1.1.0rc1'
