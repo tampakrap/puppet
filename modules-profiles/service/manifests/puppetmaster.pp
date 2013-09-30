@@ -1,4 +1,4 @@
-class infrastructure::puppetmaster {
+class service::puppetmaster {
 
   $modulepath = hiera_array('puppet_modulepath')
 
@@ -6,8 +6,7 @@ class infrastructure::puppetmaster {
     modulepath => inline_template("<%= modulepath.join(':') %>"),
   }
 
-  include infrastructure::puppetmaster::hiera
-  include infrastructure::puppetmaster::r10k
+  include service::puppetmaster::hiera
 
   file { '/etc/puppet/auth.conf':
     source => 'puppet:///modules/infrastructure/etc/puppet/auth.conf',

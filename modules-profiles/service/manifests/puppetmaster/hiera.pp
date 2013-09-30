@@ -1,4 +1,4 @@
-class infrastructure::puppetmaster::hiera {
+class service::puppetmaster::hiera {
 
   portage::package { 'dev-ruby/deep_merge':
     keywords => ['~amd64', '~x86'],

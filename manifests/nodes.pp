@@ -9,7 +9,7 @@ node 'eyedea.tampakrap.gr' {
     set => 'ruby19'
   }
 
-  include infrastructure::puppetmaster
+  include service::puppetmaster
   include puppet::agent
 
 }
