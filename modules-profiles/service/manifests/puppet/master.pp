@@ -6,7 +6,7 @@ class service::puppet::master {
     modulepath => inline_template("<%= modulepath.join(':') %>"),
   }
 
-  include service::puppetmaster::hiera
+  include service::puppet::master::hiera
 
   file { '/etc/puppet/auth.conf':
     source => 'puppet:///modules/infrastructure/etc/puppet/auth.conf',
