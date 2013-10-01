@@ -1,7 +1,7 @@
 class service::puppet::master {
 
-  include service::puppet::master::r10k
-  include service::puppet::master::hiera
+  #include service::puppet::master::r10k
+  #include service::puppet::master::hiera
 
   $modulepath = hiera_array('puppet_modulepath')
 
@@ -15,14 +15,14 @@ class service::puppet::master {
 
   # Remove empty directories
 
-  file { '/etc/puppet/manifests':
-    ensure => absent,
-    force  => true
-  }
+  #file { '/etc/puppet/manifests':
+  #  ensure => absent,
+  #  force  => true
+  #}
 
-  file { '/etc/puppet/modules':
-    ensure => absent,
-    force  => true
-  }
+  #file { '/etc/puppet/modules':
+  #  ensure => absent,
+  #  force  => true
+  #}
 
 }
