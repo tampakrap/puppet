@@ -7,7 +7,7 @@ puppet::server::servertype: 'standalone'
 puppet::server::manifest: '$confdir/environments/$environment/manifests/site.pp'
 puppet::server::ca: true
 puppet::server::monitor_server: true
-puppet::server::backup_server: false
+puppet::server::backup_server: true
 puppet::server::keywords:
   - '~amd64'
   - '~x86'
@@ -28,7 +28,9 @@ puppet::agent::server: 'eyedea.pebkac.gr'
 puppet::agent::ca_server: 'eyedea.pebkac.gr'
 puppet::agent::report_server: 'eyedea.pebkac.gr'
 puppet::agent::manage_repos: false
+puppet::agent::manage_service: 'cron'
 puppet::agent::monitor_service: true
+puppet::agent::ensure: '3.3.0'
 puppet::agent::keywords:
   - '~amd64'
   - '~x86'
