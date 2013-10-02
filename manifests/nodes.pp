@@ -1,4 +1,4 @@
-node 'eyedea.tampakrap.gr' {
+node 'eyedea.pebkac.gr' {
   portage::makeconf { 'use':
     content => 'ruby'
   }
@@ -14,7 +14,7 @@ node 'eyedea.tampakrap.gr' {
 
 }
 
-node 'evidence.tampakrap.gr' {
+node 'evidence.pebkac.gr' {
   portage::makeconf { 'use':
     content => 'ruby'
   }
@@ -28,7 +28,7 @@ node 'evidence.tampakrap.gr' {
   include service::puppet::agent
 }
 
-node 'raekwon.tampakrap.gr' {
+node 'raekwon.pebkac.gr' {
   portage::makeconf { 'use':
     content => 'ruby'
   }
