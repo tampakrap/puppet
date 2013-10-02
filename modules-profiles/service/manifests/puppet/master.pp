@@ -1,7 +1,7 @@
 class service::puppet::master {
 
   #include service::puppet::master::r10k
-  #include service::puppet::master::hiera
+  include service::puppet::master::hiera
 
   $modulepath = hiera_array('puppet_modulepath')
 
