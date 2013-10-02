@@ -28,7 +28,7 @@ puppet::agent::server: 'eyedea.pebkac.gr'
 puppet::agent::ca_server: 'eyedea.pebkac.gr'
 puppet::agent::report_server: 'eyedea.pebkac.gr'
 puppet::agent::manage_repos: false
-puppet::agent::manage_service: 'cron'
+puppet::agent::manage_service: 'service'
 puppet::agent::monitor_service: true
 puppet::agent::ensure: '3.3.0'
 puppet::agent::keywords:
