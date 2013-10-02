@@ -15,14 +15,14 @@ class service::puppet::master {
 
   # Remove empty directories
 
-  #file { '/etc/puppet/manifests':
-  #  ensure => absent,
-  #  force  => true
-  #}
+  file { '/etc/puppet/manifests':
+    ensure => absent,
+    force  => true
+  }
 
-  #file { '/etc/puppet/modules':
-  #  ensure => absent,
-  #  force  => true
-  #}
+  file { '/etc/puppet/modules':
+    ensure => absent,
+    force  => true
+  }
 
 }
