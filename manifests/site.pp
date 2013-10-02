@@ -4,7 +4,7 @@ import 'nodes.pp'
 Package { provider => portage }
 
 filebucket { 'remote':
-  server => 'eyedea.pebkac.gr',
+  server => 'puppetmaster.pebkac.gr',
   path   => false,
 }
 
