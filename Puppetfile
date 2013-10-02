@@ -1,5 +1,5 @@
 mod 'adrien/portage', '2.0.1'
-mod 'ripienaar/concat', '0.2.0'
+mod 'puppetlabs/concat', '1.0.0'
 mod 'puppet',
 #  :git => 'git://github.com/puppetlabs-operations/puppet-puppet'
   :git => 'git://github.com/tampakrap/puppet-puppet',
