@@ -1,7 +1,8 @@
 moduledir '/etc/puppet/environments/production/modules-base'
 
-mod 'adrien/portage', '2.0.1'
 mod 'puppetlabs/concat', '1.0.0'
+mod 'portage',
+  :git => 'git://github.com/gentoo/puppet-portage'
 
 # forks
 
