@@ -1,6 +1,6 @@
 class service::puppet::master {
 
-  #include service::puppet::master::r10k
+  include service::puppet::master::r10k
   include service::puppet::master::hiera
 
   include ::puppet::server
