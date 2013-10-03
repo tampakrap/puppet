@@ -37,3 +37,6 @@ puppet::agent::keywords:
   - '~x86'
 r10k::remote: 'git://github.com/tampakrap/puppet'
 r10k::version: '1.0.0'
+r10k::keywords:
+  - '~amd64'
+  - '~x86'
