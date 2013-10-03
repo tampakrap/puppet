@@ -1,10 +1,10 @@
 ---
-puppet_modulepath:
+puppet::server::servertype: 'standalone'
+puppet::server::manifest: '$confdir/environments/$environment/manifests/site.pp'
+puppet::server::modulepath:
   - '$confdir/environments/$environment/modules'
   - '$confdir/environments/$environment/modules-profiles'
   - '$confdir/environments/$environment/modules-roles'
-puppet::server::servertype: 'standalone'
-puppet::server::manifest: '$confdir/environments/$environment/manifests/site.pp'
 puppet::server::ca: true
 puppet::server::monitor_server: true
 puppet::server::backup_server: true
