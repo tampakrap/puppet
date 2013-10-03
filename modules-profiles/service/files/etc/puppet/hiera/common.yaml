@@ -24,6 +24,7 @@ puppet::server::use:
   - 'sqlite3'
   - 'vim-syntax'
   - '-xemacs'
+puppet::server::reporturl: 'http://puppetdashboard.pebkac.gr/reports'
 puppet::agent::server: 'puppetmaster.pebkac.gr'
 puppet::agent::ca_server: 'puppetca.pebkac.gr'
 puppet::agent::report_server: 'puppetdashboard.pebkac.gr'
