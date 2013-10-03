@@ -1,9 +1,16 @@
 mod 'adrien/portage', '2.0.1'
 mod 'puppetlabs/concat', '1.0.0'
+
+# forks
+
 mod 'puppet',
-#  :git => 'git://github.com/puppetlabs-operations/puppet-puppet'
+# mod 'ploperations/puppet'
+# :git => 'git://github.com/puppetlabs-operations/puppet-puppet'
   :git => 'git://github.com/tampakrap/puppet-puppet',
   :ref => 'gentoo_v2'
-mod 'ploperations/interval', '0.0.1'
-mod 'zack/r10k', '0.0.7'
-mod 'puppetlabs/ruby', '0.0.2'
+
+mod 'r10k',
+# mod 'zack/r10k'
+# :git => 'git://github.com/acidprime/r10k
+  :git => 'git://github.com/tampakrap/puppet-r10k',
+  :ref => 'gentoo'
