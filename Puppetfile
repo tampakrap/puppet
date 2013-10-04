@@ -17,4 +17,4 @@ mod 'r10k',
 # mod 'zack/r10k'
 # :git => 'git://github.com/acidprime/r10k
   :git => 'git://github.com/tampakrap/puppet-r10k',
-  :ref => 'gentoo'
+  :ref => 'pebkac'
