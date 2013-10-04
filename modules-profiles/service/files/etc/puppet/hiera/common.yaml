@@ -6,8 +6,8 @@ puppet::server::modulepath:
   - '$confdir/environments/$environment/modules-profiles'
   - '$confdir/environments/$environment/modules-roles'
 puppet::server::ca: true
-puppet::server::monitor_server: true
-puppet::server::backup_server: true
+puppet::server::monitor_server: false
+puppet::server::backup_server: false
 puppet::server::keywords:
   - '~amd64'
   - '~x86'
@@ -30,7 +30,8 @@ puppet::agent::ca_server: 'puppetca.pebkac.gr'
 puppet::agent::report_server: 'puppetdashboard.pebkac.gr'
 puppet::agent::method: 'service'
 puppet::agent::manage_repos: false
-puppet::agent::monitor_service: true
+puppet::agent::monitor_service: false
+puppet::agent::environment: 'production'
 puppet::agent::ensure: '3.3.0'
 puppet::agent::keywords:
   - '~amd64'
