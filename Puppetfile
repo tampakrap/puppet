@@ -3,6 +3,7 @@ moduledir '/etc/puppet/environments/production/modules-base'
 mod 'puppetlabs/concat', '1.0.0'
 mod 'portage', :git => 'git://github.com/gentoo/puppet-portage'
 mod 'puppetlabs/inifile', '1.0.0'
+mod 'puppetlabs/stdlib', '4.1.0'
 
 # forks
 
