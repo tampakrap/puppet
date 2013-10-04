@@ -10,7 +10,7 @@ mod 'puppet',
 # mod 'ploperations/puppet'
 # :git => 'git://github.com/puppetlabs-operations/puppet-puppet'
   :git => 'git://github.com/tampakrap/puppet-puppet',
-  :ref => 'gentoo_v2'
+  :ref => 'pebkac'
 
 mod 'r10k',
 # mod 'zack/r10k'
