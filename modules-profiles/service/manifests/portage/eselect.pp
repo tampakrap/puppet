@@ -1,6 +1,6 @@
 class service::portage::eselect (
-  $ruby
-  $python2
+  $ruby,
+  $python2,
 ) {
 
   eselect { 'ruby': set => $ruby }
