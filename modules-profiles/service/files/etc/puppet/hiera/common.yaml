@@ -42,6 +42,8 @@ r10k::gentoo_keywords:
   - '~amd64'
   - '~x86'
 r10k::provider: 'portage'
+service::portage::eselect::ruby: 'ruby19'
+service::portage::eselect::python2: 'python2.7'
 service::portage::make_conf::features:
   - 'buildpkg'
   - 'candy'
@@ -57,8 +59,6 @@ service::portage::make_conf::features:
   - 'strict'
   - '-unmerge-logs'
   - 'userfetch'
-service::portage::eselect::ruby: 'ruby19'
-service::portage::eselect::python2: 'python2.7'
 service::portage::make_conf::ruby_targets: 'ruby19'
 service::portage::make_conf::python_targets: 'python2_7'
 service::portage::make_conf::use:
