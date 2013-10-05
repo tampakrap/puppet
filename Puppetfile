@@ -7,6 +7,8 @@ mod 'puppetlabs/stdlib', '4.1.0'
 # forks
 
 mod 'portage',
+# mod 'adrienthebo/portage'
+# :git => 'git://github.com/gentoo/puppet-portage'
   :git => 'git://github.com/tampakrap/puppet-portage'
   :ref => 'pebkac'
 
@@ -18,6 +20,6 @@ mod 'puppet',
 
 mod 'r10k',
 # mod 'zack/r10k'
-# :git => 'git://github.com/acidprime/r10k
+# :git => 'git://github.com/acidprime/r10k'
   :git => 'git://github.com/tampakrap/puppet-r10k',
   :ref => 'pebkac'
