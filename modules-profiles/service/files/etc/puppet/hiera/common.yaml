@@ -42,7 +42,7 @@ r10k::gentoo_keywords:
   - '~amd64'
   - '~x86'
 r10k::provider: 'portage'
-service::puppet::make_conf::features:
+service::portage::make_conf::features:
   - 'buildpkg'
   - 'candy'
   - 'collision-protect'
@@ -57,11 +57,11 @@ service::puppet::make_conf::features:
   - 'strict'
   - '-unmerge-logs'
   - 'userfetch'
-service::puppet::eselect::ruby: 'ruby19'
-service::puppet::eselect::python2: 'python2.7'
-service::puppet::make_conf::ruby_targets: 'ruby19'
-service::puppet::make_conf::python_targets: 'python2_7'
-service::puppet::make_conf::use:
+service::portage::eselect::ruby: 'ruby19'
+service::portage::eselect::python2: 'python2.7'
+service::portage::make_conf::ruby_targets: 'ruby19'
+service::portage::make_conf::python_targets: 'python2_7'
+service::portage::make_conf::use:
   - '-X'
   - '-gtk'
   - '-gnome'
