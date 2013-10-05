@@ -5,7 +5,7 @@ class service::portage::make_conf (
   $features,
   $ruby_targets,
   $python_targets,
-  $location,
+  $location = '',
 ) {
 
   # TODO:
