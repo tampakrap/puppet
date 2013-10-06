@@ -1,0 +1,4 @@
+---
+service::portage::use:
+  - '-32bit'
+  - '64bit'
