@@ -5,6 +5,6 @@
   :datadir: /etc/puppet/hiera
 :hierarchy:
   - "node/%{::fqdn}"
-  - "architecture/architecture_%{::architecture}"
+  - "architecture/%{::architecture}"
   - common
 :merge_behavior: deeper
