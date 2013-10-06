@@ -18,5 +18,6 @@ class service::portage::make_conf (
   portage::makeconf { 'features': content => $features }
   portage::makeconf { 'ruby_targets': content => $ruby_targets }
   portage::makeconf { 'python_targets': content => $python_targets }
+  portage::makeconf { 'location': content => $location }
 
 }
