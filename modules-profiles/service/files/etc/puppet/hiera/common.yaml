@@ -43,6 +43,7 @@ r10k::gentoo_keywords:
 r10k::provider: 'portage'
 service::portage::eselect::ruby: 'ruby19'
 service::portage::eselect::python2: 'python2.7'
+service::portage::eselect::gcc: 'x86_64-pc-linux-gnu-4.6.3'
 service::portage::make_conf::features:
   - 'buildpkg'
   - 'candy'
