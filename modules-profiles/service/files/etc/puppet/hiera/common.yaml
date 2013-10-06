@@ -92,7 +92,6 @@ service::portage::make_conf::use:
   - 'python'
   - 'ruby'
   - 'libwww'
-  - 'ldap'
   - 'maildir'
   - 'png'
   - 'jpeg'
