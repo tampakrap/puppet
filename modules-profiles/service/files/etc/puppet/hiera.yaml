@@ -4,7 +4,6 @@
 :yaml:
   :datadir: /etc/puppet/hiera
 :hierarchy:
-  - "node/%{::fqdn}"
   - "architecture/%{::architecture}"
   - common
 :merge_behavior: deeper

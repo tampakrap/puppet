@@ -2,5 +2,3 @@
 service::portage::make_conf::use:
   - '-32bit'
   - '64bit'
-test_something: 'test1'
-service::portage::make_conf::location: 'test'
