@@ -3,7 +3,6 @@ moduledir '/etc/puppet/environments/production/modules-base'
 mod 'puppetlabs/concat', '1.0.0'
 mod 'puppetlabs/inifile', '1.0.0'
 mod 'puppetlabs/stdlib', '4.1.0'
-mod 'puppetlabs/passenger', '0.1.0'
 
 # forks
 
@@ -29,4 +28,10 @@ mod 'apache',
 # mod 'puppetlabs/apache',
 # :git => 'git://github.com/puppetlabs/puppetlabs-apache',
   :git => 'git://github.com/tampakrap/puppet-apache',
+  :ref => 'pebkac'
+
+mod 'passenger',
+# mod 'puppetlabs/passenger',
+# :git => 'git://github.com/puppetlabs/puppetlabs-passenger',
+  :git => 'git://github.com/tampakrap/puppet-passenger,
   :ref => 'pebkac'
