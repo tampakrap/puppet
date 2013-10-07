@@ -10,6 +10,6 @@ class service::portage::eselect (
   eselect { 'python': set => $python }
   eselect { 'python::python2': set => $python2 }
   eselect { 'python::python3': set => $python3 }
-  eselect { 'gcc-config': set => $gcc }
+  eselect { 'gcc': set => $gcc }
 
 }
