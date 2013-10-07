@@ -33,5 +33,5 @@ mod 'apache',
 mod 'passenger',
 # mod 'puppetlabs/passenger',
 # :git => 'git://github.com/puppetlabs/puppetlabs-passenger',
-  :git => 'git://github.com/tampakrap/puppet-passenger,
+  :git => 'git://github.com/tampakrap/puppet-passenger',
   :ref => 'pebkac'
