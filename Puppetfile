@@ -3,7 +3,6 @@ moduledir '/etc/puppet/environments/production/modules-base'
 mod 'puppetlabs/concat', '1.0.0'
 mod 'puppetlabs/inifile', '1.0.0'
 mod 'puppetlabs/stdlib', '4.1.0'
-mod 'puppetlabs/apache', '0.9.0'
 
 # forks
 
@@ -23,4 +22,10 @@ mod 'r10k',
 # mod 'zack/r10k'
 # :git => 'git://github.com/acidprime/r10k'
   :git => 'git://github.com/tampakrap/puppet-r10k',
+  :ref => 'pebkac'
+
+mod 'apache',
+# mod 'puppetlabs/apache',
+# :git => 'git://github.com/puppetlabs/puppetlabs-apache',
+  :git => 'git://github.com/tampakrap/puppet-apache',
   :ref => 'pebkac'
