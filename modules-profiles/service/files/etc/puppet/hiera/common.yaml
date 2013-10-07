@@ -1,5 +1,5 @@
 ---
-puppet::server::servertype: 'standalone'
+puppet::server::servertype: 'passenger'
 puppet::server::manifest: '$confdir/environments/$environment/manifests/site.pp'
 puppet::server::modulepath:
   - '$confdir/environments/$environment/modules-base'
