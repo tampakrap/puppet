@@ -8,11 +8,11 @@ puppet::server::modulepath:
 puppet::server::ca: true
 puppet::server::monitor_server: false
 puppet::server::backup_server: false
-puppet::server::keywords:
+puppet::server::gentoo_keywords:
   - '~amd64'
   - '~x86'
 puppet::server::ensure: '3.3.0'
-puppet::server::use:
+puppet::server::gentoo_use:
   - 'augeas'
   - 'diff'
   - '-doc'
@@ -32,7 +32,7 @@ puppet::agent::manage_repos: false
 puppet::agent::monitor_service: false
 puppet::agent::environment: 'production'
 puppet::agent::ensure: '3.3.0'
-puppet::agent::keywords:
+puppet::agent::gentoo_keywords:
   - '~amd64'
   - '~x86'
 r10k::remote: 'git://github.com/tampakrap/puppet'
