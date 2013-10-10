@@ -1,0 +1,3 @@
+---
+service::portage::make_conf::features:
+  - '-buildpkg'
