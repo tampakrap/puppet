@@ -8,6 +8,7 @@ class service::puppet::master::hiera {
 
   file { '/etc/puppet/hiera.yaml':
     source => 'puppet:///modules/service/etc/puppet/hiera.yaml',
+    notify => Service[$puppet::master_service],
   }
 
   file {'/etc/puppet/hiera/':
