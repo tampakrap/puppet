@@ -43,7 +43,7 @@ r10k::gentoo_keywords:
 r10k::provider: 'portage'
 apache::serveradmin: 'root@pebkac.gr'
 apache::package_ensure: '2.2.25'
-apache::default_mods::all: 'false'
+apache::default_mods::all: false
 apache::default_mods::mods:
  - 'log_config'
  - 'authz_host'
