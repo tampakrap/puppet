@@ -29,7 +29,6 @@ apache::default_mods:
   - 'authz_user'
   - 'autoindex'
   - 'cache'
-  - 'cgi'
   - 'dav'
   - 'dav_fs'
   - 'dav_lock'
