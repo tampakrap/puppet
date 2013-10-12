@@ -1,0 +1,2 @@
+---
+puppet::server::bindaddress: '178.63.20.213'
