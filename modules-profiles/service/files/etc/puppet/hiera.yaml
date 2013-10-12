@@ -4,6 +4,7 @@
 :yaml:
   :datadir: /etc/puppet/hiera
 :hierarchy:
+  - "node/%{::fqdn}"
   - common
   - "architecture/%{::architecture}"
   - "virtual/%{::virtual}"
