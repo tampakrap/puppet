@@ -7,6 +7,7 @@ class service::puppet::master {
 
   file { '/etc/puppet/auth.conf':
     source => 'puppet:///modules/service/etc/puppet/auth.conf',
+    notify => Service['httpd'],
   }
 
   # Remove empty directories

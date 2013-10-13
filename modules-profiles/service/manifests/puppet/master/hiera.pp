@@ -10,7 +10,7 @@ class service::puppet::master::hiera {
 
   file { '/etc/puppet/hiera.yaml':
     source => 'puppet:///modules/service/etc/puppet/hiera.yaml',
-    notify => Service[$puppet::params::master_service],
+    notify => Service['httpd'],
   }
 
   file {'/etc/puppet/hiera/':
