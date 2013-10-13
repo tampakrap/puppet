@@ -1,5 +1,5 @@
 class webservice::okupy (
-  domain = undef
+  $domain = undef
 ) {
 
   layman { 'okupy': }
