@@ -2,8 +2,13 @@ class webservice::okupy (
   $domain = undef
 ) {
 
-  include service::portage::layman
-  include service::portage::webapp_config
+  if ! defined(Class['service::portage::layman']) {
+    include service::portage::layman
+  }
+
+  if ! defined(Class['service::portage::webapp_config']) {
+    include service::portage::webapp_config
+  }
 
   if ! defined(Class['Service::Portage::Make_conf::Use_apache']) {
     include service::portage::make_conf::use_apache
