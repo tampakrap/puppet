@@ -2,7 +2,9 @@ class webservice::okupy (
   $domain = undef
 ) {
 
-  layman { 'okupy': }
+  layman { 'okupy':
+    require => Portage::Package['app-portage/layman']
+  }
 
   portage::package { 'www-apps/okupy':
     before  => Webapp[$domain],

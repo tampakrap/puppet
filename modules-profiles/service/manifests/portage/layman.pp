@@ -1,5 +1,5 @@
 class service::portage::layman {
-  portage::package { 'layman':
+  portage::package { 'app-portage/layman':
     ensure => 'latest',
   }
 }
