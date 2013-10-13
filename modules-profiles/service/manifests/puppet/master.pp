@@ -11,7 +11,7 @@ class service::puppet::master {
 
   # Remove empty directories
 
-  file { ['/etc/puppet/manifests', '/etc/puppet/modules']:
+  file { '/etc/puppet/modules':
     ensure  => absent,
     force   => true,
     recurse => true,
