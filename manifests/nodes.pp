@@ -9,7 +9,7 @@ node 'evidence.pebkac.gr' {
 
 node 'everlast.pebkac.gr' {
   include role::base
-  include webpage::identity.pebkac.gr
+  include 'webpage::identity.pebkac.gr'
 }
 
 node 'raekwon.pebkac.gr' {
