@@ -4,7 +4,7 @@ class webservice::okupy (
 
   include service::portage::layman
 
-  if ! defined(Class['Service::Portage::Make_conf::Use_apache') {
+  if ! defined(Class['Service::Portage::Make_conf::Use_apache']) {
     include service::portage::make_conf::use_apache
   }
 
