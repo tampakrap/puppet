@@ -8,14 +8,9 @@ class webservice::okupy (
     require => Portage::Package['app-portage/layman']
   }
 
-  portage::makeconf { 'source /var/lib/layman/make.conf': }
-
   portage::package { 'www-apps/okupy':
     before  => Webapp[$domain],
-    require => [
-      Layman['okupy'],
-      Portage::Makeconf['source /var/lib/layman/make.conf'],
-    ],
+    require => Layman['okupy'],
     ensure  => '9999',
   }
 
