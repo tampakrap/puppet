@@ -19,7 +19,7 @@ class webservice::okupy (
   }
 
   webapp { "${domain}":
-    appname    => 'django',
+    appname    => 'okupy',
     appversion => '9999',
     server     => 'apache',
     user       => 'apache',
