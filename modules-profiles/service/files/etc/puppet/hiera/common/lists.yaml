@@ -114,3 +114,5 @@ service::portage::make_conf::use:
   - 'png'
   - 'jpeg'
   - 'ldap'
+  - 'bash_completion'
+  - 'zsh_completion'
