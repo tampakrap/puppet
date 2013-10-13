@@ -14,11 +14,9 @@ puppet::server::gentoo_keywords:
 puppet::server::ensure: '3.3.1'
 puppet::server::reporturl: 'http://puppetdashboard.pebkac.gr/reports'
 puppet::server::servername: 'puppetmaster.pebkac.gr'
-puppet::server::ssl_cert: '/etc/ssl/puppetmaster/cert.pem'
-puppet::server::ssl_key: '/etc/ssl/puppetmaster/key.pem'
 puppet::agent::server: 'puppetmaster.pebkac.gr'
-puppet::agent::ca_server: 'puppetca.pebkac.gr'
-puppet::agent::report_server: 'puppetdashboard.pebkac.gr'
+puppet::agent::ca_server: 'puppetmaster.pebkac.gr'
+puppet::agent::report_server: 'puppetmaster.pebkac.gr'
 puppet::agent::method: 'none'
 puppet::agent::manage_repos: false
 puppet::agent::monitor_service: false
