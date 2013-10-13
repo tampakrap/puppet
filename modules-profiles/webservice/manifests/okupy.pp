@@ -2,6 +2,8 @@ class webservice::okupy (
   $domain = undef
 ) {
 
+  include service::portage::layman
+
   layman { 'okupy':
     require => Portage::Package['app-portage/layman']
   }
