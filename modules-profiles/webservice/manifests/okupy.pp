@@ -1,4 +1,4 @@
-class service::okupy (
+class webservice::okupy (
   domain = undef
 ) {
 
