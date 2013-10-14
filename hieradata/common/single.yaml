@@ -46,4 +46,13 @@ service::portage::eselect::python3: 'python3.2'
 service::portage::eselect::gcc: 'x86_64-pc-linux-gnu-4.6.3'
 service::portage::make_conf::ruby_targets: 'ruby19'
 service::portage::make_conf::python_targets: 'python2_7'
+service::puppet::master::hiera::datadir: '/etc/puppet/environments/%{::environment}/hieradata'
+service::puppet::master::hiera::hierarchy:
+  - 'common/lists'
+  - 'node/%{::fqdn}'
+  - 'architecture/%{::architecture}'
+  - 'virtual/%{::virtual}'
+  - 'makeconf/use_apache_%{::useflag_group_apache}'
+  - 'common/single'
+service::puppet::master::hiera::merge_behavior:
 webpage::identity: 'identity.pebkac.gr'
