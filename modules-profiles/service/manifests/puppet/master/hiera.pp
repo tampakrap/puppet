@@ -13,11 +13,6 @@ class service::puppet::master::hiera {
     notify => Service['httpd'],
   }
 
-  file {'/etc/puppet/hiera/':
-    source  => 'puppet:///modules/service/etc/puppet/hiera/',
-    recurse => true,
-  }
-
   file { '/etc/hiera.yaml':
     target => '/etc/puppet/hiera.yaml',
     ensure => link,
