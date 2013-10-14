@@ -4,9 +4,11 @@
 <%= @backends.to_yaml.split("\n")[1..-1].join("\n") %>
 <% end -%>
 :yaml:
-  :datadir: <%= @datadir %>
+  :datadir: "<%= @datadir %>"
 <% unless @hierarchy.empty? -%>
 :hierarchy:
 <%= @hierarchy.to_yaml.split("\n")[1..-1].join("\n") %>
 <% end -%>
+<% unless @merge_behavior.empty? -%>
 :merge_behavior: <%= @merge_behavior %>
+<% end -%>
