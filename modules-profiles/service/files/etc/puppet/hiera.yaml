@@ -8,6 +8,6 @@
   - "node/%{::fqdn}"
   - "architecture/%{::architecture}"
   - "virtual/%{::virtual}"
-  - "makeconf/use_apache_%{service::portage::make_conf::use_apache::add}"
+  - "makeconf/use_apache_%{::useflag_group_apache}"
   - "common/single"
 :merge_behavior: deeper
