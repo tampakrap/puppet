@@ -1,8 +1,8 @@
 class service::puppet::master::hiera (
   $backends       = ['yaml'],
-  $datadir        = '/etc/puppet/environments/%{::environment}/hieradata',
-  $hierarchy      = undef,
-  $merge_behavior = undef,
+  $datadir        = '/etc/puppet/hieradata',
+  $hierarchy      = '',
+  $merge_behavior = '',
 ) {
 
   include puppet::params
