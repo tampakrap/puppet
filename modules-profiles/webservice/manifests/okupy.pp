@@ -10,9 +10,7 @@ class webservice::okupy (
     include service::portage::webapp_config
   }
 
-  if ! defined(Class['Service::Portage::Make_conf::Use_apache']) {
-    include service::portage::make_conf::use_apache
-  }
+  service::portage::make_conf::useflag_group { 'apache': }
 
   layman { 'okupy':
     require => Portage::Package['app-portage/layman']
@@ -20,7 +18,10 @@ class webservice::okupy (
 
   portage::package { 'www-apps/okupy':
     before   => Webapp[$domain],
-    require  => Layman['okupy'],
+    require  => [
+      Layman['okupy'],
+      Service::Portage::Make_conf::Useflag_group['apache'],
+    ],
     keywords => '**',
     ensure   => '9999',
     target   => 'okupy',
