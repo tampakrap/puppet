@@ -3,7 +3,7 @@ moduledir '/etc/puppet/environments/production/modules-base'
 mod 'puppetlabs/concat',  '1.0.0'
 mod 'puppetlabs/inifile', '1.0.0'
 mod 'puppetlabs/stdlib',  '4.1.0'
-mod 'spiette/ssh,         '0.3.1'
+mod 'spiette/ssh',        '0.3.1'
 
 # forks
 
