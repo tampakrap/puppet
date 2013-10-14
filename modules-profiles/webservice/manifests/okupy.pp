@@ -15,7 +15,10 @@ class webservice::okupy (
   }
 
   layman { 'okupy':
-    require => Package['app-portage/layman']
+    require => [
+      Service::Portage::Tool['layman'],
+      Package['app-portage/layman'],
+    ],
   }
 
   portage::package { 'www-apps/okupy':
@@ -35,5 +38,9 @@ class webservice::okupy (
     server     => 'apache',
     user       => 'apache',
     group      => 'apache',
+    require    => [
+      Service::Portage::Tool['webapp_config'],
+      Package['app-admin/webapp-config'],
+    ],
   }
 }
