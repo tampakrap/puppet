@@ -1,6 +1,6 @@
 class service::puppet::master::hiera (
   $backends       = ['yaml'],
-  $datadir        = '/etc/puppet/hieradata',
+  $datadir        = '/etc/puppet/environments/_percent_{::environment}/hieradata',
   $hierarchy      = '',
   $merge_behavior = '',
 ) {
