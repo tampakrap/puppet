@@ -54,5 +54,5 @@ service::puppet::master::hiera::hierarchy:
   - 'virtual/%{::virtual}'
   - 'makeconf/use_apache_%{::useflag_group_apache}'
   - 'common/single'
-service::puppet::master::hiera::merge_behavior:
+service::puppet::master::hiera::merge_behavior: 'deeper'
 webpage::identity: 'identity.pebkac.gr'
