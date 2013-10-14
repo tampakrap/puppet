@@ -1,0 +1,12 @@
+---
+<% unless @hiera_backends.empty? -%>
+:backends:
+<%= @hiera_backends.to_yaml.split("\n")[1..-1].join("\n") %>
+<% end -%>
+:yaml:
+  :datadir: <%= @hiera_datadir %>
+<% unless @hiera_hierarchy.empty? -%>
+:hierarchy:
+<%= @hiera_hierarchy.to_yaml.split("\n")[1..-1].join("\n") %>
+<% end -%>
+:merge_behavior: <%= @hiera_merge_behavior %>

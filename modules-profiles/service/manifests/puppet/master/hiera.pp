@@ -1,4 +1,9 @@
-class service::puppet::master::hiera {
+class service::puppet::master::hiera (
+  $backends       = ['yaml'],
+  $datadir        = '/etc/puppet/environments/%{::environment}/hieradata',
+  $hierarchy      = undef,
+  $merge_behavior = undef,
+) {
 
   include puppet::params
 
@@ -9,8 +14,9 @@ class service::puppet::master::hiera {
   }
 
   file { '/etc/puppet/hiera.yaml':
-    source => 'puppet:///modules/service/etc/puppet/hiera.yaml',
-    notify => Service['httpd'],
+    ensure  => file,
+    content => template('hiera.yaml.erb'),
+    notify  => Service['httpd'],
   }
 
   file { '/etc/hiera.yaml':
