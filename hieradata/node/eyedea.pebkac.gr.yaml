@@ -1,3 +1,0 @@
----
-puppet::server::bindaddress: '178.63.20.213'
-apache::ip: '178.63.20.213'
