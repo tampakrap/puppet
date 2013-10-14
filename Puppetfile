@@ -1,37 +1,32 @@
 moduledir '/etc/puppet/environments/production/modules-base'
 
-mod 'puppetlabs/concat', '1.0.0'
+mod 'puppetlabs/concat',  '1.0.0'
 mod 'puppetlabs/inifile', '1.0.0'
-mod 'puppetlabs/stdlib', '4.1.0'
+mod 'puppetlabs/stdlib',  '4.1.0'
 
 # forks
 
+# mod 'adrienthebo/portage'
 mod 'portage',
-# mod 'adrienthebo/portage',
-# :git => 'git://github.com/gentoo/puppet-portage',
   :git => 'git://github.com/tampakrap/puppet-portage',
   :ref => 'pebkac'
 
+# mod 'ploperations/puppet'
 mod 'puppet',
-# mod 'ploperations/puppet',
-# :git => 'git://github.com/puppetlabs-operations/puppet-puppet',
   :git => 'git://github.com/tampakrap/puppet-puppet',
   :ref => 'pebkac'
 
-mod 'r10k',
 # mod 'zack/r10k'
-# :git => 'git://github.com/acidprime/r10k'
+mod 'r10k',
   :git => 'git://github.com/tampakrap/puppet-r10k',
   :ref => 'pebkac'
 
+# mod 'puppetlabs/apache'
 mod 'apache',
-# mod 'puppetlabs/apache',
-# :git => 'git://github.com/puppetlabs/puppetlabs-apache',
   :git => 'git://github.com/tampakrap/puppet-apache',
   :ref => 'pebkac'
 
+# mod 'puppetlabs/passenger'
 mod 'passenger',
-# mod 'puppetlabs/passenger',
-# :git => 'git://github.com/puppetlabs/puppetlabs-passenger',
   :git => 'git://github.com/tampakrap/puppet-passenger',
   :ref => 'pebkac'
