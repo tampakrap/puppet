@@ -6,8 +6,9 @@ class service::puppet::master {
   include ::puppet::server
 
   file { '/etc/puppet/auth.conf':
-    source => 'puppet:///modules/service/etc/puppet/auth.conf',
-    notify => Service['httpd'],
+    ensure  => file,
+    content => template("${module_name}/puppet/auth.conf.erb"),
+    notify  => Service['httpd'],
   }
 
   # Remove empty directories
