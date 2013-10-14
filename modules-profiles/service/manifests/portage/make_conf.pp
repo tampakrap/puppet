@@ -1,12 +1,11 @@
 class service::portage::make_conf (
-  $cflags = '-O2 -pipe',
-  $jobs = $::processorcount + 1,
-  $use = '',
-  $features = '',
-  $ruby_targets = '',
+  $cflags         = '-O2 -pipe',
+  $jobs           = $::processorcount + 1,
+  $use            = '',
+  $features       = '',
+  $ruby_targets   = '',
   $python_targets = '',
-  $location = '',
-  $portdir = '',
+  $portdir        = '',
 ) {
 
   # TODO:
