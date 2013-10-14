@@ -6,6 +6,7 @@ class service::portage::make_conf (
   $ruby_targets = '',
   $python_targets = '',
   $location = '',
+  $portdir = '',
 ) {
 
   # TODO:
@@ -18,6 +19,6 @@ class service::portage::make_conf (
   portage::makeconf { 'features': content => hiera_array(service::portage::make_conf::features) }
   portage::makeconf { 'ruby_targets': content => $ruby_targets }
   portage::makeconf { 'python_targets': content => $python_targets }
-  portage::makeconf { 'portdir': content => '/usr/portage' }
+  portage::makeconf { 'portdir': content => $portdir }
 
 }
