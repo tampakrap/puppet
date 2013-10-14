@@ -2,18 +2,20 @@ class webservice::okupy (
   $domain = undef
 ) {
 
-  if ! defined(Class['service::portage::layman']) {
-    include service::portage::layman
+  if ! defined(Service::Portage::Tool['layman']) {
+    service::portage::tool{ 'layman': }
   }
 
-  if ! defined(Class['service::portage::webapp_config']) {
-    include service::portage::webapp_config
+  if ! defined(Service::Portage::Tool['webapp_config']) {
+    service::portage::tool{ 'webapp_config': }
   }
 
-  service::portage::make_conf::useflag_group { 'apache': }
+  if ! defined(Service::Portage::Make_conf::Useflag_group['apache']) {
+    service::portage::make_conf::useflag_group { 'apache': }
+  }
 
   layman { 'okupy':
-    require => Portage::Package['app-portage/layman']
+    require => Package['app-portage/layman']
   }
 
   portage::package { 'www-apps/okupy':
