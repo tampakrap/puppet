@@ -15,7 +15,7 @@ class service::puppet::master::hiera (
 
   file { '/etc/puppet/hiera.yaml':
     ensure  => file,
-    content => template('hiera.yaml.erb'),
+    content => template("${module_name}/hiera.yaml.erb"),
     notify  => Service['httpd'],
   }
 
