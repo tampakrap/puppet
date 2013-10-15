@@ -10,6 +10,7 @@ node 'evidence.pebkac.gr' {
 node 'everlast.pebkac.gr' {
   include role::generic
   include webpage::identity
+  include ssh
 }
 
 node 'raekwon.pebkac.gr' {
