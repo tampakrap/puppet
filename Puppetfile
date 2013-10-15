@@ -6,7 +6,7 @@ mod 'puppetlabs/stdlib',  '4.1.0'
 
 # forks
 
-# mod 'adrienthebo/portage'
+# mod 'gentoo/portage'
 mod 'portage',
   :git => 'git://github.com/tampakrap/puppet-portage',
   :ref => 'pebkac'
