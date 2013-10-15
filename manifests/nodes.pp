@@ -12,7 +12,7 @@ node 'everlast.pebkac.gr' {
   include webpage::identity
 
   portage::package { 'app-portage/mirrorselect':
-    ensure   => '9999',
+    ensure   => 'absent',
     target   => 'mirrorselect',
     keywords => '**',
   }
