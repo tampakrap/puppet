@@ -3,7 +3,6 @@ moduledir '/etc/puppet/environments/production/modules-base'
 mod 'puppetlabs/concat',  '1.0.0'
 mod 'puppetlabs/inifile', '1.0.0'
 mod 'puppetlabs/stdlib',  '4.1.0'
-mod 'spiette/ssh',        '0.3.1'
 
 # forks
 
@@ -30,6 +29,11 @@ mod 'apache',
 # mod 'puppetlabs/passenger'
 mod 'passenger',
   :git => 'git://github.com/tampakrap/puppet-passenger',
+  :ref => 'pebkac'
+
+# mod 'spiette/ssh'
+mod 'ssh',
+  :git => 'git://github.com/tampakrap/puppet-ssh',
   :ref => 'pebkac'
 
 # vim: set ai sts=2 et tw=80 sw=2 ft=puppet:
