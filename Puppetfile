@@ -25,11 +25,6 @@ mod 'puppet',
   :git => 'git://github.com/tampakrap/puppet-puppet',
   :ref => 'pebkac'
 
-# mod 'zack/r10k'
-mod 'r10k',
-  :git => 'git://github.com/tampakrap/puppet-r10k',
-  :ref => 'pebkac'
-
 # mod 'puppetlabs/apache'
 mod 'apache',
   :git => 'git://github.com/tampakrap/puppet-apache',
