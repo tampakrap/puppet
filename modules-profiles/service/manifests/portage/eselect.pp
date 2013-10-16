@@ -6,10 +6,12 @@ class service::portage::eselect (
   $gcc,
 ) {
 
-  eselect { 'ruby': set => $ruby }
-  eselect { 'python': set => $python }
-  eselect { 'python::python2': set => $python2 }
-  eselect { 'python::python3': set => $python3 }
-  eselect { 'gcc': set => $gcc }
+  eselect {
+    'ruby': set => $ruby;
+    'python': set => $python;
+    'python::python2': set => $python2;
+    'python::python3': set => $python3;
+    'gcc': set => $gcc;
+  }
 
 }
