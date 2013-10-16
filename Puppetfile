@@ -35,9 +35,4 @@ mod 'passenger',
   :git => 'git://github.com/tampakrap/puppet-passenger',
   :ref => 'pebkac'
 
-# mod 'spiette/ssh'
-mod 'ssh',
-  :git => 'git://github.com/tampakrap/puppet-ssh',
-  :ref => 'pebkac'
-
 # vim: set ai sts=2 et tw=80 sw=2 ft=puppet:
