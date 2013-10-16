@@ -11,7 +11,7 @@ mod 'puppetlabs/stdlib',  '4.1.0'
 # mod 'zack/r10k'
 mod 'r10k',
   :git => 'git://github.com/acidprime/r10k',
-  :ref => '0.0.8'
+  :ref => '67c50b3fe5bd1ecc7a2704395fb6e19ef8674dc6'
 
 ## forks
 
