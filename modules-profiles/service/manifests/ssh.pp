@@ -1,3 +1,3 @@
 class service::ssh {
-  include ssh
+  include ::ssh
 }
