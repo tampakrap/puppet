@@ -116,3 +116,9 @@ service::portage::make_conf::use:
   - 'ldap'
   - 'bash_completion'
   - 'zsh_completion'
+service::ssh::listenaddress:
+  - '%{::ipaddress}'
+  - '%{::ipaddress6}'
+service::ssh::allowusers:
+  - 'tampakrap'
+  - 'tomkap'
