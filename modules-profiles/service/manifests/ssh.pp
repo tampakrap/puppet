@@ -1,6 +1,6 @@
 class service::ssh (
   $port = '22',
-  $addressfamily = 'any'
+  $addressfamily = 'any',
   $listenaddress = '0.0.0.0',
   $hostkey = [
     '/etc/ssh/ssh_host_rsa_key',
@@ -16,7 +16,7 @@ class service::ssh (
   $challengeresponseauthentication = 'no',
   $usepam = 'yes',
   $clientaliveinterval = '30'
-  $clientalivecountmax = '4'
+  $clientalivecountmax = '4',
   $allowusers,
 ) {
   include ::ssh
