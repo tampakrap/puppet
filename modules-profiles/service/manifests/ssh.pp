@@ -11,7 +11,7 @@ class service::ssh (
   $logingracetime = '45',
   $permitrootlogin = 'no',
   $rsaauthentication = 'no',
-  $passwordauthentication = 'no',
+  $passwordauthentication = 'yes',
   $permitemptypasswords = 'no',
   $challengeresponseauthentication = 'no',
   $usepam = 'yes',
