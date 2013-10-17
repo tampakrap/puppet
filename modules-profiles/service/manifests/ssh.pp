@@ -15,7 +15,7 @@ class service::ssh (
   $permitemptypasswords = 'no',
   $challengeresponseauthentication = 'no',
   $usepam = 'yes',
-  $clientaliveinterval = '30'
+  $clientaliveinterval = '30',
   $clientalivecountmax = '4',
   $allowusers,
 ) {
