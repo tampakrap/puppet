@@ -1,7 +1,7 @@
 class service::ssh {
   include ::ssh
 
-  ssh::server_config {
+  ssh::config::server {
     'Port': content => '22';
     'UsePAM': content => 'yes';
   }
