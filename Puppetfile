@@ -13,6 +13,8 @@ mod 'r10k',
   :git => 'git://github.com/acidprime/r10k',
   :ref => '67c50b3fe5bd1ecc7a2704395fb6e19ef8674dc6'
 
+mod 'ssh', :git => 'git://github.com/tampakrap/puppet-ssh'
+
 ## forks
 
 # mod 'gentoo/portage'
