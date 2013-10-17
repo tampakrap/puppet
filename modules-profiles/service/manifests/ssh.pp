@@ -2,7 +2,9 @@ class service::ssh {
   include ::ssh
 
   ssh::config::server {
-    'Port': content => '22';
+    'Port':
+      before  => Ssh::Config::Server['ListenAddress'],
+      content => '22';
     'ListenAddress': content => '178.63.20.213';
     #'ListenAddress': content => '2a01:4f8:141:43c1::213';
     'UsePAM': content => 'yes';
