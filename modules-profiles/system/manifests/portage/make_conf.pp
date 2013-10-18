@@ -3,8 +3,8 @@ class system::portage::make_conf (
   $makeopts       = inline_template("-j<%= @processorcount.to_i+1 %>"),
   $use            = '',
   $features       = '',
-  $ruby_targets   = 'python2_7',
-  $python_targets = 'ruby19',
+  $ruby_targets   = 'ruby19',
+  $python_targets = 'python2_7',
   $portdir        = '/usr/portage',
 ) {
 
