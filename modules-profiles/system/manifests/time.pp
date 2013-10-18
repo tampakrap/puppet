@@ -21,7 +21,7 @@ class system::time (
     notify  => Service['hwclock'],
   }
 
-  if $::is_virtual == true {
+  if $::is_virtual == 'true' {
     $enabled = false
   } else {
     $enabled = true
