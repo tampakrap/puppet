@@ -18,6 +18,19 @@ class system::time (
 
   file { '/etc/conf.d/hwclock':
     content => template('system/hwclock.erb'),
+    notify  => Service['hwclock'],
+  }
+
+  if ! $::is_virtual {
+    $enabled = true
+  } else {
+    $enabled = false
+  }
+
+  service { 'hwclock':
+    name       => '/etc/init.d/hwclock',
+    ensure     => $enabled ? { true => running, false => stopped },
+    enable     => $enabled,
   }
 
 }
