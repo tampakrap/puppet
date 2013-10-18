@@ -3,15 +3,15 @@ class webservice::okupy (
 ) {
 
   if ! defined(Service::Portage::Tool['layman']) {
-    service::portage::tool{ 'layman': }
+    system::portage::tool{ 'layman': }
   }
 
   if ! defined(Service::Portage::Tool['webapp_config']) {
-    service::portage::tool{ 'webapp_config': }
+    system::portage::tool{ 'webapp_config': }
   }
 
   if ! defined(Service::Portage::Make_conf::Useflag_group['apache']) {
-    service::portage::make_conf::useflag_group { 'apache': }
+    system::portage::make_conf::useflag_group { 'apache': }
   }
 
   if $::gentoo_tool_layman and $::gentoo_tool_webapp_config {

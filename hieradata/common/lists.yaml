@@ -63,7 +63,7 @@ apache::default_mods:
   - 'usertrack'
   - 'version'
   - 'vhost_alias'
-service::portage::make_conf::features:
+system::portage::make_conf::features:
   - 'buildpkg'
   - 'candy'
   - 'collision-protect'
@@ -78,7 +78,7 @@ service::portage::make_conf::features:
   - 'strict'
   - '-unmerge-logs'
   - 'userfetch'
-service::portage::make_conf::use:
+system::portage::make_conf::use:
   - '-X'
   - '-gtk'
   - '-gnome'
