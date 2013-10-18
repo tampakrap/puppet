@@ -1,4 +1,4 @@
-class service::facter {
+class service::puppet::facter {
   file { '/etc/facter': ensure => 'directory' }
 
   file { '/etc/facter/facts.d':
