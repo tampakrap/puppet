@@ -28,7 +28,6 @@ class system::time (
   }
 
   service { 'hwclock':
-    name       => '/etc/init.d/hwclock',
     ensure     => $enabled ? { true => running, false => stopped },
     enable     => $enabled,
   }
