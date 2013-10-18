@@ -2,16 +2,10 @@ class webservice::okupy (
   $domain = undef
 ) {
 
-  if ! defined(Service::Portage::Tool['layman']) {
-    system::portage::tool{ 'layman': }
-  }
-
-  if ! defined(Service::Portage::Tool['webapp_config']) {
-    system::portage::tool{ 'webapp_config': }
-  }
-
-  if ! defined(Service::Portage::Make_conf::Useflag_group['apache']) {
-    system::portage::make_conf::useflag_group { 'apache': }
+  service::fact {
+    'gentoo_tool_layman': value => true;
+    'gentoo_tool_webapp_config': value => true;
+    'useflag_group_apache': value => true;
   }
 
   if $::gentoo_tool_layman and $::gentoo_tool_webapp_config {

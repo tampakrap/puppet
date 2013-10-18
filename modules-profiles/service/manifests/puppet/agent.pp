@@ -1,4 +1,11 @@
 class service::puppet::agent {
   include ::puppet::agent
-  include service::puppet::facter
+
+  file { '/etc/facter': ensure => 'directory' }
+
+  file { '/etc/facter/facts.d':
+    ensure  => 'directory',
+    require => File['/etc/facter'],
+  }
+
 }
