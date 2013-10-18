@@ -4,9 +4,9 @@ define service::fact (
   $value    = '',
 ) {
 
-  file { $name:
+  file { "${name}.txt":
     ensure  => $ensure,
-    content => template('service/fact.erb'),
+    content => "${variable}=${value}",
     require => File['/etc/facter/facts.d'],
   }
 
