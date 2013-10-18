@@ -1,6 +1,6 @@
 class system::time (
-  $timezone  = 'UTC'
-  $localtime = 'UTC'
+  $timezone  = 'UTC',
+  $localtime = 'UTC',
 ) {
 
   file { '/etc/localtime':
