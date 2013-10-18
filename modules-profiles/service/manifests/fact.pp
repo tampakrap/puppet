@@ -4,7 +4,7 @@ define service::fact (
   $value    = '',
 ) {
 
-  file { "${name}.txt":
+  file { "/etc/facter/facts.d/${name}.txt":
     ensure  => $ensure,
     content => "${variable}=${value}",
     require => File['/etc/facter/facts.d'],
