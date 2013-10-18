@@ -4,7 +4,7 @@ class system::time (
   $clock         = 'UTC',
   $clock_hctosys = 'NO',
   $clock_systohc = 'NO',
-  $clock_args,
+  $clock_args    = '',
 ) {
 
   file { '/etc/localtime':
