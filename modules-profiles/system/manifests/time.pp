@@ -1,6 +1,10 @@
 class system::time (
-  $timezone  = 'UTC',
-  $localtime = 'UTC',
+  $timezone      = 'UTC',
+  $localtime     = 'UTC',
+  $clock         = 'UTC',
+  $clock_hctosys = 'NO',
+  $clock_systohc = 'NO',
+  $clock_args,
 ) {
 
   file { '/etc/localtime':
@@ -12,6 +16,8 @@ class system::time (
     content => $timezone,
   }
 
-  # TODO: /etc/conf.d/hwclock
+  file { '/etc/conf.d/hwclock':
+    content => template('system/hwclock.erb'),
+  }
 
 }
