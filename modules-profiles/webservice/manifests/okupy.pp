@@ -2,10 +2,16 @@ class webservice::okupy (
   $domain = undef
 ) {
 
-  service::fact {
-    'gentoo_tool_layman': value => true;
-    'gentoo_tool_webapp_config': value => true;
-    'useflag_group_apache': value => true;
+  if ! defined(Service::Fact['gentoo_tool_layman']) {
+    service::fact { 'gentoo_tool_layman': value => true }
+  }
+
+  if ! defined[Service::Fact['gentoo_tool_webapp_config']) {
+    service::fact { 'gentoo_tool_webapp_config': value => true }
+  }
+
+  if ! defined[Service::Fact['useflag_group_apache']) {
+    service::fact { 'useflag_group_apache': value => true }
   }
 
   if $::gentoo_tool_layman and $::gentoo_tool_webapp_config {
