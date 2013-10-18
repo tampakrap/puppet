@@ -1,2 +1,2 @@
 ---
-system::time::systohc: 'YES'
+system::time::clock_systohc: 'YES'
