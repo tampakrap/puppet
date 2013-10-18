@@ -6,11 +6,11 @@ class webservice::okupy (
     service::fact { 'gentoo_tool_layman': value => true }
   }
 
-  if ! defined[Service::Fact['gentoo_tool_webapp_config']) {
+  if ! defined(Service::Fact['gentoo_tool_webapp_config']) {
     service::fact { 'gentoo_tool_webapp_config': value => true }
   }
 
-  if ! defined[Service::Fact['useflag_group_apache']) {
+  if ! defined(Service::Fact['useflag_group_apache']) {
     service::fact { 'useflag_group_apache': value => true }
   }
 
