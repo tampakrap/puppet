@@ -1,6 +1,8 @@
 ---
 system::users::tampakrap:
   uid: 2000
+  groups:
+    - 'wheel'
   ensure: 'present'
 system::users::tomkap:
   uid: 2001
