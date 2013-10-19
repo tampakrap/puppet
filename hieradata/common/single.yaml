@@ -62,5 +62,4 @@ service::puppet::master::hiera::hierarchy:
   - 'gentoo_tool/webapp_config__percent_{::gentoo_tool_webapp_config}'
   - 'common/single'
 service::puppet::master::hiera::merge_behavior: 'deeper'
-service::mail::mydomain: 'pebkac.gr'
 webpage::identity: 'identity.pebkac.gr'

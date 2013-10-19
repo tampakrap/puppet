@@ -4,7 +4,7 @@ class service::mail (
   $daemon_directory  = '/usr/libexec/postfix',
   $data_directory    = '/var/lib/postfix',
   $mail_owner        = 'postfix',
-  $mydomain          = undef,
+  $mydomain          = "$::domain",
   $mydestination     = '$myhostname, localhost.$mydomain, localhost',
   $unknown_local_recipient_reject_code = '550',
   $alias_database    = 'hash:/etc/aliases',
@@ -16,6 +16,7 @@ class service::mail (
   $setgid_group      = 'postdrop',
   $sample_directory  = '/etc/postfix',
   $default_filter_nexthop = '$myhostname',
+  $inet_protocols    = 'ipv4',
 
 ) {
 
@@ -38,6 +39,7 @@ class service::mail (
     'setgid_group': value => $setgid_group;
     'sample_directory': value => $sample_directory;
     'default_filter_nexthop': value => $default_filter_nexthop;
+    'inet_protocols': value => $inet_protocols;
   }
 
 }
