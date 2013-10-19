@@ -6,7 +6,7 @@ class service::mail (
   $mail_owner        = 'postfix',
   $mydomain          = undef,
   $mydestination     = '$myhostname, localhost.$mydomain, localhost',
-  $unkown_local_recipient_reject_code = '550',
+  $unknown_local_recipient_reject_code = '550',
   $alias_database    = 'hash:/etc/aliases',
   $home_mailbox      = '.maildir/',
   $debug_peer_level  = '2',
