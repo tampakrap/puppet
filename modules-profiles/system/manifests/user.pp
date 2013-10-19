@@ -6,6 +6,7 @@ define system::user ( $attrs ) {
     if $attrs[groups] { $groups = $attrs[groups] }
     if $attrs[password] { $password = $attrs[password] }
     if $attrs[ensure] { $ensure = $attrs[ensure] }
+    if $attrs[keys] { $keys = $attrs[keys] }
   }
 
   if ! $groups { $groups = [] }
@@ -19,6 +20,33 @@ define system::user ( $attrs ) {
     managehome => true,
     password   => $password,
     ensure     => $ensure,
+  }
+
+  if $ensure == 'absent' {
+    file { "/home/$name/.ssh":
+      ensure  => absent,
+      purge   => true,
+      recurse => true,
+    }
+  } else {
+    file { "/home/$name/.ssh":
+      ensure  => directory,
+      owner   => $name,
+      group   => $name,
+      mode    => 0600,
+      require => User[$name],
+    }
+
+    file { "/home/$name/.ssh/authorized_keys":
+      content => $keys.join('\n')
+      owner   => $name
+      group   => $name
+      mode    => 0644,
+      require => [
+        File["/home/$name/.ssh"],
+        User[$name],
+      ],
+    }
   }
 
 }
