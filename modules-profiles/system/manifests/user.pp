@@ -6,7 +6,10 @@ define system::user ( $attrs ) {
     if $attrs[groups] { $groups = $attrs[groups] }
     if $attrs[password] { $password = $attrs[password] }
     if $attrs[ensure] { $ensure = $attrs[ensure] }
-    if $attrs[keys] { $keys = inline_template("<%= attrs[keys].join('\n') %>") }
+    if $attrs[keys] {
+      $all_keys = $attrs[keys]
+      $keys = inline_template("<%= all_keys.join('\n') %>")
+    }
   }
 
   if ! $groups { $groups = [] }
