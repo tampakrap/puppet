@@ -7,7 +7,6 @@ class service::mail (
   $mydomain          = undef,
   $mydestination     = '$myhostname, localhost.$mydomain, localhost',
   $unkown_local_recipient_reject_code = '550',
-  $alias_maps        = 'hash:/etc/aliases',
   $alias_database    = 'hash:/etc/aliases',
   $home_mailbox      = '.maildir/',
   $debug_peer_level  = '2',
@@ -30,7 +29,6 @@ class service::mail (
     'mydomain': value => $mydomain;
     'mydestination': value => $mydestination;
     'unknown_local_recipient_reject_code': value => $unknown_local_recipient_reject_code;
-    'alias_maps': value => $alias_maps;
     'alias_database': value => $alias_database;
     'home_mailbox': value => $home_mailbox;
     'debug_peer_level': value => $debug_peer_level;
