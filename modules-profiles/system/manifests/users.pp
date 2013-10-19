@@ -19,9 +19,11 @@ class system::users (
     ]
   }
 
-  system::user { 'dastergon': attrs => $dastergon }
-  system::user { 'skiarxon': attrs => $skiarxon }
-  system::user { 'tampakrap': attrs => $tampakrap }
-  system::user { 'tomkap': attrs => $tomkap }
+  system::user {
+    'dastergon': attrs => $dastergon;
+    'skiarxon': attrs => $skiarxon;
+    'tampakrap': attrs => $tampakrap;
+    'tomkap': attrs => $tomkap;
+  }
 
 }
