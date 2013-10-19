@@ -12,7 +12,7 @@ define system::user ( $attrs ) {
   user { $name:
     uid        => $uid,
     gid        => $gid,
-    groups     => concat([$attrs[name], 'users'], $groups),
+    groups     => concat([$name, 'users'], $groups),
     home       => "/home/$name",
     managehome => true,
     ensure     => $ensure,
