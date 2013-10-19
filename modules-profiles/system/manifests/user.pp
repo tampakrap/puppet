@@ -1,14 +1,22 @@
 define system::user ( $attrs ) {
 
-  if $attrs[uid] { $uid = $attrs[uid] }
-  if $attrs[gid] { $gid = $attrs[gid] }
-  if $attrs[groups] { $groups = $attrs[groups] }
+  if $attrs[groups] {
+    $groups = $attrs[groups]
+  } else {
+    $groups = []
+  }
+
+  if $attrs[ensure] {
+    $ensure = $attrs[ensure]
+  } else {
+    $ensure = 'absent'
+  }
 
   user { $attrs[name]:
-    uid    => $uid,
-    gid    => $gid,
+    uid    => $attrs[uid],
+    gid    => $attrs[gid],
     groups => concat([$attrs[name], 'users'], $groups),
-    ensure => $attrs[ensure],
+    ensure => $ensure,
   }
 
 }
