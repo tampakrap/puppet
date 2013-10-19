@@ -1,5 +1,6 @@
 class service::mail {
 
+  include postfix
   postfix::config {
     'queue_directory': value => '/var/spool/postfix';
     'command_directory': value => '/usr/sbin';
