@@ -1,13 +1,11 @@
 ---
 system::users::tampakrap:
   uid: 2000
-  gid: 2000
+  ensure: 'present'
 system::users::tomkap:
   uid: 2001
-  gid: 2001
+  ensure: 'present'
 system::users::skiarxon:
   uid: 2002
-  gid: 2002
 system::users::dastergon:
   uid: 2003
-  gid: 2003
