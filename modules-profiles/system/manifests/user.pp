@@ -5,11 +5,10 @@ define system::user ( $attrs ) {
     if $attrs[gid] { $gid = $attrs[gid] }
     if $attrs[groups] { $groups = $attrs[groups] }
     if $attrs[ensure] { $ensure = $attrs[ensure] }
-  } else {
-    $ensure = 'absent'
   }
 
   if ! $groups { $groups = [] }
+  if ! $ensure { $ensure = 'absent' }
 
   user { $name:
     uid        => $uid,
