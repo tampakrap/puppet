@@ -5,7 +5,6 @@ class service::mail (
   $data_directory    = '/var/lib/postfix',
   $mail_owner        = 'postfix',
   $mydomain          = undef,
-  $myorigin          = '$mydomain',
   $mydestination     = '$myhostname, localhost.$mydomain, localhost',
   $unkown_local_recipient_reject_code = '550',
   $alias_maps        = 'hash:/etc/aliases',
@@ -29,7 +28,6 @@ class service::mail (
     'data_directory': value => $data_directory;
     'mail_owner': value => $mail_owner;
     'mydomain': value => $mydomain;
-    'myorigin': value => $myorigin;
     'mydestination': value => $mydestination;
     'unknown_local_recipient_reject_code': value => $unknown_local_recipient_reject_code;
     'alias_maps': value => $alias_maps;
