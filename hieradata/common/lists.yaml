@@ -10,6 +10,17 @@ puppet::server::gentoo_use:
   - 'sqlite3'
   - 'vim-syntax'
   - '-xemacs'
+puppet::agent::gentoo_use:
+  - 'augeas'
+  - 'diff'
+  - '-doc'
+  - '-emacs'
+  - 'minimal'
+  - 'rrdtool'
+  - 'shadow'
+  - 'sqlite3'
+  - '-vim-syntax'
+  - '-xemacs'
 apache::default_mods:
   - 'actions'
   - 'alias'
