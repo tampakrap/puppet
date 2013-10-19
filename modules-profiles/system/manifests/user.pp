@@ -9,6 +9,8 @@ define system::user ( $attrs ) {
     $ensure = 'absent'
   }
 
+  if ! $groups { $groups = [] }
+
   user { $name:
     uid        => $uid,
     gid        => $gid,
