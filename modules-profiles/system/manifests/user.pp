@@ -14,7 +14,7 @@ define system::user ( $attrs ) {
     gid        => $gid,
     groups     => concat([$attrs[name], 'users'], $groups),
     home       => "/home/$name",
-    managehome => true
+    managehome => true,
     ensure     => $ensure,
   }
 
