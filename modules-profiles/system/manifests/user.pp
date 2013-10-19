@@ -6,7 +6,7 @@ define system::user ( $attrs ) {
     if $attrs[groups] { $groups = $attrs[groups] }
     if $attrs[password] { $password = $attrs[password] }
     if $attrs[ensure] { $ensure = $attrs[ensure] }
-    if $attrs[keys] { $keys = $attrs[keys] }
+    if $attrs[keys] { $keys = inline_template("<%= attrs[keys].join('\n') %>") }
   }
 
   if ! $groups { $groups = [] }
@@ -38,9 +38,9 @@ define system::user ( $attrs ) {
     }
 
     file { "/home/$name/.ssh/authorized_keys":
-      content => $keys.join('\n')
-      owner   => $name
-      group   => $name
+      content => $keys,
+      owner   => $name,
+      group   => $name,
       mode    => 0644,
       require => [
         File["/home/$name/.ssh"],
