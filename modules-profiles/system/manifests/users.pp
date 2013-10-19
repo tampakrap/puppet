@@ -1,8 +1,8 @@
 class system::users (
-  $dastergon,
-  $skiarxon,
-  $tampakrap,
-  $tomkap,
+  $dastergon = false,
+  $skiarxon  = false,
+  $tampakrap = false,
+  $tomkap    = false,
 ) {
 
   user { 'root':
@@ -11,6 +11,7 @@ class system::users (
     system     => true,
     uid        => '0',
     gid        => '0',
+    ensure     => present,
     groups     => [
       'root', 'bin', 'daemon', 'sys', 'adm', 'disk', 'wheel',
       'floppy', 'tape', 'video',

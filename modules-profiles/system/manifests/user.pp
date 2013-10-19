@@ -5,6 +5,8 @@ define system::user ( $attrs ) {
     if $attrs[gid] { $uid = $attrs[gid] }
     if $attrs[groups] { $groups = $attrs[groups] }
     if $attrs[ensure] { $ensure = $attrs[ensure] }
+  } else {
+    $ensure = 'absent'
   }
 
   user { $name:
