@@ -10,10 +10,12 @@ define system::user ( $attrs ) {
   }
 
   user { $name:
-    uid    => $uid,
-    gid    => $gid,
-    groups => concat([$attrs[name], 'users'], $groups),
-    ensure => $ensure,
+    uid        => $uid,
+    gid        => $gid,
+    groups     => concat([$attrs[name], 'users'], $groups),
+    home       => "/home/$name",
+    managehome => true
+    ensure     => $ensure,
   }
 
 }
