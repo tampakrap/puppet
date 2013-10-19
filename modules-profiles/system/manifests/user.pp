@@ -8,7 +8,7 @@ define system::user ( $attrs ) {
     if $attrs[ensure] { $ensure = $attrs[ensure] }
     if $attrs[keys] {
       $all_keys = $attrs[keys]
-      $keys = inline_template("<%= all_keys.join('\n') %>")
+      $keys = inline_template("<%= all_keys.join('\n') %>\n")
     }
   }
 
