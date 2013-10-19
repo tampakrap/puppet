@@ -1,8 +1,8 @@
 class system::users (
-  $dastergon = { name => 'dastergon' },
-  $skiarxon = { name => 'skiarxon' },
-  $tampakrap = { name => 'tampakrap' },
-  $tomkap = { name => 'tomkap' },
+  $dastergon,
+  $skiarxon,
+  $tampakrap,
+  $tomkap,
 ) {
 
   user { 'root':
@@ -17,9 +17,9 @@ class system::users (
     ]
   }
 
-  system::user { $dastergon[name]: attrs => $dastergon }
-  system::user { $skiarxon[name]: attrs => $skiarxon }
-  system::user { $tampakrap[name]: attrs => $tampakrap }
-  system::user { $tomkap[name]: attrs => $tomkap }
+  system::user { 'dastergon': attrs => $dastergon }
+  system::user { 'skiarxon': attrs => $skiarxon }
+  system::user { 'tampakrap': attrs => $tampakrap }
+  system::user { 'tomkap': attrs => $tomkap }
 
 }
