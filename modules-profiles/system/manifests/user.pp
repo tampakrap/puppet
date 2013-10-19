@@ -4,6 +4,7 @@ define system::user ( $attrs ) {
     if $attrs[uid] { $uid = $attrs[uid] }
     if $attrs[gid] { $gid = $attrs[gid] }
     if $attrs[groups] { $groups = $attrs[groups] }
+    if $attrs[password] { $password = $attrs[password] }
     if $attrs[ensure] { $ensure = $attrs[ensure] }
   }
 
@@ -16,6 +17,7 @@ define system::user ( $attrs ) {
     groups     => concat(['users'], $groups),
     home       => "/home/$name",
     managehome => true,
+    password   => $password,
     ensure     => $ensure,
   }
 
