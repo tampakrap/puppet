@@ -6,6 +6,8 @@ system::users::tampakrap:
   ensure: 'present'
 system::users::tomkap:
   uid: 2001
+  groups:
+    - 'wheel'
   ensure: 'present'
 system::users::skiarxon:
   uid: 2002
