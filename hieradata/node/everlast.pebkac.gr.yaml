@@ -1,0 +1,2 @@
+---
+service::puppet::agent::environment: 'development'
