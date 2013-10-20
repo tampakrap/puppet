@@ -18,6 +18,7 @@ class service::puppet::master (
   file { '/etc/puppet/tagmail.conf':
     content => "all: $tagmail",
     ensure  => present,
+    notify  => Service['httpd'],
   }
 
   # Remove empty directories
