@@ -4,5 +4,5 @@ class role::generic {
   include system::users
   include service::ssh
   include service::puppet::agent
-  include service::mail
+  #include service::mail
 }
