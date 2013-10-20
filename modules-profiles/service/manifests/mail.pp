@@ -17,7 +17,6 @@ class service::mail (
   $sample_directory  = '/etc/postfix',
   $default_filter_nexthop = '$myhostname',
   $inet_protocols    = 'ipv4',
-
 ) {
 
   include postfix
