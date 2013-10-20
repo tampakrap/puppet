@@ -69,4 +69,5 @@ service::puppet::master::hiera::hierarchy:
   - 'common/single'
 service::puppet::master::hiera::merge_behavior: 'deeper'
 service::puppet::master::tagmail: 'tampakrap@gmail.com'
+service::puppet::agent::environment: 'production'
 webpage::identity: 'identity.pebkac.gr'
