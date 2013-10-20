@@ -1,4 +1,6 @@
-class service::puppet::master {
+class service::puppet::master (
+  $tagmail = '',
+) {
 
   include service::puppet::master::r10k
   include service::puppet::master::hiera
@@ -11,6 +13,11 @@ class service::puppet::master {
     ensure  => file,
     content => template("${module_name}/puppet/auth.conf.erb"),
     notify  => Service['httpd'],
+  }
+
+  file { '/etc/puppet/tagmail.conf':
+    content => "all: $tagmail",
+    ensure  => present,
   }
 
   # Remove empty directories
