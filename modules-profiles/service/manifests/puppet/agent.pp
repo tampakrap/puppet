@@ -12,8 +12,4 @@ class service::puppet::agent (
 
   service::fact { 'environment': value => $environment }
 
-  file { '/etc/puppet/._cfg*_puppet.conf':
-    ensure => absent
-  }
-
 }
