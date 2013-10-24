@@ -27,6 +27,7 @@ class service::mail (
     'daemon_directory': value => $daemon_directory;
     'data_directory': value => $data_directory;
     'mail_owner': value => $mail_owner;
+    'myhostname': value => $myhostname;
     'mydomain': value => $mydomain;
     'mydestination': value => $mydestination;
     'unknown_local_recipient_reject_code': value => $unknown_local_recipient_reject_code;
