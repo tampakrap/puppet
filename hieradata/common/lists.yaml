@@ -105,6 +105,7 @@ system::portage::make_conf::use:
   - 'unicode'
   - 'nls'
   - 'ipv6'
+  - 'hardened'
   - 'syslog'
   - 'threads'
   - 'vserver'
