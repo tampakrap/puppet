@@ -4,6 +4,7 @@ class service::mail (
   $daemon_directory  = '/usr/libexec/postfix',
   $data_directory    = '/var/lib/postfix',
   $mail_owner        = 'postfix',
+  $myhostname        = "$::fqdn",
   $mydomain          = "$::domain",
   $mydestination     = '$myhostname, localhost.$mydomain, localhost',
   $unknown_local_recipient_reject_code = '550',
