@@ -1,6 +1,6 @@
 class system::portage::make_conf (
   $cflags,
-  $makeopts = inline_template("<%= @processorcount.to_i+1 %>"),
+  $makeopts = inline_template("-j<%= @processorcount.to_i+1 %>"),
   $use,
   $features,
   $ruby_targets,
