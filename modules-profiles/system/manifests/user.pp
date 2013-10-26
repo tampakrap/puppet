@@ -10,6 +10,7 @@ define system::user ( $attrs ) {
       $all_keys = $attrs[keys]
       $keys = inline_template("<%= @all_keys.join('\n') %>\n")
     }
+    if $attrs[forward] { $forward = $attrs[forward] }
   }
 
   if ! $groups { $groups = [] }
@@ -49,6 +50,14 @@ define system::user ( $attrs ) {
         File["/home/$name/.ssh"],
         User[$name],
       ],
+    }
+
+    file { "/home/$name/.forward":
+      content => $forward,
+      owner   => $name,
+      group   => $name,
+      mode    => 0644,
+      require => User[$name],
     }
   }
 
