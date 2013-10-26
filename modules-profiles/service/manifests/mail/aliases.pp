@@ -1,18 +1,19 @@
 class service::mail::aliases (
-  $aliases_file,
   $root,
 ) {
 
-  include postfix
+  include service::mail::postfix
+
+  $aliases_file = inline_template("<%= @alias_database.split(':')[1] %>")
 
   exec { 'newaliases':
-    command     => '/usr/bin/newaliases',
+    command     => $service::mail::postfix::newaliases_path,
     refreshonly => true,
   }
 
   mailalias { 'root':
     recipient => $root,
-    target    => $postfix::aliases_file,
+    target    => $aliases_file,
     notify    => Exec['newaliases'],
   }
 
