@@ -1,24 +1,21 @@
 class service::ssh (
-  $port = '22',
-  $addressfamily = 'any',
-  $listenaddress = '0.0.0.0',
-  $hostkey = [
-    '/etc/ssh/ssh_host_rsa_key',
-    '/etc/ssh/ssh_host_dsa_key',
-    '/etc/ssh/ssh_host_ecdsa_key',
-  ],
-  $subsystem = 'sftp /usr/lib64/misc/sftp-server',
-  $logingracetime = '45',
-  $permitrootlogin = 'no',
-  $rsaauthentication = 'no',
-  $passwordauthentication = 'yes',
-  $permitemptypasswords = 'no',
-  $challengeresponseauthentication = 'no',
-  $usepam = 'yes',
-  $clientaliveinterval = '30',
-  $clientalivecountmax = '4',
+  $port,
+  $addressfamily,
+  $listenaddress,
+  $hostkey,
+  $subsystem,
+  $logingracetime,
+  $permitrootlogin,
+  $rsaauthentication,
+  $passwordauthentication,
+  $permitemptypasswords,
+  $challengeresponseauthentication,
+  $usepam,
+  $clientaliveinterval,
+  $clientalivecountmax,
   $allowusers,
 ) {
+
   include ::ssh
 
   ssh::config::server {

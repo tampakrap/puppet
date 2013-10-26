@@ -1,5 +1,3 @@
-class webpage::identity (
-  $domain = 'identity',
-) {
-  class { 'webservice::okupy': domain => $domain }
+class webpage::identity {
+  include webservice::okupy
 }

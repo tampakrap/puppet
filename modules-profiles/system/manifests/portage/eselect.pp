@@ -1,10 +1,10 @@
 class system::portage::eselect (
-  $ruby    = 'ruby19',
-  $python  = 'python2.7',
-  $python2 = 'python2.7',
-  $python3 = 'python3.2',
-  $gcc     = 'x86_64-pc-linux-gnu-4.6.3',
-  $profile = "hardened/linux/$::architecture",
+  $ruby,
+  $python,
+  $python2,
+  $python3,
+  $gcc,
+  $profile,
 ) {
 
   eselect {

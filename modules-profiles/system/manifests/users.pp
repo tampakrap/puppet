@@ -1,8 +1,8 @@
 class system::users (
-  $dastergon = false,
-  $skiarxon  = false,
-  $tampakrap = false,
-  $tomkap    = false,
+  $dastergon,
+  $skiarxon,
+  $tampakrap,
+  $tomkap,
 ) {
 
   user { 'root':

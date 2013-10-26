@@ -1,26 +1,27 @@
 class service::mail (
-  $queue_directory   = '/var/spool/postfix',
-  $command_directory = '/usr/sbin',
-  $daemon_directory  = '/usr/libexec/postfix',
-  $data_directory    = '/var/lib/postfix',
-  $mail_owner        = 'postfix',
-  $myhostname        = "$::fqdn",
-  $mydomain          = "$::domain",
-  $mydestination     = '$myhostname, localhost.$mydomain, localhost',
-  $unknown_local_recipient_reject_code = '550',
-  $alias_database    = 'hash:/etc/aliases',
-  $home_mailbox      = '.maildir/',
-  $debug_peer_level  = '2',
-  $sendmail_path     = '/usr/sbin/sendmail',
-  $newaliases_path   = '/usr/bin/newaliases',
-  $mailq_path        = '/usr/bin/mailq',
-  $setgid_group      = 'postdrop',
-  $sample_directory  = '/etc/postfix',
-  $default_filter_nexthop = '$myhostname',
-  $inet_protocols    = 'ipv4',
+  $queue_directory,
+  $command_directory,
+  $daemon_directory,
+  $data_directory,
+  $mail_owner,
+  $myhostname,
+  $mydomain,
+  $mydestination,
+  $unknown_local_recipient_reject_code,
+  $alias_database,
+  $home_mailbox,
+  $debug_peer_level,
+  $sendmail_path,
+  $newaliases_path,
+  $mailq_path,
+  $setgid_group,
+  $sample_directory,
+  $default_filter_nexthop,
+  $inet_protocols,
 ) {
 
   include postfix
+
   postfix::config {
     'queue_directory': value => $queue_directory;
     'command_directory': value => $command_directory;

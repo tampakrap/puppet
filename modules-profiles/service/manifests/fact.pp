@@ -1,6 +1,6 @@
 define service::fact (
-  $ensure   = 'present',
-  $value    = '',
+  $ensure = 'present',
+  $value,
 ) {
 
   file { "/etc/facter/facts.d/${name}.txt":

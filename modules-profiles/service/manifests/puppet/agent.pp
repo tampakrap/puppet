@@ -1,5 +1,5 @@
 class service::puppet::agent (
-  $environment = 'production',
+  $environment,
 ) {
   include ::puppet::agent
 

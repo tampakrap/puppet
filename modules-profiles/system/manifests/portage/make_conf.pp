@@ -1,11 +1,11 @@
 class system::portage::make_conf (
-  $cflags         = '-O2 -pipe',
-  $makeopts       = inline_template("-j<%= @processorcount.to_i+1 %>"),
-  $use            = '',
-  $features       = '',
-  $ruby_targets   = 'ruby19',
-  $python_targets = 'python2_7',
-  $portdir        = '/usr/portage',
+  $cflags,
+  $makeopts,
+  $use,
+  $features,
+  $ruby_targets,
+  $python_targets,
+  $portdir,
 ) {
 
   # TODO:

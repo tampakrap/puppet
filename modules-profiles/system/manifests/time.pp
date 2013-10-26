@@ -1,10 +1,10 @@
 class system::time (
-  $timezone      = 'UTC',
-  $localtime     = 'UTC',
-  $clock         = 'UTC',
-  $clock_hctosys = 'NO',
-  $clock_systohc = 'NO',
-  $clock_args    = [],
+  $timezone,
+  $localtime,
+  $clock,
+  $clock_hctosys,
+  $clock_systohc,
+  $clock_args,
 ) {
 
   file { '/etc/localtime':

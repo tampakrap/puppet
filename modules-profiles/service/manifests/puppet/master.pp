@@ -1,5 +1,5 @@
 class service::puppet::master (
-  $tagmail = '',
+  $tagmail,
 ) {
 
   include service::puppet::master::r10k
@@ -15,10 +15,12 @@ class service::puppet::master (
     notify  => Service['httpd'],
   }
 
-  file { '/etc/puppet/tagmail.conf':
-    content => "all: $tagmail",
-    ensure  => present,
-    notify  => Service['httpd'],
+  if $tagmail {
+    file { '/etc/puppet/tagmail.conf':
+      content => "all: $tagmail",
+      ensure  => present,
+      notify  => Service['httpd'],
+    }
   }
 
   # Remove empty directories

@@ -1,5 +1,5 @@
 class webservice::okupy (
-  $domain = undef
+  $domain,
 ) {
 
   include system::portage::layman
