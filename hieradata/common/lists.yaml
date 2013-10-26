@@ -75,7 +75,7 @@ apache::default_mods:
   - 'version'
   - 'vhost_alias'
 system::portage::make_conf::cflags:
-  - '-02'
+  - '-O2'
   - '-pipe'
 system::portage::make_conf::features:
   - 'buildpkg'
