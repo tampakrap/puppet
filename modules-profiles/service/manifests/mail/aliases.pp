@@ -2,8 +2,7 @@ class service::mail::aliases (
   $root,
 ) {
 
-  include service::mail::postfix
-
+  $alias_database = $service::mail::aliases::alias_database
   $aliases_file = inline_template("<%= @alias_database.split(':')[1] %>")
 
   exec { 'newaliases':
