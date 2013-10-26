@@ -131,6 +131,9 @@ system::portage::make_conf::use:
   - 'ldap'
   - 'bash_completion'
   - 'zsh_completion'
+service::mail::aliases::root:
+  - 'tampakrap'
+  - 'tomkap'
 service::ssh::listenaddress:
   - '%{::ipaddress}'
 service::ssh::allowusers:
