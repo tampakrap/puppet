@@ -1,4 +1,4 @@
-moduledir '/etc/puppet/environments/development/modules-base'
+moduledir "/etc/puppet/environments/$environment/modules-base"
 
 ## forge
 
