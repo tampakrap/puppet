@@ -7,6 +7,7 @@ class service::mail (
   $myhostname,
   $mydomain,
   $mydestination,
+  $myorigin,
   $unknown_local_recipient_reject_code,
   $alias_database,
   $home_mailbox,
@@ -17,31 +18,34 @@ class service::mail (
   $setgid_group,
   $sample_directory,
   $default_filter_nexthop,
+  $inet_interfaces,
   $inet_protocols,
 ) {
 
   include postfix
 
-  postfix::config {
-    'queue_directory': value => $queue_directory;
-    'command_directory': value => $command_directory;
-    'daemon_directory': value => $daemon_directory;
-    'data_directory': value => $data_directory;
-    'mail_owner': value => $mail_owner;
-    'myhostname': value => $myhostname;
-    'mydomain': value => $mydomain;
-    'mydestination': value => $mydestination;
-    'unknown_local_recipient_reject_code': value => $unknown_local_recipient_reject_code;
-    'alias_database': value => $alias_database;
-    'home_mailbox': value => $home_mailbox;
-    'debug_peer_level': value => $debug_peer_level;
-    'sendmail_path': value => $sendmail_path;
-    'newaliases_path': value => $newaliases_path;
-    'mailq_path': value => $mailq_path;
-    'setgid_group': value => $setgid_group;
-    'sample_directory': value => $sample_directory;
-    'default_filter_nexthop': value => $default_filter_nexthop;
-    'inet_protocols': value => $inet_protocols;
+  postfix::mailcf {
+    'queue_directory': content => $queue_directory;
+    'command_directory': content => $command_directory;
+    'daemon_directory': content => $daemon_directory;
+    'data_directory': content => $data_directory;
+    'mail_owner': content => $mail_owner;
+    'myhostname': content => $myhostname;
+    'mydomain': content => $mydomain;
+    'mydestination': content => $mydestination;
+    'myorigin': content => $myorigin;
+    'unknown_local_recipient_reject_code': content => $unknown_local_recipient_reject_code;
+    'alias_database': content => $alias_database;
+    'home_mailbox': content => $home_mailbox;
+    'debug_peer_level': content => $debug_peer_level;
+    'sendmail_path': content => $sendmail_path;
+    'newaliases_path': content => $newaliases_path;
+    'mailq_path': content => $mailq_path;
+    'setgid_group': content => $setgid_group;
+    'sample_directory': content => $sample_directory;
+    'default_filter_nexthop': content => $default_filter_nexthop;
+    'inet_interfaces': content => $inet_interfaces;
+    'inet_protocols': content => $inet_protocols;
   }
 
 }

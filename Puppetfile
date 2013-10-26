@@ -8,12 +8,13 @@ mod 'puppetlabs/stdlib',  '4.1.0'
 
 ## not in forge
 
+mod 'ssh',     :git => 'git://github.com/tampakrap/puppet-ssh'
+mod 'postfix', :git => 'git://github.com/tampakrap/puppet-postfix'
+
 # mod 'zack/r10k'
 mod 'r10k',
   :git => 'git://github.com/acidprime/r10k',
   :ref => '67c50b3fe5bd1ecc7a2704395fb6e19ef8674dc6'
-
-mod 'ssh', :git => 'git://github.com/tampakrap/puppet-ssh'
 
 ## forks
 
@@ -35,12 +36,6 @@ mod 'apache',
 # mod 'puppetlabs/passenger'
 mod 'passenger',
   :git => 'git://github.com/tampakrap/puppet-passenger',
-  :ref => 'pebkac'
-
-
-# mod 'camptocamp/postfix'
-mod 'postfix',
-  :git => 'git://github.com/tampakrap/puppet-postfix',
   :ref => 'pebkac'
 
 # vim: set ai sts=2 et tw=80 sw=2 ft=puppet:
