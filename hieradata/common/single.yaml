@@ -93,7 +93,6 @@ service::mail::default_filter_nexthop: '$myhostname'
 service::mail::inet_protocols: 'ipv4'
 service::ssh::port: '22'
 service::ssh::addressfamily: 'any'
-service::ssh::listenaddress: '0.0.0.0'
 service::ssh::hostkey:
   - '/etc/ssh/ssh_host_rsa_key'
   - '/etc/ssh/ssh_host_dsa_key'
