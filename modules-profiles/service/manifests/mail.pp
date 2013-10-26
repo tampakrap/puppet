@@ -24,7 +24,7 @@ class service::mail (
 
   include postfix
 
-  postfix::mailcf {
+  postfix::maincf {
     'queue_directory': content => $queue_directory;
     'command_directory': content => $command_directory;
     'daemon_directory': content => $daemon_directory;
