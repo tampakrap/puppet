@@ -66,7 +66,7 @@ service::puppet::master::hiera::hierarchy:
   - 'gentoo_tool/webapp_config__percent_{::gentoo_tool_webapp_config}'
   - 'common/single'
 service::puppet::master::hiera::merge_behavior: 'deeper'
-service::puppet::master::tagmail: 'tampakrap@gmail.com'
+service::puppet::master::tagmail: 'root@%{::fqdn}'
 service::puppet::agent::environment: 'production'
 service::mail::postfix::queue_directory: '/var/spool/postfix'
 service::mail::postfix::command_directory: '/usr/sbin'
