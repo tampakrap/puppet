@@ -4,7 +4,7 @@ class system::time (
   $clock,
   $clock_hctosys,
   $clock_systohc,
-  $clock_args,
+  $clock_args = [],
 ) {
 
   file { '/etc/localtime':
@@ -28,8 +28,8 @@ class system::time (
   }
 
   service { 'hwclock':
-    ensure     => $enabled ? { true => running, false => stopped },
-    enable     => $enabled,
+    ensure => $enabled ? { true => running, false => stopped },
+    enable => $enabled,
   }
 
 }
