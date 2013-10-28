@@ -1,4 +1,4 @@
-class system::portage::eix {
+class system::portage::sync {
 
   if $::virtual == 'vserver' {
     $command = '/usr/bin/layman -S && /usr/bin/eix-update'
