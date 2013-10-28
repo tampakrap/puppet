@@ -1,4 +1,14 @@
 ---
 service::ssh::allowusers:
-  - 'mgorny'
   - 'dastergon'
+  - 'differentreality'
+  - 'mgorny'
+  - 'miska'
+system::users::dastergon:
+  ensure: 'present'
+system::users::differentreality:
+  ensure: 'present'
+system::users::mgorny:
+  ensure: 'present'
+system::users::miska:
+  ensure: 'present'
