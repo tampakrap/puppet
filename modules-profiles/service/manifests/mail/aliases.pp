@@ -44,7 +44,6 @@ class service::mail::aliases (
     recipient => 'root',
     target    => $aliases_file,
     notify    => Exec['newaliases'],
-    ensure    => absent,
   }
 
   mailalias { [
@@ -59,7 +58,7 @@ class service::mail::aliases (
   }
 
   mailalias { 'decode':
-    recipient => '/dev/null',
+    recipient => /dev/null,
     target    => $aliases_file,
     notify    => Exec['newaliases'],
   }
