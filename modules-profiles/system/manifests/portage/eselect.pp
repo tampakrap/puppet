@@ -5,6 +5,7 @@ class system::portage::eselect (
   $python3,
   $gcc,
   $profile,
+  $timezone,
 ) {
 
   eselect {
@@ -14,6 +15,7 @@ class system::portage::eselect (
     'python::python3': set => $python3;
     'gcc': set => $gcc;
     'profile': set => $profile;
+    'timezone': set => $timezone;
   }
 
 }
