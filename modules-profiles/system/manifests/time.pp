@@ -5,6 +5,7 @@ class system::time (
   $clock_hctosys,
   $clock_systohc,
   $clock_args = [],
+  $timezone_data_ensure,
 ) {
 
   file { '/etc/localtime':
@@ -31,5 +32,7 @@ class system::time (
     ensure => $enabled ? { true => running, false => stopped },
     enable => $enabled,
   }
+
+  package { 'sys-libs/timezone-data': ensure => $timezone_data_ensure }
 
 }
