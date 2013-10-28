@@ -10,8 +10,56 @@ class service::mail::aliases (
     refreshonly => true,
   }
 
+  if $::relayhost {
+    $root_recipient = $root
+  } else {
+    $root_recipient = "root@eyedea.$::domain"
+  }
+
   mailalias { 'root':
-    recipient => $root,
+    recipient => $root_recipient,
+    target    => $aliases_file,
+    notify    => Exec['newaliases'],
+  }
+
+  mailalias { [
+    'postmaster',
+    'adm',
+    'bin',
+    'daemon',
+    'exim',
+    'lp',
+    'mail',
+    'named',
+    'nobody',
+    'postfix',
+    'ftp',
+    'hostmaster',
+    'noc',
+    'security',
+    'usenet',
+    'uucp',
+    'webmaster',
+  ]:
+    recipient => 'root',
+    target    => $aliases_file,
+    notify    => Exec['newaliases'],
+    ensure    => absent,
+  }
+
+  mailalias { [
+    'MAILER-DAEMON',
+    'abuse',
+    'news',
+    'www',
+  ]:
+    recipient => 'postmaster',
+    target    => $aliases_file,
+    notify    => Exec['newaliases'],
+  }
+
+  mailalias { 'decode':
+    recipient => '/dev/null',
     target    => $aliases_file,
     notify    => Exec['newaliases'],
   }
