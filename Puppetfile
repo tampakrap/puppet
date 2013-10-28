@@ -5,6 +5,7 @@ moduledir '/etc/puppet/environments/production/modules-base'
 mod 'puppetlabs/concat',  '1.0.0'
 mod 'puppetlabs/inifile', '1.0.0'
 mod 'puppetlabs/stdlib',  '4.1.0'
+mod 'puppetlabs/ntp',     '3.0.0-rc1'
 
 ## not in forge
 

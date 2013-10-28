@@ -38,4 +38,6 @@ class system::time (
 
   package { 'sys-libs/timezone-data': ensure => $timezone_data_ensure }
 
+  include ntp
+
 }
