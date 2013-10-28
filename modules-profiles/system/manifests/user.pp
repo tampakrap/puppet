@@ -42,7 +42,7 @@ define system::user ( $attrs ) {
     }
 
     file { "/home/$name/.ssh/authorized_keys":
-      content => $keys,
+      content => "# managed by puppet\n\n$keys\n",
       owner   => $name,
       group   => $name,
       mode    => 0644,
@@ -53,7 +53,7 @@ define system::user ( $attrs ) {
     }
 
     file { "/home/$name/.forward":
-      content => $forward,
+      content => "# managed by puppet\n\n$forward\n",
       owner   => $name,
       group   => $name,
       mode    => 0644,
