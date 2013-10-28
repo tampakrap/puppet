@@ -132,7 +132,7 @@ system::portage::make_conf::use:
   - 'bash_completion'
   - 'zsh_completion'
 service::mail::aliases::root:
-  - 'tampakrap'
+  - 'tampakrap@eyedea.pebkac.gr'
   - 'tomkap'
 service::ssh::listenaddress:
   - '%{::ipaddress}'
