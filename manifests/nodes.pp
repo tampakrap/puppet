@@ -5,6 +5,7 @@ node 'eyedea.pebkac.gr' {
 }
 
 node 'evidence.pebkac.gr' {
+  include role::generic
 }
 
 node 'everlast.pebkac.gr' {
