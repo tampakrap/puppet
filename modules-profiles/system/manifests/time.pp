@@ -5,8 +5,6 @@ class system::time (
   $clock_systohc,
   $clock_args = [],
   $timezone_data_ensure,
-  $eselect_timezone_keywords,
-  $eselect_timezone_ensure,
 ) {
 
   package { 'sys-libs/timezone-data':
@@ -36,15 +34,10 @@ class system::time (
     enable => $enabled,
   }
 
-  portage::package { 'app-admin/eselect-timezone':
-    keywords => $eselect_timezone_keywords,
-    ensure   => $eselect_timezone_ensure,
-    before   => Eselect['timezone'],
-  }
-
   service { 'ntp-client':
-    ensure => 'running',
-    enable => true,
+    require => Class['ntp'],
+    ensure  => 'running',
+    enable  => true,
   }
 
 }
