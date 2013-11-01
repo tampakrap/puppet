@@ -9,6 +9,11 @@ class system::time (
   $eselect_timezone_ensure,
 ) {
 
+  package { 'sys-libs/timezone-data':
+    before => File['/etc/localtime'],
+    ensure => $timezone_data_ensure,
+  }
+
   file { '/etc/localtime':
     target => "/usr/share/zoneinfo/$localtime",
     ensure => 'link',
@@ -36,8 +41,6 @@ class system::time (
     ensure   => $eselect_timezone_ensure,
     before   => Eselect['timezone'],
   }
-
-  package { 'sys-libs/timezone-data': ensure => $timezone_data_ensure }
 
   service { 'ntp-client':
     ensure => 'running',
