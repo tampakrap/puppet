@@ -6,6 +6,7 @@ mod 'puppetlabs/concat',  '1.0.0'
 mod 'puppetlabs/inifile', '1.0.0'
 mod 'puppetlabs/stdlib',  '4.1.0'
 mod 'puppetlabs/ntp',     '3.0.0-rc1'
+mod 'gentoo/portage',     '2.1.0'
 
 ## not in forge
 
@@ -18,11 +19,6 @@ mod 'r10k',
   :ref => '67c50b3fe5bd1ecc7a2704395fb6e19ef8674dc6'
 
 ## forks
-
-# mod 'gentoo/portage'
-mod 'portage',
-  :git => 'git://github.com/tampakrap/puppet-portage',
-  :ref => 'pebkac'
 
 # mod 'ploperations/puppet'
 mod 'puppet',
