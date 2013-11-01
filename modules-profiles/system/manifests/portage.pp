@@ -4,8 +4,6 @@ class system::portage (
   $portage_utils_ensure,
   $eselect_ruby_ensure,
   $eselect_python_ensure,
-  $eselect_timezone_keywords,
-  $eselect_timezone_ensure,
   $gcc_config_ensure,
 ) {
 
