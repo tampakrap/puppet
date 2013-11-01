@@ -7,6 +7,8 @@ class system::time (
   $timezone_data_ensure,
 ) {
 
+  include ntp
+
   package { 'sys-libs/timezone-data':
     before => File['/etc/localtime'],
     ensure => $timezone_data_ensure,
@@ -23,7 +25,6 @@ class system::time (
   }
 
   if $::is_virtual == 'true' {
-    include ntp
     $enabled = false
   } else {
     $enabled = true
