@@ -20,6 +20,7 @@ class system::time (
   }
 
   if $::is_virtual == 'true' {
+    include ntp
     $enabled = false
   } else {
     $enabled = true
@@ -38,6 +39,9 @@ class system::time (
 
   package { 'sys-libs/timezone-data': ensure => $timezone_data_ensure }
 
-  include ntp
+  service { 'ntp-client':
+    ensure => 'running',
+    enable => true,
+  }
 
 }
