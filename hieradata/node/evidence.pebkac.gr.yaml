@@ -12,3 +12,5 @@ system::users::mgorny:
   ensure: 'present'
 system::users::miska:
   ensure: 'present'
+system::users::skiarxon:
+  ensure: 'present'
