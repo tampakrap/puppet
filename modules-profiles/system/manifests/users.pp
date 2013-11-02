@@ -40,30 +40,30 @@ class system::users (
   }
 
   system::user {
-    'amy': attrs => $amy;
-    'atma': attrs => $atma;
-    'dastergon': attrs => $dastergon;
-    'differentreality': attrs => $differentreality;
-    'etern4l': attrs => $etern4l;
-    'feedward': attrs => $feedward;
-    'hwoarang': attrs => $hwoarang;
-    'kokeroulis': attrs => $kokeroulis;
-    'liquidxd': attrs => $liquidxd;
-    'lourdas_v': attrs => $lourdas_v;
-    'mgorny': attrs => $mgorny;
-    'miska': attrs => $miska;
-    'moloch': attrs => $moloch;
-    'nikhatzi': attrs => $nikhatzi;
-    'parapente': attrs => $parapente;
-    'pktoss': attrs => $pktoss;
-    'psomas': attrs => $psomas;
-    'pvidalis': attrs => $pvidalis;
-    'skiarxon': attrs => $skiarxon;
-    'tampakrap': attrs => $tampakrap;
-    'tomkap': attrs => $tomkap;
-    'tzorvas': attrs => $tzorvas;
-    'wired': attrs => $wired;
-    'yz250': attrs => $yz250;
+    'amy': attrs => hiera_array(system::users::amy);
+    'atma': attrs => hiera_array(system::users::atma);
+    'dastergon': attrs => hiera_array(system::users::dastergon);
+    'differentreality': attrs => hiera_array(system::users::differentreality);
+    'etern4l': attrs => hiera_array(system::users::etern4l);
+    'feedward': attrs => hiera_array(system::users::feedward);
+    'hwoarang': attrs => hiera_array(system::users::hwoarang);
+    'kokeroulis': attrs => hiera_array(system::users::kokeroulis);
+    'liquidxd': attrs => hiera_array(system::users::liquidxd);
+    'lourdas_v': attrs => hiera_array(system::users::lourdas_v);
+    'mgorny': attrs => hiera_array(system::users::mgorny);
+    'miska': attrs => hiera_array(system::users::miska);
+    'moloch': attrs => hiera_array(system::users::moloch);
+    'nikhatzi': attrs => hiera_array(system::users::nikhatzi);
+    'parapente': attrs => hiera_array(system::users::parapente);
+    'pktoss': attrs => hiera_array(system::users::pktoss);
+    'psomas': attrs => hiera_array(system::users::psomas);
+    'pvidalis': attrs => hiera_array(system::users::pvidalis);
+    'skiarxon': attrs => hiera_array(system::users::skiarxon);
+    'tampakrap': attrs => hiera_array(system::users::tampakrap);
+    'tomkap': attrs => hiera_array(system::users::tomkap);
+    'tzorvas': attrs => hiera_array(system::users::tzorvas);
+    'wired': attrs => hiera_array(system::users::wired);
+    'yz250': attrs => hiera_array(system::users::yz250);
   }
 
 }
