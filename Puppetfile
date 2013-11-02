@@ -7,6 +7,7 @@ mod 'puppetlabs/inifile', '1.0.0'
 mod 'puppetlabs/stdlib',  '4.1.0'
 mod 'puppetlabs/ntp',     '3.0.0-rc1'
 mod 'gentoo/portage',     '2.1.0'
+mod 'rodjek/logrotate',   '1.1.1'
 
 ## not in forge
 
