@@ -59,7 +59,6 @@ service::puppet::master::hiera::backends:
 service::puppet::master::hiera::datadir: '/etc/puppet/environments/_percent_{::environment}/hieradata'
 service::puppet::master::hiera::hierarchy:
   - 'common/lists'
-  - 'common/hash'
   - 'node/_percent_{::fqdn}'
   - 'architecture/_percent_{::architecture}'
   - 'virtual/_percent_{::virtual}'
@@ -67,6 +66,7 @@ service::puppet::master::hiera::hierarchy:
   - 'makeconf/use_apache__percent_{::useflag_group_apache}'
   - 'gentoo_tool/layman__percent_{::gentoo_tool_layman}'
   - 'gentoo_tool/webapp_config__percent_{::gentoo_tool_webapp_config}'
+  - 'common/hash'
   - 'common/single'
 service::puppet::master::hiera::merge_behavior: 'deeper'
 service::puppet::master::tagmail: 'root@%{::fqdn}'
