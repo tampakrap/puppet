@@ -6,6 +6,7 @@ class system::portage::eselect (
   $gcc,
   $profile,
   $timezone,
+  $locale,
 ) {
 
   eselect {
@@ -16,6 +17,7 @@ class system::portage::eselect (
     'gcc': set => $gcc;
     'profile': set => $profile;
     'timezone': set => $timezone;
+    'locale': set => $locale;
   }
 
 }

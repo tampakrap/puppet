@@ -131,6 +131,9 @@ system::portage::make_conf::use:
   - 'ldap'
   - 'bash_completion'
   - 'zsh_completion'
+system::locale::locale_gen:
+  - 'en_US ISO-8859-1'
+  - 'en_US.UTF-8 UTF-8'
 service::mail::aliases::root:
   - 'tampakrap@eyedea.pebkac.gr'
   - 'tomkap'
