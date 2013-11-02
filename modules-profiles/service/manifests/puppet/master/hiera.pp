@@ -10,7 +10,7 @@ class service::puppet::master::hiera (
   portage::package { 'dev-ruby/deep_merge':
     keywords => ['~amd64', '~x86'],
     target   => 'puppet',
-    ensure   => '1.0.0',
+    ensure   => '1.0.0-r1',
   }
 
   file { '/etc/puppet/hiera.yaml':
