@@ -40,30 +40,30 @@ class system::users (
   }
 
   system::user {
-    'amy': attrs => hiera_array(system::users::amy);
-    'atma': attrs => hiera_array(system::users::atma);
-    'dastergon': attrs => hiera_array(system::users::dastergon);
-    'differentreality': attrs => hiera_array(system::users::differentreality);
-    'etern4l': attrs => hiera_array(system::users::etern4l);
-    'feedward': attrs => hiera_array(system::users::feedward);
-    'hwoarang': attrs => hiera_array(system::users::hwoarang);
-    'kokeroulis': attrs => hiera_array(system::users::kokeroulis);
-    'liquidxd': attrs => hiera_array(system::users::liquidxd);
-    'lourdas_v': attrs => hiera_array(system::users::lourdas_v);
-    'mgorny': attrs => hiera_array(system::users::mgorny);
-    'miska': attrs => hiera_array(system::users::miska);
-    'moloch': attrs => hiera_array(system::users::moloch);
-    'nikhatzi': attrs => hiera_array(system::users::nikhatzi);
-    'parapente': attrs => hiera_array(system::users::parapente);
-    'pktoss': attrs => hiera_array(system::users::pktoss);
-    'psomas': attrs => hiera_array(system::users::psomas);
-    'pvidalis': attrs => hiera_array(system::users::pvidalis);
-    'skiarxon': attrs => hiera_array(system::users::skiarxon);
-    'tampakrap': attrs => hiera_array(system::users::tampakrap);
-    'tomkap': attrs => hiera_array(system::users::tomkap);
-    'tzorvas': attrs => hiera_array(system::users::tzorvas);
-    'wired': attrs => hiera_array(system::users::wired);
-    'yz250': attrs => hiera_array(system::users::yz250);
+    'amy': attrs => hiera_hash(system::users::amy);
+    'atma': attrs => hiera_hash(system::users::atma);
+    'dastergon': attrs => hiera_hash(system::users::dastergon);
+    'differentreality': attrs => hiera_hash(system::users::differentreality);
+    'etern4l': attrs => hiera_hash(system::users::etern4l);
+    'feedward': attrs => hiera_hash(system::users::feedward);
+    'hwoarang': attrs => hiera_hash(system::users::hwoarang);
+    'kokeroulis': attrs => hiera_hash(system::users::kokeroulis);
+    'liquidxd': attrs => hiera_hash(system::users::liquidxd);
+    'lourdas_v': attrs => hiera_hash(system::users::lourdas_v);
+    'mgorny': attrs => hiera_hash(system::users::mgorny);
+    'miska': attrs => hiera_hash(system::users::miska);
+    'moloch': attrs => hiera_hash(system::users::moloch);
+    'nikhatzi': attrs => hiera_hash(system::users::nikhatzi);
+    'parapente': attrs => hiera_hash(system::users::parapente);
+    'pktoss': attrs => hiera_hash(system::users::pktoss);
+    'psomas': attrs => hiera_hash(system::users::psomas);
+    'pvidalis': attrs => hiera_hash(system::users::pvidalis);
+    'skiarxon': attrs => hiera_hash(system::users::skiarxon);
+    'tampakrap': attrs => hiera_hash(system::users::tampakrap);
+    'tomkap': attrs => hiera_hash(system::users::tomkap);
+    'tzorvas': attrs => hiera_hash(system::users::tzorvas);
+    'wired': attrs => hiera_hash(system::users::wired);
+    'yz250': attrs => hiera_hash(system::users::yz250);
   }
 
 }
