@@ -19,8 +19,9 @@ class system::portage (
     'app-portage/gentoolkit-dev': ensure => $gentoolkit_dev_ensure;
     'app-portage/portage-utils': ensure => $portage_utils_ensure;
     'app-admin/eselect-ruby':
-      before => Eselect['ruby'],
-      ensure => $eselect_ruby_ensure;
+      before  => Eselect['ruby'],
+      require => Package['dev-lang/ruby'],
+      ensure  => $eselect_ruby_ensure;
     'app-admin/eselect-python':
       before => Eselect['python'],
       ensure => $eselect_python_ensure;

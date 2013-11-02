@@ -3,6 +3,7 @@ class role::generic {
   include system::portage
   include system::users
   include system::locale
+  include system::language
   include service::cron
   include service::ssh
   include service::puppet::agent
