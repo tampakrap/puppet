@@ -5,7 +5,7 @@ class system::locale (
 ) {
 
   file { '/etc/locale.gen':
-    content => inline_template('<%= @locales.join("\n") + "\n" %>'),
+    content => inline_template('<%= @locale_gen.join("\n") + "\n" %>'),
   }
 
   file { '/etc/env.d/02locale':
