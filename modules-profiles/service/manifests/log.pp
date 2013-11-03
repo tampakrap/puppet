@@ -7,6 +7,13 @@ class service::log (
 
   if defined(package['httpd']) {
     package { 'app-admin/cronolog': ensure => $cronolog_ensure }
+
+    logrotate::rule { 'apache2':
+      path          => '/var/log/apache2/*.log',
+      postrotate    => '/etc/init.d/apache2 reload > /dev/null 2>&1 || true',
+      missingok     => true,
+      sharedscripts => true,
+    }
   }
 
   package { 'app-admin/syslog-ng': ensure => $syslog_ng_ensure }
