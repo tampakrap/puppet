@@ -19,4 +19,11 @@ class service::log (
 
   package { 'app-admin/syslog-ng': ensure => $syslog_ng_ensure }
 
+  file { [
+    '/etc/cron.daily/logrotate',
+    '/etc/cron.hourly/logrotate',
+  ]:
+    ensure => absent
+  }
+
 }
