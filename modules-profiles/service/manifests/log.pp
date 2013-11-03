@@ -13,6 +13,7 @@ class service::log (
       postrotate    => '/etc/init.d/apache2 reload > /dev/null 2>&1 || true',
       missingok     => true,
       sharedscripts => true,
+      ifempty       => false,
     }
   }
 
