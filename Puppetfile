@@ -41,7 +41,7 @@ mod 'ruby',
   :ref => 'gentoo_wip'
 
 # mod 'rodjek/logrotate'
-mod 'logrotate'
+mod 'logrotate',
   :git => 'git://github.com/tampakrap/puppet-logrotate',
   :ref => 'tampakrap'
 
