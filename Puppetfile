@@ -43,6 +43,6 @@ mod 'ruby',
 # mod 'rodjek/logrotate'
 mod 'logrotate',
   :git => 'git://github.com/tampakrap/puppet-logrotate',
-  :ref => 'tampakrap'
+  :ref => 'pebkac'
 
 # vim: set ai sts=2 et tw=80 sw=2 ft=puppet:
