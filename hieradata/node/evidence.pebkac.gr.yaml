@@ -4,6 +4,7 @@ service::ssh::allowusers:
   - 'differentreality'
   - 'mgorny'
   - 'miska'
+  - 'skiarxon'
 system::users::dastergon:
   ensure: 'present'
 system::users::differentreality:
