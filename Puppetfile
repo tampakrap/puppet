@@ -33,8 +33,8 @@ mod 'apache',
 
 # mod 'puppetlabs/passenger'
 mod 'passenger',
-  :git => 'git://github.com/tampakrap/puppet-passenger',
-  :ref => 'pebkac'
+  :git => 'git://github.com/gentoo/puppet-passenger',
+  :ref => 'gentoo_wip'
 
 # mod 'puppetlabs/ruby'
 mod 'ruby',
