@@ -18,6 +18,16 @@ class service::log (
     }
   }
 
+  logrotate::rule { 'elog-save-summary':
+    path          => '/var/log/portage/elog/summary.log',
+    missingok     => true,
+    create        => false,
+    delaycompress => true,
+    su            => true,
+    su_owner      => 'portage',
+    su_group      => 'portage',
+  }
+
   package { 'app-admin/syslog-ng': ensure => $syslog_ng_ensure }
 
   file { [
