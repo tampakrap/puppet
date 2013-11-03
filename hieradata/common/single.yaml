@@ -53,8 +53,11 @@ ntp::package_ensure: '4.2.6_p5-r7'
 ruby::version: '1.9.3_p448'
 ruby::gems_version: '2.0.3'
 logrotate::package_ensure: '3.8.6'
-logrotate::compress: true
-logrotate::dateext: true
+logrotate::conf::dateext: true
+logrotate::conf::compress: true
+logrotate::conf::ifempty: false
+logrotate::conf::mail: false
+logrotate::conf::olddir: false
 service::log::cronolog_ensure: '1.6.2-r4'
 service::log::syslog_ng_ensure: '3.4.2'
 service::cron::ensure: '4.1-r13'

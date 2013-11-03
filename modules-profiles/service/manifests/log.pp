@@ -4,6 +4,7 @@ class service::log (
 ) {
 
   include logrotate
+  include logrotate::conf
 
   if defined(package['httpd']) {
     package { 'app-admin/cronolog': ensure => $cronolog_ensure }
