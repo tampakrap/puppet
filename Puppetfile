@@ -7,7 +7,6 @@ mod 'puppetlabs/inifile', '1.0.0'
 mod 'puppetlabs/stdlib',  '4.1.0'
 mod 'puppetlabs/ntp',     '3.0.0-rc1'
 mod 'gentoo/portage',     '2.1.0'
-mod 'rodjek/logrotate',   '1.1.1'
 
 ## not in forge
 
@@ -39,6 +38,11 @@ mod 'passenger',
 # mod 'puppetlabs/ruby'
 mod 'ruby',
   :git => 'git://github.com/gentoo/puppet-ruby',
+  :ref => 'gentoo_wip'
+
+# mod 'rodjek/logrotate'
+mod 'logrotate',
+  :git => 'git://github.com/gentoo/puppet-logrotate',
   :ref => 'gentoo_wip'
 
 # vim: set ai sts=2 et tw=80 sw=2 ft=puppet:
