@@ -28,6 +28,15 @@ class service::log (
     su_group      => 'portage',
   }
 
+  logrotate::rule { 'openrc':
+    path         => '/var/log/rc.log',
+    compress     => true,
+    rotate       => '4',
+    rotate_every => 'weekly',
+    missingok    => true,
+    ifempty      => false,
+  }
+
   package { 'app-admin/syslog-ng': ensure => $syslog_ng_ensure }
 
   file { [
