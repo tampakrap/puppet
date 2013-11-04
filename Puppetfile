@@ -12,7 +12,7 @@ mod 'gentoo/portage',     '2.1.0'
 
 mod 'ssh',     :git => 'git://github.com/tampakrap/puppet-ssh'
 mod 'postfix', :git => 'git://github.com/tampakrap/puppet-postfix'
-mod 'git',     :git => 'git://github.com/tampakrap/git'
+mod 'git',     :git => 'git://github.com/tampakrap/puppet-git'
 
 # mod 'zack/r10k'
 mod 'r10k',
