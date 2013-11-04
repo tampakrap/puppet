@@ -1,6 +1,5 @@
 class service::log (
   $cronolog_ensure,
-  $syslog_ng_ensure,
 ) {
 
   include logrotate
@@ -14,8 +13,6 @@ class service::log (
     package { 'app-admin/cronolog': ensure => $cronolog_ensure }
     include service::log::apache
   }
-
-  package { 'app-admin/syslog-ng': ensure => $syslog_ng_ensure }
 
   file { [
     '/etc/cron.daily/logrotate',
