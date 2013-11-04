@@ -20,6 +20,7 @@ puppet::server::reports:
   - 'http'
   - 'tagmail'
 puppet::server::reportfrom: 'puppet@puppetmaster.pebkac.gr'
+puppet::server::use_cached_catalog: false
 puppet::agent::server: 'puppetmaster.pebkac.gr'
 puppet::agent::ca_server: 'puppetmaster.pebkac.gr'
 puppet::agent::report_server: 'puppetmaster.pebkac.gr'
