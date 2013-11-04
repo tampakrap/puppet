@@ -4,6 +4,7 @@ class role::generic {
   include system::users
   include system::locale
   include system::language
+  include system::man
   include service::cron
   include service::ssh
   include service::puppet::agent
