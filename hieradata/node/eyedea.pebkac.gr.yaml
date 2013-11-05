@@ -1,8 +1,3 @@
 ---
 service::ssh::listenaddress:
   - '2a01:4f8:141:43c1::213'
-service::ssh::allowusers:
-  - 'feedward'
-system::users::feedward:
-  groups: 'wheel'
-  ensure: 'present'
