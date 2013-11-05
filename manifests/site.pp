@@ -1,7 +1,7 @@
 import 'nodes.pp'
 
 # Global defaults
-Package { provider => portage }
+Package { provider => 'portage' }
 
 Mailalias { provider => 'aliases' }
 
