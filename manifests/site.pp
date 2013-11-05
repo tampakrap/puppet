@@ -3,6 +3,8 @@ import 'nodes.pp'
 # Global defaults
 Package { provider => portage }
 
+Mailalias { provider => 'aliases' }
+
 filebucket { 'remote':
   server => 'puppetmaster.pebkac.gr',
   path   => false,
