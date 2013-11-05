@@ -4,5 +4,6 @@ service::ssh::listenaddress:
 service::ssh::allowusers:
   - 'feedward'
 system::users::feedward:
-  groups: 'wheel'
+  groups:
+    - 'wheel'
   ensure: 'present'
