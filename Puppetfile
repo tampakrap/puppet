@@ -2,11 +2,12 @@ moduledir '/etc/puppet/environments/production/modules-base'
 
 ## forge
 
-mod 'puppetlabs/concat',  '1.0.0'
-mod 'puppetlabs/inifile', '1.0.0'
-mod 'puppetlabs/stdlib',  '4.1.0'
-mod 'puppetlabs/ntp',     '3.0.0-rc1'
-mod 'gentoo/portage',     '2.1.0'
+mod 'puppetlabs/concat',        '1.0.0'
+mod 'puppetlabs/inifile',       '1.0.0'
+mod 'puppetlabs/stdlib',        '4.1.0'
+mod 'puppetlabs/ntp',           '3.0.0-rc1'
+mod 'gentoo/portage',           '2.1.0'
+mod 'domcleal/augeasproviders', '1.0.2'
 
 ## not in forge
 
