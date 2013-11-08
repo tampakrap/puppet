@@ -10,4 +10,5 @@ class role::generic {
   include service::puppet::agent
   include service::mail
   include service::log
+  include service::mlocate
 }
