@@ -5,7 +5,7 @@ class service::mlocate (
   $ionice_priority,
   $updatedb_prunefs,
   $updatedb_prunepaths,
-  $updatedb_prunenames
+  $updatedb_prunenames,
   $updatedb_prune_bind_mounts,
 ) {
 
