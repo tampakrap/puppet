@@ -34,13 +34,13 @@ class service::mlocate (
   }
 
   file { '/etc/mlocate.conf':
-    content => template("${module_name}/mlocate/mlocate.conf.erb")
+    content => template("${module_name}/mlocate/mlocate.conf.erb"),
     ensure  => present,
     require => Package['sys-apps/mlocate'],
   }
 
   file { '/etc/updatedb.conf':
-    content => template("${module_name}/mlocate/updatedb.conf.erb")
+    content => template("${module_name}/mlocate/updatedb.conf.erb"),
     ensure  => present,
     require => Package['sys-apps/mlocate'],
   }
