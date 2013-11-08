@@ -14,7 +14,7 @@ class service::mlocate (
   file { '/etc/cron.daily/mlocate': ensure => absent }
 
   file { '/usr/local/bin/mlocate-cron.sh':
-    source  => "puppet:///modules/${module_name}/mlocate-cron.sh"
+    source  => "puppet:///modules/${module_name}/mlocate-cron.sh",
     ensure  => present,
     require => Package['sys-apps/mlocate'],
     mode    => '0700',
