@@ -62,7 +62,11 @@ logrotate::conf::olddir: false
 git::package_ensure: '1.8.1.5-r1'
 syslogng::package_ensure: '3.4.2'
 service::log::cronolog_ensure: '1.6.2-r4'
-service::log::syslog_ng_ensure: '3.4.2'
+service::mlocate::ensure: '0.26'
+service::mlocate::nice: '19'
+service::mlocate::ionice_class: '2'
+service::mlocate::ionice_priority: '7'
+service::mlocate::updatedb_prune_bind_mounts: true
 service::cron::ensure: '4.1-r13'
 service::puppet::master::hiera::backends:
   - 'yaml'

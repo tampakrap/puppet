@@ -1,0 +1,21 @@
+# /etc/updatedb.conf: config file for slocate
+# $Id: updatedb.conf,v 1.5 2011/01/24 12:39:33 scarabeus Exp $
+
+# This file sets variables that are used by updatedb.
+# For more info, see the updatedb.conf(5) manpage.
+
+# Filesystems that are pruned from updatedb database
+PRUNEFS="<%= @updatedb_prunefs.join(' ') %>"
+
+# Paths which are pruned from updatedb database
+PRUNEPATHS="<%= @updatedb_prunepaths.join(' ') %>"
+
+# Folder names that are pruned from updatedb database
+PRUNENAMES="<%= @updatedb_prunenames.join(' ') %>"
+
+# Skip bind mounts.
+<% if @updatedb_prune_bind_mounts == true -%>
+PRUNE_BIND_MOUNTS="yes"
+<% elsif @updatedb_prune_bind_mounts == false -%>
+PRUNE_BIND_MOUNTS="no"
+<% end -%>
