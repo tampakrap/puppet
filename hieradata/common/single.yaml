@@ -12,7 +12,7 @@ puppet::server::gentoo_keywords:
   - '~amd64'
   - '~x86'
 puppet::server::ensure: '3.3.1'
-puppet::server::reporturl: 'http://puppetdashboard.pebkac.gr/reports'
+puppet::server::reporturl: 'http://puppetdashboard.pebkac.gr/reports1'
 puppet::server::servername: 'puppetmaster.pebkac.gr'
 puppet::server::bindaddress: '%{::ipaddress}'
 puppet::server::reports:
