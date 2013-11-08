@@ -7,6 +7,13 @@ class service::puppet::master::hiera (
 
   include puppet::params
 
+  case $puppet::server::servertype {
+    'passenger': { $service = 'httpd' }
+    'unicorn': { $service = '??' }
+    'thin': { $service = '??' }
+    'standalone': { $service = $puppet::params::master_service }
+  }
+
   portage::package { 'dev-ruby/deep_merge':
     keywords => ['~amd64', '~x86'],
     target   => 'puppet',
@@ -16,7 +23,7 @@ class service::puppet::master::hiera (
   file { '/etc/puppet/hiera.yaml':
     ensure  => file,
     content => template("${module_name}/puppet/hiera.yaml.erb"),
-    notify  => Service['httpd'],
+    notify  => Service[$service],
   }
 
   file { '/etc/hiera.yaml':
