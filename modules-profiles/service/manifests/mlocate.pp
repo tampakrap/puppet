@@ -45,3 +45,4 @@ class service::mlocate (
     require => Package['sys-apps/mlocate'],
   }
 
+}
