@@ -19,3 +19,15 @@ node 'raekwon.pebkac.gr' {
 
 node 'virtuoso.pebkac.gr' {
 }
+
+node 'slug.pebkac.gr' {
+  include role::generic
+}
+
+node 'esoteric.pebkac.gr' {
+  include role::generic
+}
+
+node 'apathy.pebkac.gr' {
+  include role::generic
+}
