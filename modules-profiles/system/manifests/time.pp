@@ -36,9 +36,9 @@ class system::time (
   }
 
   service { 'ntp-client':
-    require => Class['ntp'],
-    ensure  => 'running',
-    enable  => true,
+    subscribe => File['/etc/ntp.conf'],
+    ensure    => 'running',
+    enable    => true,
   }
 
 }
