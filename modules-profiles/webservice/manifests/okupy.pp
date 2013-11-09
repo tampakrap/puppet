@@ -5,7 +5,6 @@ class webservice::okupy (
   include webservice
   include system::portage::layman
   include system::portage::webapp_config
-  include system::portage::make_conf::use_apache
 
   if $::gentoo_tool_layman and $::gentoo_tool_webapp_config {
     layman { 'okupy':
