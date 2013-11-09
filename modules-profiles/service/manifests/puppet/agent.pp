@@ -8,6 +8,6 @@ class service::puppet::agent {
     require => File['/etc/facter'],
   }
 
-  service::fact { 'environment': value => $puppet::agent::environment }
+  defined_type::fact { 'environment': value => $puppet::agent::environment }
 
 }

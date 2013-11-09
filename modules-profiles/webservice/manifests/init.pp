@@ -1,5 +1,5 @@
 class webservice {
 
-  service::fact { 'apache': value => 'true' }
+  defined_type::fact { 'apache': value => 'true' }
 
 }

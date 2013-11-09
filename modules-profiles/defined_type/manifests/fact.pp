@@ -1,4 +1,4 @@
-define service::fact (
+define defined_type::fact (
   $ensure = 'present',
   $value,
 ) {

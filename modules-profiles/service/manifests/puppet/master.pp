@@ -6,7 +6,7 @@ class service::puppet::master (
   include service::puppet::master::r10k
   include service::puppet::master::hiera
 
-  service::fact { 'puppet_master': value => true }
+  defined_type::fact { 'puppet_master': value => true }
 
   include ::puppet::server
 

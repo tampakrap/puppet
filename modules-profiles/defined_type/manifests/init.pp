@@ -1,0 +1,1 @@
+class defined_type { }

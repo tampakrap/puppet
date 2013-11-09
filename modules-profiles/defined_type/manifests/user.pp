@@ -1,4 +1,4 @@
-define system::user ( $attrs ) {
+define defined_type::user ( $attrs ) {
 
   if is_hash($attrs) {
     if $attrs[uid] { $uid = $attrs[uid] }
