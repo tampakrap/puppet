@@ -2,6 +2,8 @@ class service::log (
   $cronolog_ensure,
 ) {
 
+  include syslogng
+
   include logrotate
   include logrotate::conf
 
