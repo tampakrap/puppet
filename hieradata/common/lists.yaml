@@ -8,7 +8,6 @@ puppet::server::gentoo_use:
   - 'rrdtool'
   - 'shadow'
   - 'sqlite3'
-  - 'vim-syntax'
   - '-xemacs'
 puppet::agent::gentoo_use:
   - 'augeas'
@@ -19,7 +18,6 @@ puppet::agent::gentoo_use:
   - 'rrdtool'
   - 'shadow'
   - 'sqlite3'
-  - '-vim-syntax'
   - '-xemacs'
 apache::default_mods:
   - 'actions'
@@ -131,7 +129,6 @@ system::portage::make_conf::use:
   - 'ldap'
   - 'bash_completion'
   - 'zsh_completion'
-  - 'vim-syntax'
 system::locale::locale_gen:
   - 'en_US ISO-8859-1'
   - 'en_US.UTF-8 UTF-8'
