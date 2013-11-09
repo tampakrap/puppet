@@ -1,3 +1,5 @@
 ---
 system::portage::make_conf::features:
   - '-buildpkg'
+syslogng::sources::kernel:
+  ensure: 'absent'
