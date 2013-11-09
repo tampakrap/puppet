@@ -39,7 +39,7 @@ class system::users (
     ]
   }
 
-  system::user {
+  defined_type::user {
     'amy': attrs => hiera_hash(system::users::amy);
     'atma': attrs => hiera_hash(system::users::atma);
     'dastergon': attrs => hiera_hash(system::users::dastergon);
