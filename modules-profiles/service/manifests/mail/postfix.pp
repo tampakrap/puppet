@@ -48,6 +48,7 @@ class service::mail::postfix (
     'inet_interfaces': content => $inet_interfaces;
     'inet_protocols': content => $inet_protocols;
     'virtual_alias_domains': content => $virtual_alias_domains;
+    'virtual_alias_maps': content => $virtual_alias_maps;
   }
 
 }
