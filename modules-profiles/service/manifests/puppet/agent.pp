@@ -1,6 +1,4 @@
-class service::puppet::agent (
-  $environment,
-) {
+class service::puppet::agent {
   include ::puppet::agent
 
   file { '/etc/facter': ensure => 'directory' }
@@ -10,6 +8,6 @@ class service::puppet::agent (
     require => File['/etc/facter'],
   }
 
-  service::fact { 'environment': value => $environment }
+  service::fact { 'environment': value => $puppet::agent::environment }
 
 }
