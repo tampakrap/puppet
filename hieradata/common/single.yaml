@@ -60,7 +60,7 @@ logrotate::conf::ifempty: false
 logrotate::conf::mail: false
 logrotate::conf::olddir: false
 git::package_ensure: '1.8.1.5-r1'
-syslogng::package_ensure: '3.2.5'
+syslogng::ensure: '3.2.5'
 service::log::cronolog_ensure: '1.6.2-r4'
 service::mlocate::ensure: '0.26'
 service::mlocate::nice: '19'
