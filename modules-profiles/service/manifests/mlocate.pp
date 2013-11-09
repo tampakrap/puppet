@@ -33,11 +33,13 @@ class service::mlocate (
     ],
   }
 
-  file { '/etc/mlocate.conf':
+  file { '/etc/mlocate-cron.conf':
     content => template("${module_name}/mlocate/mlocate-cron.conf.erb"),
     ensure  => present,
     require => Package['sys-apps/mlocate'],
   }
+
+  file { '/etc/mlocate.conf': ensure => absent }
 
   file { '/etc/updatedb.conf':
     content => template("${module_name}/mlocate/updatedb.conf.erb"),
