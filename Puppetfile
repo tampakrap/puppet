@@ -47,9 +47,4 @@ mod 'logrotate',
   :git => 'git://github.com/tampakrap/puppet-logrotate',
   :ref => 'pebkac'
 
-# mod 'purplehazech/syslogng'
-mod 'syslogng',
-  :git => 'git://github.com/tampakrap/puppet-syslogng',
-  :ref => 'pebkac'
-
 # vim: set ai sts=2 et tw=80 sw=2 ft=puppet:

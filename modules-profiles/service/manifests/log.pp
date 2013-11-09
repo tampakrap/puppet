@@ -1,8 +1,7 @@
 class service::log (
   $cronolog_ensure,
+  $syslogng_ensure,
 ) {
-
-  include syslogng
 
   include logrotate
   include logrotate::conf
@@ -21,6 +20,14 @@ class service::log (
     '/etc/cron.hourly/logrotate',
   ]:
     ensure => absent
+  }
+
+  package { 'app-admin/syslog-ng': ensure => $syslogng_ensure }
+
+  service { 'syslog-ng':
+    subscribe => Package['app-admin/syslog-ng'],
+    ensure    => 'running',
+    enable    => true,
   }
 
 }
