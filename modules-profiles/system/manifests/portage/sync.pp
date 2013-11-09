@@ -10,7 +10,7 @@ class system::portage::sync {
     command => $command,
     user    => 'root',
     hour    => [5, 17],
-    minute  => 42,
+    minute  => interval(1, 60),
   }
 
 }

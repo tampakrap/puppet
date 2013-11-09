@@ -26,7 +26,7 @@ class service::mlocate (
     ensure  => present,
     command => '/usr/local/bin/mlocate-cron.sh',
     hour    => '2',
-    minute  => '27',
+    minute  => interval(1, 60),
     require => [
       Package['sys-apps/mlocate'],
       File['/usr/local/bin/mlocate-cron.sh'],

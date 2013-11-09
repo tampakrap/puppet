@@ -11,9 +11,10 @@ mod 'domcleal/augeasproviders', '1.0.2'
 
 ## not in forge
 
-mod 'ssh',     :git => 'git://github.com/tampakrap/puppet-ssh'
-mod 'postfix', :git => 'git://github.com/tampakrap/puppet-postfix'
-mod 'git',     :git => 'git://github.com/tampakrap/puppet-git'
+mod 'ssh',      :git => 'git://github.com/tampakrap/puppet-ssh'
+mod 'postfix',  :git => 'git://github.com/tampakrap/puppet-postfix'
+mod 'git',      :git => 'git://github.com/tampakrap/puppet-git'
+mod 'interval', :git => 'git://github.com/puppetlabs-operations/puppet-interval'
 
 # mod 'zack/r10k'
 mod 'r10k',
