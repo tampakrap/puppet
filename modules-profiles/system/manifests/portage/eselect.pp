@@ -7,7 +7,7 @@ class system::portage::eselect (
   $profile,
   $timezone,
   $locale,
-  $php5,
+  $php,
 ) {
 
   eselect {
@@ -19,9 +19,9 @@ class system::portage::eselect (
     'profile': set => $profile;
     'timezone': set => $timezone;
     'locale': set => $locale;
-    'php::apache2': set => $php5;
-    'php::cli': set => $php5;
-    'php::cgi': set => $php5;
+    'php::apache2': set => $php;
+    'php::cli': set => $php;
+    'php::cgi': set => $php;
   }
 
 }
