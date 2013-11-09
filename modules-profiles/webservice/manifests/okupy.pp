@@ -2,6 +2,7 @@ class webservice::okupy (
   $domain,
 ) {
 
+  include webservice
   include system::portage::layman
   include system::portage::webapp_config
   include system::portage::make_conf::use_apache

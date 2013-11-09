@@ -2,6 +2,7 @@ class service::puppet::master (
   $tagmail,
 ) {
 
+  include webservice
   include service::puppet::master::r10k
   include service::puppet::master::hiera
 
