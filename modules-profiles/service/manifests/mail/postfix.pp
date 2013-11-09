@@ -20,6 +20,7 @@ class service::mail::postfix (
   $default_filter_nexthop,
   $inet_interfaces,
   $inet_protocols,
+  $virtual_alias_domains,
 ) {
 
   include ::postfix
@@ -46,6 +47,7 @@ class service::mail::postfix (
     'default_filter_nexthop': content => $default_filter_nexthop;
     'inet_interfaces': content => $inet_interfaces;
     'inet_protocols': content => $inet_protocols;
+    'virtual_alias_domains': content => $virtual_alias_domains;
   }
 
 }
