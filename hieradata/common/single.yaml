@@ -67,7 +67,7 @@ service::mlocate::nice: '19'
 service::mlocate::ionice_class: '2'
 service::mlocate::ionice_priority: '7'
 service::mlocate::updatedb_prune_bind_mounts: true
-service::cron::ensure: '4.1-r13'
+service::cron::ensure: '4.1-r14'
 service::puppet::master::hiera::backends:
   - 'yaml'
 service::puppet::master::hiera::datadir: '/etc/puppet/environments/_percent_{::environment}/hieradata'
