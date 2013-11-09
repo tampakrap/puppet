@@ -14,6 +14,7 @@ node 'everlast.pebkac.gr' {
 }
 
 node 'raekwon.pebkac.gr' {
+  include role::generic
 }
 
 node 'virtuoso.pebkac.gr' {
