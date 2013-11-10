@@ -167,3 +167,9 @@ system::time::eselect_timezone_keywords:
 system::man::man_ensure: '1.6g'
 system::man::man_pages_ensure: '3.53'
 webservice::okupy::domain: 'identity.pebkac.gr'
+webservice::drupal::keywords:
+  - '~amd64'
+  - '~x86'
+webservice::drupal::use:
+  - 'mysql'
+webservice::drupal::ensure: '6.28'

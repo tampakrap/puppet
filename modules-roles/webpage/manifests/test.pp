@@ -5,7 +5,7 @@ class webpage::test {
   if defined(Class['system::portage::webapp_config']) {
     webapp { 'www.test.com':
       appname    => 'drupal',
-      appversion => '6.28',
+      appversion => $webservice::drupal::ensure,
       server     => 'apache',
       user       => 'apache',
       group      => 'apache',
