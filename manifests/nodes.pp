@@ -11,7 +11,7 @@ node 'evidence.pebkac.gr' {
 node 'everlast.pebkac.gr' {
   include role::generic
   include webpage::identity
-  include webpage::test
+  include webpage::www_gentoo_el_org
 }
 
 node 'raekwon.pebkac.gr' {
