@@ -1,10 +1,10 @@
-class system::language::ruby {
+class system::language::ruby (
   $bundler_ensure,
   $eselect_ruby_ensure,
   $eselect,
 ) {
 
-  include ruby
+  include ::ruby
 
   package {
     'dev-ruby/bundler':

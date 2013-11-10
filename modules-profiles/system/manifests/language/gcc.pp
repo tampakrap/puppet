@@ -5,14 +5,16 @@ class system::language::gcc (
 ) {
 
   package {
-    'dev-lang/gcc': ensure => $ensure;
-    'app-admin/gcc-config': ensure => $gcc_config_ensure;
+    'sys-devel/gcc': ensure => $ensure;
+    'sys-devel/gcc-config': ensure => $gcc_config_ensure;
   }
 
   eselect { 'gcc':
     require => [
-      Package['dev-lang/gcc'],
-      Package['app-admin/gcc-config'],
+      Package['sys-devel/gcc'],
+      Package['sys-devel/gcc-config'],
     ],
     set     => $eselect,
   }
+
+}
