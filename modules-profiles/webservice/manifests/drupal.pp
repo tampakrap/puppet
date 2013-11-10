@@ -12,21 +12,19 @@ define webservice::drupal (
   if $directory {
     $sites = "/var/www/$name/htdocs/$directory/sites"
     $url = "http://${name}/${directory}"
-    $webapp_name = "${name}::/${directory}"
   } else {
     $sites = "/var/www/$name/htdocs/sites"
     $url = "http://${name}"
-    $webapp_name = $name
   }
 
-  webapp { $webapp_name:
+  webapp { "${webapp_name}::/${directory}:
     appname    => 'drupal',
     appversion => $drupal::ensure,
     require    => Portage::Package[$drupal::pkg_name],
   }
   ->
   vcsrepo {
-    "/var/www/$name/$repo":
+    "/var/www/$name/$name":
       provider => 'git',
       source   => $repo;
     "$sites/all/themes":
@@ -36,10 +34,10 @@ define webservice::drupal (
   ->
   file {
     "$sites/all/modules":
-      target => "/var/www/$name/$repo/modules",
+      target => "/var/www/$name/$name/modules",
       ensure => 'link';
     "$sites/all/plugins":
-      target => "/var/www/$name/$repo/plugins",
+      target => "/var/www/$name/$name/plugins",
       ensure => 'link';
   }
 
