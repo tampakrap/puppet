@@ -10,10 +10,12 @@ define webservice::drupal (
   include system::portage::webapp_config
 
   if $directory {
-    $sites = "/var/www/$name/htdocs/$directory/sites"
+    $docroot = "/var/www/$name/htdocs/$directory"
+    $sites = "$docroot/sites"
     $url = "http://${name}/${directory}"
   } else {
-    $sites = "/var/www/$name/htdocs/sites"
+    $docroot = "/var/www/$name/htdocs"
+    $sites = "$docroot/sites"
     $url = "http://${name}"
   }
 
@@ -50,6 +52,15 @@ define webservice::drupal (
     command => "wget -O - -q -t 1 $url/cron.php",
     minute  => interval(1, 60),
     require => Webapp["${name}::/${directory}"],
+  }
+
+  apache::vhost { $name:
+    port           => '80',
+    docroot        => $docroot,
+    serveradmin    => 'root@gentoo-el.org',
+    scriptalias    => "/var/www/${name}/cgi-bin",
+    directoryindex => 'index.php',
+    priority       => '10',
   }
 
 }
