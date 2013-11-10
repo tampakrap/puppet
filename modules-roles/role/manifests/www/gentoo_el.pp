@@ -1,4 +1,4 @@
-class webpage::www_gentoo_el_org (
+class role::www::gentoo_el (
   $host,
   $directory,
   $repo,
