@@ -1,10 +1,11 @@
 class role::generic {
-  include system::time
-  include system::portage
-  include system::users
-  include system::locale
   include system::language
+  include system::locale
   include system::man
+  include system::portage
+  include system::profile
+  include system::time
+  include system::users
   include service::cron
   include service::ssh
   include service::puppet::agent

@@ -3,8 +3,10 @@ class system::man (
   $man_pages_ensure,
 ) {
 
-  package { 'sys-apps/man': ensure => $man_ensure }
-  package { 'sys-apps/man-pages': ensure => $man_pages_ensure }
+  package {
+    'sys-apps/man': ensure => $man_ensure;
+    'sys-apps/man-pages': ensure => $man_pages_ensure;
+  }
 
   cron { 'makewhatis':
     ensure => 'present',
