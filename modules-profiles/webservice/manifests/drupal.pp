@@ -6,6 +6,7 @@ class webservice::drupal (
 
   include webservice
   include system::language::php
+  include system::portage::webapp_config
 
   portage::package { 'www-apps/drupal':
     keywords => $keywords,
