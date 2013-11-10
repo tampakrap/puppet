@@ -24,8 +24,8 @@ class service::log (
   }
 
   portage::package { 'app-admin/syslog-ng':
-    ensure => $syslogng_ensure,
-    mask   => $syslogng_mask,
+    ensure       => $syslogng_ensure,
+    mask_version => $syslogng_mask,
   }
 
   service { 'syslog-ng':
