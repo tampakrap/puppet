@@ -1,5 +1,8 @@
 class system::language::python (
-  $ensure,
+  $python2_ensure,
+  $python3_ensure,
+  $lang_exec_ensure,
+  $python_exec_ensure,
   $eselect_python_ensure,
   $eselect_python,
   $eselect_python2,
@@ -7,10 +10,11 @@ class system::language::python (
 ) {
 
   package {
-    'dev-lang/python':
-      ensure => $ensure;
-    'app-admin/eselect-python':
-      ensure => $eselect_python_ensure;
+    'dev-lang/python:2.7': ensure => $python2_ensure;
+    'dev-lang/python:3.2': ensure => $python3_ensure;
+    'app-admin/eselect-python': ensure => $eselect_python_ensure;
+    'dev-lang/python-exec': ensure => $lang_exec_ensure;
+    'dev-python/python-exec': ensure => $python_exec_ensure;
   }
 
   eselect {
