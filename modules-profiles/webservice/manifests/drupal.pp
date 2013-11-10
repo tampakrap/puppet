@@ -17,7 +17,7 @@ define webservice::drupal (
     $url = "http://${name}"
   }
 
-  webapp { "${webapp_name}::/${directory}:
+  webapp { "${webapp_name}::/${directory}":
     appname    => 'drupal',
     appversion => $drupal::ensure,
     require    => Portage::Package[$drupal::pkg_name],
