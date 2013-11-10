@@ -79,6 +79,7 @@ service::puppet::master::hiera::hierarchy:
   - 'virtual/_percent_{::virtual}'
   - 'is_virtual/_percent_{::is_virtual}'
   - 'apache/_percent_{::apache}'
+  - 'php/_percent_{::apache}'
   - 'gentoo_tool/layman__percent_{::gentoo_tool_layman}'
   - 'gentoo_tool/webapp_config__percent_{::gentoo_tool_webapp_config}'
   - 'common/hash'

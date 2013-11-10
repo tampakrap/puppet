@@ -7,7 +7,7 @@ class system::language::php (
 
   defined_type::fact { 'php': value => 'true' }
 
-  portage::package { 'dev-lang/php':
+  portage::package { 'dev-lang/php:5.5':
     use    => $use,
     ensure => $ensure,
     notify => Service['httpd'],
