@@ -1,6 +1,6 @@
 class webpage::test {
 
-  include drupal
+  include webservice::drupal
 
   if defined(Class['system::portage::webapp_config']) {
     webapp { 'www.test.com':
