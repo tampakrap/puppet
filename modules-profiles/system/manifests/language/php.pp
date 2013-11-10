@@ -7,7 +7,7 @@ class system::language::php (
 
   defined_type::fact { 'php': value => 'true' }
 
-  portage::package { 'dev-lang/php:5.5':
+  portage::package { 'dev-lang/php':
     use    => $use,
     ensure => $ensure,
     notify => Service['httpd'],
@@ -22,7 +22,5 @@ class system::language::php (
     ],
     set     => $eselect,
   }
-
-  package { 'dev-lang/php:5.4': ensure => absent }
 
 }
