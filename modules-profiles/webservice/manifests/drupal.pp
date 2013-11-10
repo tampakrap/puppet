@@ -55,6 +55,7 @@ define webservice::drupal (
   }
 
   apache::vhost { $name:
+    ip             => $::ipaddress,
     port           => '80',
     docroot        => $docroot,
     serveradmin    => 'root@gentoo-el.org',
