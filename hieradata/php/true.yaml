@@ -3,4 +3,3 @@ system::portage::make_conf::use:
   - 'php'
   - 'pdo'
   - 'gd'
-  - 'curl'

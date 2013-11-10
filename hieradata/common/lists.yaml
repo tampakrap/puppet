@@ -112,6 +112,7 @@ system::portage::make_conf::use:
   - 'vserver'
   - 'readline'
   - 'ssl'
+  - 'curl'
   - 'zlib'
   - 'bzip2'
   - 'snmp'
@@ -138,6 +139,9 @@ system::portage::make_conf::use:
   - '-postgres'
   - '-mysql'
   - '-mysqli'
+  - '-php'
+  - '-pdo'
+  - '-gd'
 system::locale::locale_gen:
   - 'en_US ISO-8859-1'
   - 'en_US.UTF-8 UTF-8'
