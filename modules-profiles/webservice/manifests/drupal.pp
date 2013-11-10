@@ -23,12 +23,14 @@ define webservice::drupal (
     require    => Portage::Package[$drupal::pkg_name],
   }
   ->
+  file { "$sites/all/themes": ensure => directory }
+  ->
   vcsrepo {
     "/var/www/$name/$name":
       ensure   => present,
       provider => 'git',
       source   => $repo;
-    "$sites/all/themes":
+    "$sites/all/themes/$name":
       ensure   => present,
       provider => 'git',
       source   => $theme;
