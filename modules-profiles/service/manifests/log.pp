@@ -1,6 +1,7 @@
 class service::log (
   $cronolog_ensure,
   $syslogng_ensure,
+  $syslogng_mask,
 ) {
 
   include logrotate
@@ -22,7 +23,10 @@ class service::log (
     ensure => absent
   }
 
-  package { 'app-admin/syslog-ng': ensure => $syslogng_ensure }
+  portage::package { 'app-admin/syslog-ng':
+    ensure => $syslogng_ensure,
+    mask   => $syslogng_mask,
+  }
 
   service { 'syslog-ng':
     subscribe => Package['app-admin/syslog-ng'],
