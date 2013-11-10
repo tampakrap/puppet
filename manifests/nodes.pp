@@ -11,6 +11,7 @@ node 'evidence.pebkac.gr' {
 node 'everlast.pebkac.gr' {
   include role::generic
   include webpage::identity
+  include webpage::test
 }
 
 node 'raekwon.pebkac.gr' {
