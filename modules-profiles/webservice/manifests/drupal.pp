@@ -25,9 +25,11 @@ define webservice::drupal (
   ->
   vcsrepo {
     "/var/www/$name/$name":
+      ensure   => present,
       provider => 'git',
       source   => $repo;
     "$sites/all/themes":
+      ensure   => present,
       provider => 'git',
       source   => $theme;
   }
@@ -36,8 +38,8 @@ define webservice::drupal (
     "$sites/all/modules":
       target => "/var/www/$name/$name/modules",
       ensure => 'link';
-    "$sites/all/plugins":
-      target => "/var/www/$name/$name/plugins",
+    "$sites/all/libraries":
+      target => "/var/www/$name/$name/libraries",
       ensure => 'link';
   }
 
