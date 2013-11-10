@@ -1,5 +1,5 @@
 ---
-drupal::keywords:
+drupal::gentoo_keywords:
   - '~amd64'
   - '~x86'
 drupal::ensure: '6.28'
