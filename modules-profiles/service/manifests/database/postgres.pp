@@ -1,5 +1,5 @@
 class service::database::postgres {
 
-  defined_type::fact { 'postgres': value => $enabled }
+  defined_type::fact { 'postgres': value => 'true' }
 
 }
