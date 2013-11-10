@@ -41,11 +41,11 @@ define webservice::drupal (
       ensure => 'link';
   }
 
-  cron { "$url cron":
+  cron { "$name cron":
     ensure  => present,
     command => "wget -O - -q -t 1 $url/cron.php",
     minute  => interval(1, 60),
-    require => Webapp[$name],
+    require => Webapp["${name}::/${directory}"],
   }
 
 }
