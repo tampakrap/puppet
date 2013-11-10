@@ -20,19 +20,22 @@ class system::language::python (
   eselect {
     'python':
       require => [
-        Package['dev-lang/python'],
+        Package['dev-lang/python:2.7'],
+        Package['dev-lang/python:3.2'],
         Package['app-admin/eselect-python'],
       ],
       set     => $python;
     'python::python2':
       require => [
-        Package['dev-lang/python'],
+        Package['dev-lang/python:2.7'],
+        Package['dev-lang/python:3.2'],
         Package['app-admin/eselect-python'],
       ],
       set     => $python2;
     'python::python3':
       require => [
-        Package['dev-lang/python'],
+        Package['dev-lang/python:2.7'],
+        Package['dev-lang/python:3.2'],
         Package['app-admin/eselect-python'],
       ],
       set     => $python3;
