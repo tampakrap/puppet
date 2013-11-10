@@ -45,7 +45,7 @@ define webservice::drupal (
     ensure  => present,
     command => "wget -O - -q -t 1 $url/cron.php",
     minute  => interval(1, 60),
-    require => Webapp[$webapp_name],
+    require => Webapp[$name],
   }
 
 }
