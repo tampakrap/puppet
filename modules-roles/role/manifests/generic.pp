@@ -12,4 +12,6 @@ class role::generic {
   include service::mail
   include service::log
   include service::mlocate
+  include service::database::mysql
+  include service::database::postgres
 }

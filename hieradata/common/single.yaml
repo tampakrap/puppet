@@ -1,4 +1,8 @@
 ---
+drupal::keywords:
+  - '~amd64'
+  - '~x86'
+drupal::ensure: '6.28'
 puppet::server::servertype: 'passenger'
 puppet::server::manifest: '$confdir/environments/$environment/manifests/site.pp'
 puppet::server::modulepath:
@@ -80,7 +84,9 @@ service::puppet::master::hiera::hierarchy:
   - 'virtual/_percent_{::virtual}'
   - 'is_virtual/_percent_{::is_virtual}'
   - 'apache/_percent_{::apache}'
-  - 'php/_percent_{::apache}'
+  - 'php/_percent_{::php}'
+  - 'mysql/_percent_{::mysql}'
+  - 'postgres/_percent_{::postgres}'
   - 'gentoo_tool/layman__percent_{::gentoo_tool_layman}'
   - 'gentoo_tool/webapp_config__percent_{::gentoo_tool_webapp_config}'
   - 'common/hash'
@@ -168,9 +174,7 @@ system::time::eselect_timezone_keywords:
 system::man::man_ensure: '1.6g'
 system::man::man_pages_ensure: '3.53'
 webservice::okupy::domain: 'identity.pebkac.gr'
-webservice::drupal::keywords:
-  - '~amd64'
-  - '~x86'
-webservice::drupal::use:
-  - 'mysql'
-webservice::drupal::ensure: '6.28'
+webpage::www_gentoo_el_org::host: 'www.gentoo-el.org'
+webpage::www_gentoo_el_org::directory: ''
+webpage::www_gentoo_el_org::repo: 'git://github.com/gentoo-el/www.gentoo-el.org'
+webpage::www_gentoo_el_org::theme: 'git://github.com/gentoo-el/drupal-gentoo-theme'
