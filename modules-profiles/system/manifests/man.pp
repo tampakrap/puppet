@@ -10,7 +10,7 @@ class system::man (
 
   cron { 'makewhatis':
     ensure => 'present',
-    command => 'exec nice makewhatis -u',
+    command => 'exec nice /usr/sbin/makewhatis -u',
     hour    => interval(1, 24),
     minute  => interval(1, 60),
     require => Package['sys-apps/man'],
