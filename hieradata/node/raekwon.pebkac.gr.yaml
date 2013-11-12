@@ -1,4 +1,12 @@
 ---
+service::mail::postfix::mydomain: '$myhostname'
+service::mail::postfix::myhostname: 'gentoo-el.org'
+service::mail::postfix::myorigin: '$myhostname'
+service::mail::postfix::virtual_alias_domains:
+  - 'chatzimichos.gr'
+  - 'kde.gr'
+  - 'kde-el.org'
+  - 'tampakrap.gr'
 service::ssh::allowusers:
   - 'amy'
   - 'atma'
@@ -60,11 +68,3 @@ system::users::wired:
   ensure: 'present'
 system::users::yz250:
   ensure: 'present'
-service::mail::postfix::myhostname: 'gentoo-el.org'
-service::mail::postfix::mydomain: '$myhostname'
-service::mail::postfix::myorigin: '$myhostname'
-service::mail::postfix::virtual_alias_domains:
-  - 'kde.gr'
-  - 'kde-el.org'
-  - 'chatzimichos.gr'
-  - 'tampakrap.gr'

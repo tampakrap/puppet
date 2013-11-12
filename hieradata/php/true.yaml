@@ -1,5 +1,5 @@
 ---
 system::portage::make_conf::use:
+  - 'gd'
   - 'php'
   - 'pdo'
-  - 'gd'
