@@ -22,7 +22,6 @@ passenger::passenger_provider: 'portage'
 passenger::passenger_version: '3.0.21-r1'
 puppet::agent::ca_server: 'puppetmaster.pebkac.gr'
 puppet::agent::ensure: '3.3.1'
-puppet::agent::environment: 'production'
 puppet::agent::gentoo_keywords:
   - '~amd64'
   - '~x86'
@@ -101,6 +100,7 @@ service::mlocate::ionice_class: '2'
 service::mlocate::ionice_priority: '7'
 service::mlocate::nice: '19'
 service::mlocate::updatedb_prune_bind_mounts: true
+service::puppet::environment: 'production'
 service::puppet::master::hiera::backends:
   - 'yaml'
 service::puppet::master::hiera::datadir: '/etc/puppet/environments/_percent_{::environment}/hieradata'
