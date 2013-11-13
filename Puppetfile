@@ -32,8 +32,8 @@ mod 'puppet',
 
 # mod 'puppetlabs/apache'
 mod 'apache',
-  :git => 'git://github.com/tampakrap/puppet-apache',
-  :ref => 'pebkac'
+  :git => 'git://github.com/gentoo/puppet-apache',
+  :ref => 'gentoo_wip'
 
 # mod 'puppetlabs/passenger'
 mod 'passenger',
