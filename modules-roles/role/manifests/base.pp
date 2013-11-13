@@ -8,7 +8,7 @@ class role::base {
   include system::users
   include service::cron
   include service::ssh
-  include service::puppet::agent
+  include service::puppet
   include service::mail
   include service::log
   include service::mlocate
