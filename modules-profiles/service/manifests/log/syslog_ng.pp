@@ -47,14 +47,12 @@ class service::log::syslog_ng {
   logrotate::rule { 'syslog-auth':
     path          => '/var/log/auth.log',
     sharedscripts => true,
-    missingok     => true,
     postrotate    => $postrotate,
   }
 
-  logrotate::rule { 'syslog-rest':
+  logrotate::rule { 'syslog-messages':
     path          => '/var/log/messages',
     sharedscripts => true,
-    missingok     => true,
     postrotate    => $postrotate,
   }
 
