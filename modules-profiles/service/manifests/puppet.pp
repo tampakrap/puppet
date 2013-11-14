@@ -1,5 +1,7 @@
 class service::puppet (
   $environment,
+  $facter_ensure,
+  $hiera_ensure,
 ) {
 
   include ::puppet::agent
@@ -12,5 +14,12 @@ class service::puppet (
   }
 
   defined_type::fact { 'environment': value => $environment }
+
+  portage::package {
+    'dev-ruby/facter':
+      ensure => $facter_ensure;
+    'dev-ruby/hiera':
+      ensure => $hiera_ensure;
+  }
 
 }
