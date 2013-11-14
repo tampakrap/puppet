@@ -102,7 +102,11 @@ service::mlocate::nice: '19'
 service::mlocate::updatedb_prune_bind_mounts: true
 service::puppet::environment: 'production'
 service::puppet::facter_ensure: '1.7.1-r1'
-service::puppet::hiera_ensure: '1.2.1-r1'
+service::puppet::hiera_ensure: '1.2.1'
+service::puppet::hiera_keywords:
+  - '~amd64'
+  - '~x86'
+service::puppet::puppet_syntax_ensure: '3.0.1'
 service::puppet::master::hiera::backends:
   - 'yaml'
 service::puppet::master::hiera::datadir: '/etc/puppet/environments/_percent_{::environment}/hieradata'

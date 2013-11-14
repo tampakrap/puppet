@@ -1,7 +1,9 @@
 class service::puppet (
   $environment,
   $facter_ensure,
+  $hiera_keywords,
   $hiera_ensure,
+  $puppet_syntax_ensure,
 ) {
 
   include ::puppet::agent
@@ -19,7 +21,10 @@ class service::puppet (
     'dev-ruby/facter':
       ensure => $facter_ensure;
     'dev-ruby/hiera':
-      ensure => $hiera_ensure;
+      keywords => $hiera_keywords;
+      ensure   => $hiera_ensure;
+    'app-vim/puppet-syntax':
+      ensure => $puppet_syntax_ensure;
   }
 
 }
