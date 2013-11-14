@@ -1,9 +1,9 @@
 class system::portage::sync {
 
   if $::virtual == 'vserver' {
-    $command = '/usr/bin/layman -S && /usr/bin/eix-update'
+    $command = '/usr/bin/layman -S > /dev/null && /usr/bin/eix-update > /dev/null'
   } else {
-    $command = '/usr/bin/eix-sync'
+    $command = '/usr/bin/eix-sync > /dev/null'
   }
 
   cron { 'eix_layman_sync':
