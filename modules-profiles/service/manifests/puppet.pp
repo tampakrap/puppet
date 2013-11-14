@@ -21,6 +21,7 @@ class service::puppet (
     'dev-ruby/facter':
       ensure => $facter_ensure;
     'dev-ruby/hiera':
+      target   => 'puppet',
       keywords => $hiera_keywords,
       ensure   => $hiera_ensure;
     'app-vim/puppet-syntax':
