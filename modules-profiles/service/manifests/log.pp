@@ -37,7 +37,7 @@ class service::log (
   # (temp) remove all syslog-* stuff from logrotate.d
   file { [
     '/etc/logrotage.d/syslog-auth',
-    '/etc/logrotate.d/syslog-generic',
+    '/etc/logrotate.d/syslog-gerenic',
     '/etc/logrotate.d/syslog-hardened',
     '/etc/logrotate.d/syslog-mail',
     '/etc/logrotate.d/syslog-messages',
