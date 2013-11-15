@@ -5,7 +5,7 @@ class service::puppet::master (
   include webservice
   include r10k
   include r10k::prerun_command
-  include service::puppet::master::hiera
+  include hiera
 
   defined_type::fact { 'puppet_master': value => true }
 

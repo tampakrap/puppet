@@ -1,8 +1,6 @@
 class service::puppet (
   $environment,
   $facter_ensure,
-  $hiera_keywords,
-  $hiera_ensure,
   $puppet_syntax_ensure,
 ) {
 
@@ -20,10 +18,6 @@ class service::puppet (
   portage::package {
     'dev-ruby/facter':
       ensure => $facter_ensure;
-    'dev-ruby/hiera':
-      target   => 'puppet',
-      keywords => $hiera_keywords,
-      ensure   => $hiera_ensure;
     'app-vim/puppet-syntax':
       ensure => $puppet_syntax_ensure;
   }
