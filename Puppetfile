@@ -7,6 +7,7 @@ mod 'puppetlabs/inifile',       '1.0.0'
 mod 'puppetlabs/stdlib',        '4.1.0'
 mod 'puppetlabs/ntp',           '3.0.0-rc1'
 mod 'puppetlabs/vcsrepo',       '0.1.2'
+mod 'ploperations/interval',    '0.0.1'
 mod 'gentoo/portage',           '2.1.0'
 mod 'domcleal/augeasproviders', '1.0.2'
 
@@ -16,7 +17,6 @@ mod 'ssh',      :git => 'git://github.com/tampakrap/puppet-ssh'
 mod 'postfix',  :git => 'git://github.com/tampakrap/puppet-postfix'
 mod 'git',      :git => 'git://github.com/tampakrap/puppet-git'
 mod 'drupal',   :git => 'git://github.com/tampakrap/puppet-drupal'
-mod 'interval', :git => 'git://github.com/puppetlabs-operations/puppet-interval'
 
 # mod 'zack/r10k'
 mod 'r10k',
