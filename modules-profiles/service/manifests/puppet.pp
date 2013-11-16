@@ -1,25 +1,21 @@
 class service::puppet (
   $environment,
-  $facter_ensure,
   $puppet_syntax_ensure,
+  $net_tools_ensure,
+  $net_tools_use,
 ) {
 
   include ::puppet::agent
 
-  file { '/etc/facter': ensure => 'directory' }
-
-  file { '/etc/facter/facts.d':
-    ensure  => 'directory',
-    require => File['/etc/facter'],
-  }
-
-  defined_type::fact { 'environment': value => $environment }
+  facter::fact { 'environment': value => $environment }
 
   portage::package {
-    'dev-ruby/facter':
-      ensure => $facter_ensure;
     'app-vim/puppet-syntax':
       ensure => $puppet_syntax_ensure;
+    'sys-apps/net-tools':
+      before => Package['dev-ruby/facter'],
+      use    => $net_tools_use,
+      ensure => $net_tools_ensure;
   }
 
 }

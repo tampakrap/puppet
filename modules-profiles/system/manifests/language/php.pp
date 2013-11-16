@@ -5,7 +5,7 @@ class system::language::php (
   $eselect_php_ensure,
 ) {
 
-  defined_type::fact { 'php': value => 'true' }
+  facter::fact { 'php': value => 'true' }
 
   portage::package { 'dev-lang/php':
     use    => $use,

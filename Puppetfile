@@ -18,6 +18,7 @@ mod 'postfix',  :git => 'git://github.com/tampakrap/puppet-postfix'
 mod 'git',      :git => 'git://github.com/tampakrap/puppet-git'
 mod 'drupal',   :git => 'git://github.com/tampakrap/puppet-drupal'
 mod 'hiera',    :git => 'git://github.com/tampakrap/puppet-hiera'
+mod 'facter',   :git => 'git://github.com/tampakrap/puppet-facter'
 
 # mod 'zack/r10k'
 mod 'r10k',

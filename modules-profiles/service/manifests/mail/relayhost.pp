@@ -1,5 +1,5 @@
 class service::mail::relayhost {
 
-  defined_type::fact { 'relayhost': value => 'true' }
+  facter::fact { 'relayhost': value => 'true' }
 
 }

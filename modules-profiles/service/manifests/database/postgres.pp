@@ -1,5 +1,5 @@
 class service::database::postgres {
 
-  defined_type::fact { 'postgres': value => 'true' }
+  facter::fact { 'postgres': value => 'true' }
 
 }

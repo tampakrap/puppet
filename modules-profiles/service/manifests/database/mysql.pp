@@ -1,5 +1,5 @@
 class service::database::mysql {
 
-  defined_type::fact { 'mysql': value => 'true' }
+  facter::fact { 'mysql': value => 'true' }
 
 }
