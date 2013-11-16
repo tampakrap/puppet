@@ -2,6 +2,7 @@ class role::base {
   include system::language
   include system::locale
   include system::man
+  include system::openrc
   include system::portage
   include system::profile
   include system::time
