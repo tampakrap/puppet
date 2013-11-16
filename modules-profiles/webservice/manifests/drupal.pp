@@ -35,30 +35,31 @@ define webservice::drupal (
       require    => Portage::Package[$drupal::pkg_name],
     }
     ->
-    file { "$sites/$name": ensure => directory }
-    ->
-    file {
-      "$sites/$name/files":
-        ensure => directory,
-        owner  => 'apache',
-        group  => 'root',
-        mode   => 0755;
-      "$sites/$name/settings.php":
-        ensure => file,
-        owner  => 'root',
-        group  => 'apache',
-        mode   => 0640;
-      "$sites/$name/default.settings.php": ensure => absent;
+    file { ["$sites/all", "$sites/default"]:
+      ensure  => absent,
+      recurse => true,
+      purge   => true,
+      force   => true,
     }
+  }
 
-    if ! defined(File["$sites/all"]) {
-      file { ["$sites/all", "$sites/default"]:
-        ensure  => absent,
-        recurse => true,
-        purge   => true,
-        force   => true,
-      }
-    }
+  file { "$sites/$name":
+    require => Webapp["${real_target}::${directory}"],
+    ensure => directory
+  }
+  ->
+  file {
+    "$sites/$name/files":
+      ensure => directory,
+      owner  => 'apache',
+      group  => 'root',
+      mode   => 0755;
+    "$sites/$name/settings.php":
+      ensure => file,
+      owner  => 'root',
+      group  => 'apache',
+      mode   => 0640;
+    "$sites/$name/default.settings.php": ensure => absent;
   }
 
   if $repo_url and ! defined(Vcsrepo["/var/www/$real_target/$repo_target"]) {
