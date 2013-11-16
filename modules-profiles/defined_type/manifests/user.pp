@@ -40,16 +40,13 @@ define defined_type::user ( $attrs ) {
       mode    => 0600,
       require => User[$name],
     }
-
+    ->
     file { "/home/$name/.ssh/authorized_keys":
       content => "# managed by puppet\n\n$keys\n",
       owner   => $name,
       group   => $name,
       mode    => 0644,
-      require => [
-        File["/home/$name/.ssh"],
-        User[$name],
-      ],
+      require => User[$name],
     }
 
     file { "/home/$name/.forward":
