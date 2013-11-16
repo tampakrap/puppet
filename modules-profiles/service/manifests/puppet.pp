@@ -16,6 +16,7 @@ class service::puppet (
     'sys-apps/net-tools':
       before => Portage::Package['dev-ruby/facter'],
       use    => $net_tools_use,
+      target => 'puppet',
       ensure => $net_tools_ensure;
   }
 
