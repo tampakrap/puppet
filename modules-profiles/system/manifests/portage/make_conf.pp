@@ -24,7 +24,7 @@ class system::portage::make_conf (
 
   Ini_setting {
     path   => '/etc/portage/repos.conf/gentoo.conf',
-    ensure => 'ensure',
+    ensure => present,
   }
 
   ini_setting {
