@@ -1,7 +1,10 @@
 define webservice::drupal (
-  $directory,
-  $repo,
-  $theme,
+  $target       = '',
+  $directory    = '',
+  $repo_url     = '',
+  $repo_target  = '',
+  $theme_url    = '',
+  $theme_target = '',
 ) {
 
   include ::drupal
@@ -9,57 +12,80 @@ define webservice::drupal (
   include system::language::php
   include system::portage::webapp_config
 
-  if $directory {
-    $docroot = "/var/www/$name/htdocs/$directory"
-    $sites = "$docroot/sites"
-    $url = "http://${name}/${directory}"
+  if $target {
+    $real_target = $target
   } else {
-    $docroot = "/var/www/$name/htdocs"
-    $sites = "$docroot/sites"
-    $url = "http://${name}"
+    $real_target = $name
   }
 
-  webapp { "${name}::/${directory}":
-    appname    => 'drupal',
-    appversion => $drupal::ensure,
-    require    => Portage::Package[$drupal::pkg_name],
+  if $directory {
+    $docroot = "/var/www/$real_target/htdocs/$directory"
+    $sites = "$docroot/sites"
+    $url = "http://$name/$directory"
+  } else {
+    $docroot = "/var/www/$real_target/htdocs"
+    $sites = "$docroot/sites"
+    $url = "http://$name"
   }
-  ->
-  file { "$sites/all/themes": ensure => directory }
-  ->
-  vcsrepo {
-    "/var/www/$name/$name":
+
+  if ! defined(Webapp["${real_target}::/${directory}"]) {
+    webapp { "${real_target}::/${directory}":
+      appname    => 'drupal',
+      appversion => $drupal::ensure,
+      require    => Portage::Package[$drupal::pkg_name],
+    }
+    ->
+    file { "$sites/$name": ensure => directory }
+    ->
+    file {
+      "$sites/$name/files":
+        ensure => directory,
+        owner  => 'apache',
+        group  => 'root',
+        mode   => 0755;
+      "$sites/$name/default.settings.php": ensure => absent;
+    }
+  }
+
+  if $repo_url and ! defined(Vcsrepo["/var/www/$real_target/$repo_target"]) {
+    vcsrepo { "/var/www/$real_target/$repo_target":
+      require  => File["$sites/$name"],
       ensure   => present,
       provider => 'git',
-      source   => $repo;
-    "$sites/all/themes/$name":
+      source   => $repo_url,
+    }
+    ->
+    file {
+      "$sites/$name/modules":
+        target => "/var/www/$real_target/$repo_target/modules",
+        ensure => 'link';
+      "$sites/$name/libraries":
+        target => "/var/www/$real_target/$repo_target/libraries",
+        ensure => 'link';
+    }
+  }
+
+  if $theme_url {
+    vcsrepo { "$sites/$name/themes/$theme_target":
+      require  => File["$sites/$name"],
       ensure   => present,
       provider => 'git',
-      source   => $theme;
-  }
-  ->
-  file {
-    "$sites/all/modules":
-      target => "/var/www/$name/$name/modules",
-      ensure => 'link';
-    "$sites/all/libraries":
-      target => "/var/www/$name/$name/libraries",
-      ensure => 'link';
+      source   => $theme_url,
+    }
   }
 
   cron { "$name cron":
     ensure  => present,
     command => "wget -O - -q -t 1 $url/cron.php",
     minute  => interval(1, 60),
-    require => Webapp["${name}::/${directory}"],
   }
 
   apache::vhost { $name:
     ip             => $::ipaddress,
     port           => '80',
     docroot        => $docroot,
-    serveradmin    => 'root@gentoo-el.org',
-    scriptalias    => "/var/www/${name}/cgi-bin",
+    serveradmin    => "root@${::domain}",
+    scriptalias    => "/var/www/$real_target/cgi-bin",
     directoryindex => 'index.php',
     priority       => '10',
   }
