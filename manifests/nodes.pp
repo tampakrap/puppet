@@ -18,6 +18,9 @@ node 'everlast.pebkac.gr' {
 
 node 'raekwon.pebkac.gr' {
   include role::base
+  include role::db::client::postgres
+  include role::www::gentoo_el
+  include role::www::kde_el
 }
 
 node 'virtuoso.pebkac.gr' {
