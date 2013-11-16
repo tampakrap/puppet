@@ -88,6 +88,7 @@ define webservice::drupal (
     scriptalias    => "/var/www/$real_target/cgi-bin",
     directoryindex => 'index.php',
     priority       => '10',
+    require        => Webapp["${real_target}::/${directory}"],
   }
 
 }
