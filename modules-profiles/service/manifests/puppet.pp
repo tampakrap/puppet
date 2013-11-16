@@ -13,7 +13,7 @@ class service::puppet (
     'app-vim/puppet-syntax':
       ensure => $puppet_syntax_ensure;
     'sys-apps/net-tools':
-      before => Package['dev-ruby/facter'],
+      before => Portage::Package['dev-ruby/facter'],
       use    => $net_tools_use,
       ensure => $net_tools_ensure;
   }
