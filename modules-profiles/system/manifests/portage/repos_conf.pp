@@ -1,4 +1,4 @@
-class system::repos_conf {
+class system::portage::repos_conf {
 
   Ini_setting {
     path   => '/etc/portage/repos.conf/gentoo.conf',
