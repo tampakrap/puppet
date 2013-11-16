@@ -47,7 +47,7 @@ define webservice::drupal (
         ensure => file,
         owner  => 'root',
         group  => 'apache',
-        mode   => 0755;
+        mode   => 0640;
       "$sites/$name/default.settings.php": ensure => absent;
     }
 
