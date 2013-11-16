@@ -1,14 +1,20 @@
 class role::www::gentoo_el (
   $host,
-  $directory,
-  $repo,
-  $theme,
+  $target       = '',
+  $directory    = '',
+  $repo_url     = '',
+  $repo_target  = '',
+  $theme_url    = '',
+  $theme_target = '',
 ) {
 
   webservice::drupal { $host:
-    directory => $directory,
-    repo      => $repo,
-    theme     => $theme,
+    target       => $target,
+    directory    => $directory,
+    repo_url     => $repo_url,
+    repo_target  => $repo_target,
+    theme_url    => $theme_url,
+    theme_target => $theme_target,
   }
 
 }
