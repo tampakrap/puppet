@@ -7,6 +7,7 @@ class system::portage (
 
   include ::portage
   include system::portage::make_conf
+  include system::portage::repos_conf
   include system::portage::sync
 
   portage::package {
