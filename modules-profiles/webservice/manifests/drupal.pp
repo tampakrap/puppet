@@ -56,6 +56,7 @@ define webservice::drupal (
         ensure  => absent,
         recurse => true,
         purge   => true,
+        force   => true,
       }
     }
   }
