@@ -6,6 +6,7 @@ class service::puppet (
 ) {
 
   include ::puppet::agent
+  include facter
 
   facter::fact { 'environment': value => $environment }
 
