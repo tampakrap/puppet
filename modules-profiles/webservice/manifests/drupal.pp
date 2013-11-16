@@ -44,7 +44,7 @@ define webservice::drupal (
   }
 
   file { "$sites/$name":
-    require => Webapp["${real_target}::${directory}"],
+    require => Webapp["${real_target}::/${directory}"],
     ensure => directory
   }
   ->
