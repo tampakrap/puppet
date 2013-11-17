@@ -19,6 +19,7 @@ hiera::hierarchy:
   - 'virtual/_percent_{::virtual}'
   - 'is_virtual/_percent_{::is_virtual}'
   - 'apache/_percent_{::apache}'
+  - 'drupal/_percent_{::drupal}'
   - 'php/_percent_{::php}'
   - 'mysql/_percent_{::mysql}'
   - 'postgres/_percent_{::postgres}'
