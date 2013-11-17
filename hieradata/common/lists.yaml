@@ -226,7 +226,7 @@ system::portage::make_conf::use:
   - '-X'
   - 'xml'
   - 'zlib'
-  - 'zsh_completion'
+  - 'zsh-completion'
 service::ssh::allowusers:
   - 'tampakrap'
   - 'tomkap'
