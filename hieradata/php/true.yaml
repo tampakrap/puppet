@@ -1,8 +1,7 @@
 ---
 apache::default_mods:
   - 'php'
-apache::mpm_module:
-  - 'prefork'
+apache::mpm_module: 'prefork'
 system::portage::make_conf::use:
   - 'gd'
   - 'php'
