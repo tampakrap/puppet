@@ -1,4 +1,5 @@
 ---
+portage::portage_ensure: '2.2.1'
 system::portage::make_conf::use:
   - '32bit'
   - '-64bit'
