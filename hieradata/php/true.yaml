@@ -1,4 +1,6 @@
 ---
+apache::default_mods:
+  - 'php'
 system::portage::make_conf::use:
   - 'gd'
   - 'php'
