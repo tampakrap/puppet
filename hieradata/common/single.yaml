@@ -6,6 +6,7 @@ drupal::ensure: '6.28'
 drupal::gentoo_keywords:
   - '~amd64'
   - '~x86'
+drupal::gentoo_mask: '>=7'
 facter::ensure: '1.7.1-r1'
 git::package_ensure: '1.8.3.2-r1'
 hiera::datadir: '/etc/puppet/environments/_percent_{::environment}/hieradata'
