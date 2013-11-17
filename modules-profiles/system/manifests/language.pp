@@ -4,7 +4,7 @@ class system::language {
   include system::language::python
   include system::language::ruby
 
-  if ! defined(Class["system::language::php"]) {
+  if ! defined(Facter::Fact["php"]) {
     facter::fact { 'php': value => 'false' }
   }
 
