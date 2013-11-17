@@ -10,10 +10,6 @@ node 'evidence.pebkac.gr' {
 
 node 'everlast.pebkac.gr' {
   include role::base
-  include role::www::identity
-  include role::www::gentoo_el
-  include role::www::kde_el
-  include role::db::client::postgres
 }
 
 node 'raekwon.pebkac.gr' {
