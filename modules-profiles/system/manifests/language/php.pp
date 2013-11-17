@@ -3,6 +3,7 @@ class system::language::php (
   $use,
   $eselect,
   $eselect_php_ensure,
+  $targets,
 ) {
 
   facter::fact { 'php': value => 'true' }
@@ -21,6 +22,11 @@ class system::language::php (
       Package['app-admin/eselect-php'],
     ],
     set     => $eselect,
+  }
+
+  portage::makeconf { 'php_targets':
+    before  => Portage::Package['dev-lang/php'],
+    content => $targets,
   }
 
 }

@@ -3,8 +3,6 @@ class system::portage::make_conf (
   $makeopts = inline_template("-j<%= @processorcount.to_i+1 %>"),
   $use,
   $features,
-  $ruby_targets,
-  $python_targets,
   $portdir,
 ) {
 
@@ -17,8 +15,6 @@ class system::portage::make_conf (
     'makeopts': content => $makeopts;
     'use': content => hiera_array(system::portage::make_conf::use);
     'features': content => hiera_array(system::portage::make_conf::features);
-    'ruby_targets': content => $ruby_targets;
-    'python_targets': content => $python_targets;
     'portdir': content => $portdir;
   }
 

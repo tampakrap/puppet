@@ -2,6 +2,7 @@ class system::language::ruby (
   $bundler_ensure,
   $eselect_ruby_ensure,
   $eselect,
+  $targets,
 ) {
 
   include ::ruby
@@ -20,6 +21,11 @@ class system::language::ruby (
       Package['app-admin/eselect-ruby'],
     ],
     set     => $eselect,
+  }
+
+  portage::makeconf { 'ruby_targets':
+    before  => Portage::Package['ruby'],
+    content => $targets,
   }
 
 }

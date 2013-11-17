@@ -7,6 +7,7 @@ class system::language::python (
   $eselect_python,
   $eselect_python2,
   $eselect_python3,
+  $targets,
 ) {
 
   package {
@@ -31,6 +32,11 @@ class system::language::python (
         Package['app-admin/eselect-python'],
       ],
       set     => $python3;
+  }
+
+  portage::makeconf { 'python_targets':
+    #before  => Package['dev-lang/python'],
+    content => $targets,
   }
 
 }
