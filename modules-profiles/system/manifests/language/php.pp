@@ -6,11 +6,6 @@ class system::language::php (
   $targets,
 ) {
 
-  facter::fact { 'php':
-    before => Class['system::language'],
-    value  => 'true',
-  }
-
   portage::package { 'dev-lang/php':
     use    => $use,
     ensure => $ensure,

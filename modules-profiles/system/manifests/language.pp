@@ -1,11 +1,13 @@
-class system::language {
+class system::language (
+  $php_enabled,
+) {
 
   include system::language::gcc
   include system::language::python
   include system::language::ruby
 
-  if ! defined(Facter::Fact["php"]) {
-    facter::fact { 'php': value => 'false' }
-  }
+  facter::fact { 'php': value => $php_enabled }
+
+  if $php_enabled == 'true' { include system::language::php }
 
 }

@@ -9,7 +9,6 @@ define webservice::drupal (
 
   include ::drupal
   include webservice
-  include system::language::php
   include system::portage::webapp_config
 
   if $target {
@@ -28,11 +27,18 @@ define webservice::drupal (
     $url = "http://$name"
   }
 
+  if ! defined(Facter::Fact['drupal']) {
+    facter::fact { 'drupal': value => 'true' }
+  }
+
   if ! defined(Webapp["${real_target}::/${directory}"]) {
     webapp { "${real_target}::/${directory}":
       appname    => 'drupal',
       appversion => $drupal::ensure,
-      require    => Portage::Package[$drupal::pkg_name],
+      require    => [
+        Portage::Package[$drupal::pkg_name],
+        Facter::Fact['drupal'],
+      ],
     }
     ->
     file { ["$sites/all", "$sites/default"]:
