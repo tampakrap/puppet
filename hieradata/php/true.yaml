@@ -1,5 +1,6 @@
 ---
 apache::default_mods:
+  - '-cgid'
   - 'php'
 apache::mpm_module: 'prefork'
 system::portage::make_conf::use:
