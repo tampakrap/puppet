@@ -11,7 +11,6 @@ class system::language::python (
 ) {
 
   package {
-    'dev-lang/python': ensure => $python2_ensure;
     'app-admin/eselect-python': ensure => $eselect_python_ensure;
     'dev-lang/python-exec': ensure => $lang_exec_ensure;
     'dev-python/python-exec': ensure => $python_exec_ensure;
@@ -20,26 +19,23 @@ class system::language::python (
   eselect {
     'python':
       require => [
-        Package['dev-lang/python'],
         Package['app-admin/eselect-python'],
       ],
       set     => $python;
     'python::python2':
       require => [
-        Package['dev-lang/python'],
         Package['app-admin/eselect-python'],
       ],
       set     => $python2;
     'python::python3':
       require => [
-        Package['dev-lang/python'],
         Package['app-admin/eselect-python'],
       ],
       set     => $python3;
   }
 
   portage::makeconf { 'python_targets':
-    before  => Package['dev-lang/python'],
+    #before  => Package['dev-lang/python'],
     content => $targets,
   }
 
