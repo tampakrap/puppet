@@ -159,6 +159,8 @@ service::mlocate::updatedb_prunepaths:
 system::portage::make_conf::cflags:
   - '-O2'
   - '-pipe'
+system::portage::make_conf::emerge_default_opts:
+  - '--quiet'
 system::portage::make_conf::features:
   - 'buildpkg'
   - 'candy'
