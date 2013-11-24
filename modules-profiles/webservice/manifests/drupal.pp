@@ -10,6 +10,7 @@ define webservice::drupal (
   include ::drupal
   include webservice
   include system::portage::webapp_config
+  include service::database::postgres
 
   if $target {
     $real_target = $target
