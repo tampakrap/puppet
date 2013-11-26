@@ -22,8 +22,8 @@ mod 'facter',   :git => 'git://github.com/tampakrap/puppet-facter'
 
 # mod 'zack/r10k'
 mod 'r10k',
-  :git => 'git://github.com/acidprime/r10k',
-  :ref => 'v0.0.9'
+  :git => 'git://github.com/tampakrap/puppet-r10k',
+  :ref => 'package_name'
 
 ## forks
 
