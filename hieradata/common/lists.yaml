@@ -179,7 +179,7 @@ system::portage::make_conf::features:
 system::portage::make_conf::use:
   - '-alsa'
   - '-apache2'
-  - 'bash_completion'
+  - 'bash-completion'
   - 'berkdb'
   - 'bzip2'
   - '-cgi'
