@@ -1,5 +1,6 @@
 ---
 portage::portage_ensure: '2.2.1'
+system::openrc::ensure: '0.11.8'
 system::portage::make_conf::use:
   - '32bit'
   - '-64bit'
