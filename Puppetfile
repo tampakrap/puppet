@@ -37,11 +37,6 @@ mod 'apache',
   :git => 'git://github.com/gentoo/puppet-apache',
   :ref => 'gentoo_wip'
 
-# mod 'puppetlabs/passenger'
-mod 'passenger',
-  :git => 'git://github.com/gentoo/puppet-passenger',
-  :ref => 'gentoo_wip'
-
 # mod 'puppetlabs/ruby'
 mod 'ruby',
   :git => 'git://github.com/gentoo/puppet-ruby',
