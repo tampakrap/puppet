@@ -2,7 +2,6 @@ class service::puppet (
   $environment,
   $puppet_syntax_ensure,
   $net_tools_ensure,
-  $net_tools_use,
 ) {
 
   include ::puppet::agent
@@ -15,7 +14,6 @@ class service::puppet (
       ensure => $puppet_syntax_ensure;
     'sys-apps/net-tools':
       before => Portage::Package['dev-ruby/facter'],
-      use    => $net_tools_use,
       target => 'puppet',
       ensure => $net_tools_ensure;
   }
