@@ -7,7 +7,7 @@ class service::puppet::master (
   include r10k::prerun_command
   include hiera
 
-  facter::fact { 'puppet_master': value => true }
+  facter::fact { 'puppetmaster': value => true }
 
   include ::puppet::server
 
