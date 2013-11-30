@@ -30,7 +30,7 @@ mod 'r10k',
 # mod 'ploperations/puppet'
 mod 'puppet',
   :git => 'git://github.com/tampakrap/puppet-puppet',
-  :ref => 'pebkac'
+  :ref => 'forkbomb'
 
 # mod 'puppetlabs/apache'
 mod 'apache',
