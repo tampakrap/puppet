@@ -8,7 +8,7 @@ mod 'puppetlabs/stdlib',        '4.1.0'
 mod 'puppetlabs/ntp',           '3.0.0-rc1'
 mod 'puppetlabs/vcsrepo',       '0.1.2'
 mod 'ploperations/interval',    '0.0.1'
-mod 'gentoo/portage',           '2.1.0'
+mod 'gentoo/portage',           '2.2.0-rc1'
 mod 'domcleal/augeasproviders', '1.0.2'
 
 ## not in forge
