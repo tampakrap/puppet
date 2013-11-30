@@ -9,12 +9,11 @@ class service::puppet (
 
   facter::fact { 'environment': value => $environment }
 
-  portage::package {
+  package {
     'app-vim/puppet-syntax':
       ensure => $puppet_syntax_ensure;
     'sys-apps/net-tools':
       before => Portage::Package['dev-ruby/facter'],
-      target => 'puppet',
       ensure => $net_tools_ensure;
   }
 
