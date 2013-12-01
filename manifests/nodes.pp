@@ -14,6 +14,7 @@ node 'everlast.pebkac.gr' {
 
 node 'raekwon.pebkac.gr' {
   include role::base
+  include role::bnc::quassel
 }
 
 node 'virtuoso.pebkac.gr' {
