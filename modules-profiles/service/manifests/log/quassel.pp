@@ -3,6 +3,7 @@ class service::log::quassel {
     path          => '/var/log/quassel.log',
     rotate        => '4',
     rotate_every  => 'weekly',
+    compress      => true,
     delaycompress => true,
     copytruncate  => true,
     missingok     => true,
