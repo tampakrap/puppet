@@ -15,6 +15,8 @@ system::users::dastergon:
   uid: 2003
 system::users::differentreality:
   uid: 2010
+  keys:
+    - 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCpZsXo00y/qQlCasaysVsv4vcLUbyjlPW1+V3R+y+eqqVTZnWe4OtuXeHeo4nUMZ4CGw+j8JYltvSDxBTzMmRyotXSNVSj+cmLro29Dxt+wBLUlmVVaT1UDO6PG5aBOJwPB3AT1eqpm/StSniS0Aww7NtCBl1UAc/D6I738K8EVlC25s7pbYAE8xscMKqtdzlTBkidWDA9HL1BDAlmfRafDeohdsiRGrVUHBcTIvb0EU9SQLSzFS7k0nBYjrFTZoMU0O+uT9VR4k/Eu5pvfxdFFEsUwOJg3ZJWSixNpU4FerUS5SCh3HsjrGSU8gNtcG6t+Esbytl6/ewCTkQ+M0CN differentreality@gmail.com'
 system::users::etern4l:
   keys:
     - 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDiAL1eo+Z3V2mcmOAabMw2t8016heuY6iP9IHrx6QHU82NIshOE2NYLFZaFIsIRQVSkEtnklHzhak4yDCVw0XWRS8GSwichrz+JM/Y5fhkqoEeOFZRlWJj0PKmqDvuXabRJqd8xRNXpKEiveqSXh1x/zIRz+jMJZADjoOzTFjEavd98kfYfiAze4UAjNVaPOkMG2eQHy9gvhzznLRbz/WjbGuxwtjmbUCRGGhinHin0e2fA/xIfCiglkHCOZfB8Jcq4uZC/y2yGnuvJICoKHFG4grI7nEP88LoqOWWt8EQ401bRDnE1IyV/Yd9WfGC47zCSTwizvrIMiRO46I47WIB etern4l@Bratsaki-PC'
