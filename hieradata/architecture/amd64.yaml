@@ -1,4 +1,0 @@
----
-system::portage::make_conf::use:
-  - '-32bit'
-  - '64bit'

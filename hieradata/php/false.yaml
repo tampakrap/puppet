@@ -1,9 +1,0 @@
----
-apache::default_mods:
-  - '-cgi'
-  - 'cgid'
-  - '-php'
-system::portage::make_conf::use:
-  - '-gd'
-  - '-php'
-  - '-pdo'

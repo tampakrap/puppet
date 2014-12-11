@@ -1,7 +1,0 @@
----
-portage::portage_ensure: '2.2.1'
-system::openrc::ensure: '0.11.8'
-system::portage::gentoolkit_ensure: '0.3.0.7'
-system::portage::make_conf::use:
-  - '32bit'
-  - '-64bit'

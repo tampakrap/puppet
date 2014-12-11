@@ -1,3 +1,0 @@
----
-system::portage::make_conf::use:
-  - 'postgres'

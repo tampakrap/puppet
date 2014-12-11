@@ -1,7 +1,0 @@
----
-system::portage::make_conf::use:
-  - 'apache2'
-  - 'vhosts'
-  - 'sni'
-  - 'suexec'
-  - 'cgi'
