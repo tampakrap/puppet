@@ -2,6 +2,8 @@ moduledir 'modules-base'
 
 ## forge
 
+mod 'puppetlabs/ntp', '3.3.0'
+
 ## not in forge
 
 ## forks
