@@ -1,5 +1,5 @@
-node 'odb.forkbomb.cz' {
+node 'odb.forkbomb.gr' {
 }
 
-node 'everlast.forkbomb.cz' {
+node 'everlast.forkbomb.gr' {
 }
