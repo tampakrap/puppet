@@ -1,4 +1,5 @@
 moduledir 'modules-base'
+forge 'forge.puppetlabs.com'
 
 ## forge
 
