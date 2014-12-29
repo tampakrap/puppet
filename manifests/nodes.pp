@@ -1,5 +1,19 @@
-node 'odb.forkbomb.gr' {
+node 'everlast.forkbomb.gr' {
+  include role::base
 }
 
-node 'everlast.forkbomb.gr' {
+node 'evidence.forkbomb.gr' {
+  include role::base
+}
+
+node 'eyedea.forkbomb.gr' {
+  include role::base
+}
+
+node 'odb.forkbomb.gr' {
+  include role::base
+}
+
+node 'raekwon.forkbomb.gr' {
+  include role::base
 }
