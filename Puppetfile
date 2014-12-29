@@ -3,7 +3,7 @@ forge 'forge.puppetlabs.com'
 
 ## forge
 
-mod 'puppetlabs/ntp', '3.3.0'
+mod 'darin/zypprepo', '1.0.1'
 
 ## not in forge
 
