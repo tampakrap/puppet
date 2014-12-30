@@ -1,6 +1,6 @@
 Package {
   provider        => 'zypper',
-  install_options => {'--no-recommends'},
+  install_options => ['--no-recommends'],
 }
 
 filebucket { 'remote':
