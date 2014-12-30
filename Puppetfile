@@ -4,6 +4,7 @@ forge 'forge.puppetlabs.com'
 ## forge
 
 mod 'darin/zypprepo', '1.0.1'
+mod 'zack/r10k', '2.5.1'
 
 ## not in forge
 
