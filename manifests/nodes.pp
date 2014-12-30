@@ -12,6 +12,7 @@ node 'eyedea.forkbomb.gr' {
 
 node 'odb.forkbomb.gr' {
   include role::base
+  include role::puppetmaster
 }
 
 node 'raekwon.forkbomb.gr' {
