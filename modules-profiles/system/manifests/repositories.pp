@@ -1,20 +1,17 @@
-class system::repositories {
-  zypprepo {
-    'repo-oss':
-      baseurl => 'http://download.opensuse.org/distribution/13.2/repo/oss',
-      enabled => 1,
-      autorefresh => 1,
-      gpgcheck => 0,
-      priority => 99,
-      keeppackages => 1,
-      type => 'yast2';
-    'repo-update-oss':
-      baseurl => 'http://download.opensuse.org/update/13.2',
-      enabled => 1,
-      autorefresh => 1,
-      gpgcheck => 0,
-      priority => 99,
-      keeppackages => 1,
-      type => 'rpm-md';
+class system::repositories (
+  $repo_oss,
+  $repo_update_oss,
+  $sysmgmt_puppet,
+) {
+  if $repo_oss {
+    include system::repositories::repo_oss
+  }
+
+  if $repo_update_oss {
+    include system::repositories::repo_update_oss
+  }
+
+  if $sysmgmt_puppet {
+    include system::repositories::sysmgmt_puppet
   }
 }
