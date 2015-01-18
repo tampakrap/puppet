@@ -12,7 +12,7 @@ class system::packages::bootloader (
   $os_probero,
 ) {
   package {
-    'btrfsprogs': ensure => $ ensure => $btrfsprogs,
+    'btrfsprogs': ensure => $btrfsprogs,
     'gettext-runtime': ensure => $gettext_runtime,
     'grub2': ensure => $grub2,
     'grub2-i386-pc': ensure => $grub2_i386_pc,
