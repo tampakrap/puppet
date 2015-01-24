@@ -229,6 +229,8 @@ system::repositories::sysmgmt_puppet::gpgcheck: '0'
 system::repositories::sysmgmt_puppet::keeppackages: '0'
 system::repositories::sysmgmt_puppet::priority: '99'
 system::repositories::sysmgmt_puppet::type: 'rpm-md'
+system::time::localtime: 'UTC'
+system::time::timezone: 'latest'
 system::users::dastergon:
   ensure: 'present'
   forward: 'dastergon@gmail.com'
