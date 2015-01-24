@@ -42,7 +42,7 @@ define defined_type::user ( $attrs ) {
   } else {
     file { "/home/$name/.ssh":
       ensure => directory,
-      owner => $uid
+      owner => $uid,
       group => $gid,
       mode => 0600,
       require => User[$name],
