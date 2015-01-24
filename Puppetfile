@@ -4,6 +4,7 @@ forge 'forge.puppetlabs.com'
 ## forge
 
 mod 'darin/zypprepo', '1.0.1'
+mod 'puppetlabs/concat', '1.1.2'
 mod 'puppetlabs/stdlib', '4.5.0'
 mod 'zack/r10k', '2.5.1'
 

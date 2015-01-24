@@ -1,19 +1,28 @@
 define defined_type::user ( $attrs ) {
   if is_hash($attrs) {
     if $attrs[uid] { $uid = $attrs[uid] }
-    if $attrs[gid] { $gid = $attrs[gid] }
-    if $attrs[groups] { $groups = $attrs[groups] }
+    if $attrs[gid] {
+      $gid = $attrs[gid]
+    } else {
+      $gid = 100
+    }
+    if $attrs[groups] {
+      $groups = $attrs[groups]
+    } else {
+      $groups = []
+    }
     if $attrs[password] { $password = $attrs[password] }
-    if $attrs[ensure] { $ensure = $attrs[ensure] }
+    if $attrs[ensure] {
+      $ensure = $attrs[ensure]
+    } else {
+      $ensure = 'absent'
+    }
     if $attrs[keys] {
       $all_keys = $attrs[keys]
       $keys = inline_template("<%= @all_keys.join('\n') %>\n")
     }
     if $attrs[forward] { $forward = $attrs[forward] }
   }
-
-  if ! $groups { $groups = [] }
-  if ! $ensure { $ensure = 'absent' }
 
   user { $name:
     uid => $uid,
@@ -33,24 +42,24 @@ define defined_type::user ( $attrs ) {
   } else {
     file { "/home/$name/.ssh":
       ensure => directory,
-      owner => $name,
-      group => $name,
+      owner => $uid
+      group => $gid,
       mode => 0600,
       require => User[$name],
     }
     ->
     file { "/home/$name/.ssh/authorized_keys":
       content => "# managed by puppet\n\n$keys\n",
-      owner => $name,
-      group => $name,
+      owner => $uid,
+      group => $gid,
       mode => 0644,
       require => User[$name],
     }
 
     file { "/home/$name/.forward":
       content => "# managed by puppet\n\n$forward\n",
-      owner => $name,
-      group => $name,
+      owner => $uid,
+      group => $gid,
       mode => 0644,
       require => User[$name],
     }
