@@ -6,23 +6,18 @@ define defined_type::user ( $attrs ) {
     } else {
       $gid = 100
     }
-    if $attrs[groups] {
-      $groups = $attrs[groups]
-    } else {
-      $groups = []
-    }
+    if $attrs[groups] { $groups = $attrs[groups] }
     if $attrs[password] { $password = $attrs[password] }
-    if $attrs[ensure] {
-      $ensure = $attrs[ensure]
-    } else {
-      $ensure = 'absent'
-    }
+    if $attrs[ensure] { $ensure = $attrs[ensure] }
     if $attrs[keys] {
       $all_keys = $attrs[keys]
       $keys = inline_template("<%= @all_keys.join('\n') %>\n")
     }
     if $attrs[forward] { $forward = $attrs[forward] }
   }
+
+  if ! $groups { $groups = [] }
+  if ! $ensure { $ensure = 'absent' }
 
   user { $name:
     uid => $uid,
