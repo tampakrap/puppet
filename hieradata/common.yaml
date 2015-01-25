@@ -1,4 +1,15 @@
 ---
+ntp::iburst_enable: true
+ntp::logfile: '/var/log/ntp'
+ntp::keys_enable: true
+ntp::keys_file: '/etc/ntp.keys'
+ntp::keys_requestkey: '1'
+ntp::keys_trusted:
+  - '1'
+ntp::servers:
+  - 'ntp1.hetzner.de'
+  - 'ntp2.hetzner.com'
+  - 'ntp3.hetzner.net'
 ntp::service_name: 'ntpd'
 r10k::configfile: '/etc/puppet/r10k.yaml'
 r10k::install_options:
