@@ -30,6 +30,7 @@ class system::packages::various (
   $ruby2_1_rubygem_ruby_augeas,
   $ruby2_1_rubygem_ruby_shadow,
   $ruby2_1_stdlib,
+  $rubygem_facter,
   $rubygem_hiera,
   $sudo,
   $vim,
@@ -68,6 +69,7 @@ class system::packages::various (
     'ruby2.1-rubygem-ruby-augeas': ensure => $ruby2_1_rubygem_ruby_augeas;
     'ruby2.1-rubygem-ruby-shadow': ensure => $ruby2_1_rubygem_ruby_shadow;
     'ruby2.1-stdlib': ensure => $ruby2_1_stdlib;
+    'rubygem-facter': ensure => $rubygem_facter;
     'rubygem-hiera': ensure => $rubygem_hiera;
     'sudo': ensure => $sudo;
     'vim': ensure => $vim;

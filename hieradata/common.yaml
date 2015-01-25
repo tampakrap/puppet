@@ -1,4 +1,8 @@
 ---
+facter::ensure: 'latest'
+facter::install_options:
+  - '--no-recommends'
+facter::pkgname: 'ruby2.1-rubygem-facter'
 ntp::iburst_enable: true
 ntp::logfile: '/var/log/ntp'
 ntp::keys_enable: true
@@ -14,7 +18,6 @@ ntp::service_name: 'ntpd'
 r10k::configfile: '/etc/puppet/r10k.yaml'
 r10k::install_options:
   - '--no-recommends'
-  - '--from': 'sysmgmt:puppet'
 r10k::manage_configfile_symlink: true
 r10k::package_name: 'ruby2.1-rubygem-r10k'
 r10k::provider: 'zypper'
@@ -240,6 +243,7 @@ system::packages::various::ruby2_1_rubygem_json_pure: 'latest'
 system::packages::various::ruby2_1_rubygem_ruby_augeas: 'latest'
 system::packages::various::ruby2_1_rubygem_ruby_shadow: 'latest'
 system::packages::various::ruby2_1_stdlib: 'latest'
+system::packages::various::rubygem_facter: 'latest'
 system::packages::various::rubygem_hiera: 'latest'
 system::packages::various::sudo: 'latest'
 system::packages::various::vim: 'latest'
