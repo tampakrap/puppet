@@ -3,4 +3,5 @@ class role::base {
   include system::repositories
   include system::time
   include system::users
+  include service::puppet
 }
