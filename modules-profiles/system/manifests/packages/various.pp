@@ -1,4 +1,5 @@
 class system::packages::various (
+  $augeas,
   $bind_libs,
   $bind_utils,
   $dmidecode,
@@ -24,13 +25,19 @@ class system::packages::various (
   $ruby_common,
   $ruby2_1,
   $ruby2_1_rubygem_gem2rpm,
+  $ruby2_1_rubygem_hiera,
+  $ruby2_1_rubygem_json_pure,
+  $ruby2_1_rubygem_ruby_augeas,
+  $ruby2_1_rubygem_ruby_shadow,
   $ruby2_1_stdlib,
+  $rubygem_hiera,
   $sudo,
   $vim,
   $vim_data,
   $virt_what,
 ) {
   package {
+    'augeas': ensure => $augeas;
     'bind-libs': ensure => $bind_libs;
     'bind-utils': ensure => $bind_utils;
     'dmidecode': ensure => $dmidecode;
@@ -56,7 +63,12 @@ class system::packages::various (
     'ruby-common': ensure => $ruby_common;
     'ruby2.1': ensure => $ruby2_1;
     'ruby2.1-rubygem-gem2rpm': ensure => $ruby2_1_rubygem_gem2rpm;
+    'ruby2.1-rubygem-hiera': ensure => $ruby2_1_rubygem_hiera;
+    'ruby2.1-rubygem-json_pure': ensure => $ruby2_1_rubygem_json_pure;
+    'ruby2.1-rubygem-ruby-augeas': ensure => $ruby2_1_rubygem_ruby_augeas;
+    'ruby2.1-rubygem-ruby-shadow': ensure => $ruby2_1_rubygem_ruby_shadow;
     'ruby2.1-stdlib': ensure => $ruby2_1_stdlib;
+    'rubygem-hiera': ensure => $rubygem_hiera;
     'sudo': ensure => $sudo;
     'vim': ensure => $vim;
     'vim-data': ensure => $vim_data;
