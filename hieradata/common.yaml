@@ -15,6 +15,12 @@ ntp::servers:
   - 'ntp2.hetzner.com'
   - 'ntp3.hetzner.net'
 ntp::service_name: 'ntpd'
+puppet::agent::agent_package: 'ruby2.1-rubygem-puppet'
+puppet::agent::ensure: 'latest'
+puppet::agent::method: 'service'
+puppet::agent::server: 'odb.forkbomb.gr'
+puppet::agent::splay: true
+puppet::agent::usecacheonfailure: false
 r10k::configfile: '/etc/puppet/r10k.yaml'
 r10k::install_options:
   - '--no-recommends'

@@ -32,6 +32,7 @@ class system::packages::various (
   $ruby2_1_stdlib,
   $rubygem_facter,
   $rubygem_hiera,
+  $rubygem_puppet,
   $sudo,
   $vim,
   $vim_data,
@@ -71,6 +72,7 @@ class system::packages::various (
     'ruby2.1-stdlib': ensure => $ruby2_1_stdlib;
     'rubygem-facter': ensure => $rubygem_facter;
     'rubygem-hiera': ensure => $rubygem_hiera;
+    'rubygem-puppet': ensure => $rubygem_puppet;
     'sudo': ensure => $sudo;
     'vim': ensure => $vim;
     'vim-data': ensure => $vim_data;
