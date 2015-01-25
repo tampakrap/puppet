@@ -18,7 +18,6 @@ ntp::service_name: 'ntpd'
 r10k::configfile: '/etc/puppet/r10k.yaml'
 r10k::install_options:
   - '--no-recommends'
-  - '--from': 'sysmgmt:puppet'
 r10k::manage_configfile_symlink: true
 r10k::package_name: 'ruby2.1-rubygem-r10k'
 r10k::provider: 'zypper'
