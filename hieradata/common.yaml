@@ -1,4 +1,5 @@
 ---
+ntp::service_name: 'ntpd'
 r10k::configfile: '/etc/puppet/r10k.yaml'
 r10k::install_options:
   - '--no-recommends'
