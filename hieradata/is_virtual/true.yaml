@@ -1,4 +1,4 @@
 ---
 ntp::package_ensure: 'absent'
-ntp::service_enable: 'false'
+ntp::service_enable: false
 ntp::service_ensure: 'stopped'
