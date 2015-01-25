@@ -44,7 +44,7 @@ class system::packages::various (
     'etc-update': ensure => $etc_update;
     'fdupes': ensure => $fdupes;
     'iproute2': ensure => $iproute2;
-    'libdb_4_8': ensure => $libdb_4_8;
+    'libdb-4_8': ensure => $libdb_4_8;
     'libgdbm4': ensure => $libgdbm4;
     'libICE6': ensure => $libICE6;
     'libpci3': ensure => $libpci3;
