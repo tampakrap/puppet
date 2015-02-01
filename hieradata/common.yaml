@@ -2,7 +2,7 @@
 facter::ensure: 'latest'
 facter::install_options:
   - '--no-recommends'
-facter::pkgname: 'ruby2.1-rubygem-facter'
+facter::package_name: 'ruby2.1-rubygem-facter'
 ntp::iburst_enable: true
 ntp::logfile: '/var/log/ntp'
 ntp::keys_enable: true
@@ -253,6 +253,7 @@ system::packages::various::ruby2_1_rubygem_ruby_shadow: 'latest'
 system::packages::various::ruby2_1_stdlib: 'latest'
 system::packages::various::rubygem_facter: 'latest'
 system::packages::various::rubygem_hiera: 'latest'
+system::packages::various::rubygem_puppet: 'latest'
 system::packages::various::sudo: 'latest'
 system::packages::various::vim: 'latest'
 system::packages::various::vim_data: 'latest'
