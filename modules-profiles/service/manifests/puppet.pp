@@ -4,5 +4,5 @@ class service::puppet (
   include facter
   include ::puppet::agent
 
-  facter::fact { 'environment': value => $environment }
+  fact { 'environment': content => $environment }
 }
