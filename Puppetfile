@@ -3,6 +3,7 @@ forge 'forge.puppetlabs.com'
 
 ## forge
 
+mod 'adrien/filemapper', '1.1.3'
 mod 'darin/zypprepo', '1.0.1'
 #mod 'ploperations/puppet', '0.13.0'
 mod 'puppetlabs/concat', '1.1.2'
